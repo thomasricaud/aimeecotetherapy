@@ -17,11 +17,11 @@
     name: 'CoreView',
 
     components: {
-      AboutMe: () => import('@/components/AboutMe'),
-      GetInTouch: () => import('@/components/GetInTouch'),
+      Welcome: () => import('@/components/Welcome'),
       RecentProjects: () => import('@/components/RecentProjects'),
       Services: () => import('@/components/Services'),
-      Welcome: () => import('@/components/Welcome'),
+      AboutMe: () => import('@/components/AboutMe'),
+      GetInTouch: () => import('@/components/GetInTouch'),
     },
   }
 </script>

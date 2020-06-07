@@ -2,43 +2,49 @@
   <v-app-bar
     app
     flat
+    color="primary"
   >
     <v-app-bar-nav-icon
       class="hidden-md-and-up"
-      @click="toggleDrawer"
     />
 
     <v-container class="mx-auto py-0">
       <v-row align="center">
-        <v-img
-          :src="require('@/assets/logo.png')"
-          class="mr-5"
-          contain
-          height="48"
-          width="48"
-          max-width="48"
-          @click="$vuetify.goTo(0)"
-        />
-
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on }">
+            <v-img
+              :src="require('@/assets/logo.jpg')"
+              class="mr-5"
+              contain
+              height="48"
+              width="48"
+              max-width="48"
+              @click="$vuetify.goTo(0)"
+              v-on="on"
+            />
+          </template>
+          <span>Couple, Family, and Individual Therapist</span>
+        </v-tooltip>
         <v-btn
           v-for="(link, i) in links"
           :key="i"
-          v-bind="link"
-          class="hidden-sm-and-down"
           text
-          @click="onClick($event, link)"
+          :to="link .href"
         >
           {{ link.text }}
         </v-btn>
 
         <v-spacer />
-
-        <v-text-field
-          append-icon="mdi-magnify"
-          flat
+        <v-select
+          v-model="$i18n.locale"
+          append-outer-icon="fas fa-globe"
+          item-text="text"
+          item-value="locale"
+          :items="langs"
+          label="Change Language"
           hide-details
-          solo-inverted
           style="max-width: 300px;"
+          @change="changeLocale"
         />
       </v-row>
     </v-container>
@@ -50,11 +56,27 @@
   import {
     mapGetters,
     mapMutations,
+
   } from 'vuex'
 
   export default {
     name: 'CoreAppBar',
-
+    data: () => ({
+      langs: [
+        {
+          text: 'Français',
+          locale: 'fr',
+        },
+        {
+          text: 'English',
+          locale: 'en',
+        },
+        {
+          text: 'Español',
+          locale: 'es',
+        },
+      ],
+    }),
     computed: {
       ...mapGetters(['links']),
     },
@@ -68,6 +90,10 @@
 
         this.$vuetify.goTo(item.href.endsWith('!') ? 0 : item.href)
       },
+      changeLocale (locale) {
+        this.$i18n.locale = locale
+      },
     },
+
   }
 </script>

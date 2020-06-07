@@ -11,10 +11,35 @@
         class="hidden-sm-and-down"
         md="6"
       >
-        <v-img
-          :src="require('@/assets/services.png')"
-          height="100%"
-        />
+         <base-bubble-1 style="transform: translate(5%, -5%)" />
+        <base-heading class="info--text">
+          Family therapy
+        </base-heading>
+        <v-container
+          fluid
+        >
+          <v-row>
+            <v-col
+              v-for="card in families"
+              :key="card.name"
+              class="color"
+              :cols="card.flex"
+            >
+              <v-card>
+                <v-img
+                  v-if="card.src"
+                  :src="require(`@/assets/${card.src}`)"
+                  class="white--text"
+                  gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+                  height="200px"
+                >
+                  <v-card-title v-text="$i18n.t(card.name)" />
+                  <v-card-text v-text="$i18n.t(card.blurb)" />
+                </v-img>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
       </v-col>
 
       <v-col
@@ -22,53 +47,28 @@
         cols="12"
         md="6"
       >
-        <v-row
-          class="fill-height"
-          align="center"
-          justify="center"
-        >
-          <v-col cols="12">
-            <base-bubble-2
-              style="transform: translateX(55%)"
-            />
-            <base-heading class="info--text">
-              Services
-            </base-heading>
-
-            <base-text class="mb-5">
-              Curabitur venenatis tortor erat, quis laoreet nis<br>
-              lobortis eget. Fusce tempor aucto.
-            </base-text>
-          </v-col>
-
-          <v-col
-            v-for="(service, i) in services"
-            :key="i"
-            class="text-center mb-3"
-            md="6"
-          >
-            <v-avatar
-              class="elevation-6 mb-2"
-              color="#69A1BB"
-              size="64"
-              tile
+        <v-container fluid>
+          <v-row>
+            <v-col
+              v-for="card in individual"
+              :key="card.name"
+              :cols="card.flex"
             >
-              <v-icon
-                dark
-                size="52"
-                v-text="service.icon"
-              />
-            </v-avatar>
-
-            <base-text>
-              <div
-                class="mb-2"
-                v-text="service.name"
-              />
-              <div v-html="service.blurb" />
-            </base-text>
-          </v-col>
-        </v-row>
+              <v-card>
+                <v-img
+                  v-if="card.src"
+                  :src="require(`@/assets/${card.src}`)"
+                  class="white--text"
+                  gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+                  height="200px"
+                >
+                  <v-card-title v-text="$i18n.t(card.name)" />
+                  <v-card-text v-text="$i18n.t(card.blurb)" />
+                </v-img>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
       </v-col>
     </v-row>
   </section>
@@ -79,26 +79,64 @@
     name: 'Services',
 
     data: () => ({
-      services: [
+      individual: [
         {
-          name: 'Research',
+          name: 'Individual1',
           icon: 'mdi-clipboard-text-outline',
-          blurb: 'Curabitur et nisi semper,<br> pellent e sque ',
+          blurb: 'IndividualBlurb1',
+          flex: 12,
+          src: 'project1.jpeg',
         },
         {
-          name: 'Design',
+          name: 'Individual2',
           icon: 'mdi-pencil-outline',
-          blurb: 'Curabitur et nisi semper, <br>pellent.',
+          blurb: 'IndividualBlurb2',
+          flex: 6,
+          src: 'project1.jpeg',
         },
         {
-          name: 'Development',
+          name: 'Individual3',
           icon: 'mdi-settings-outline',
-          blurb: 'Curabitur et nisi semper, <br>pellent.',
+          blurb: 'IndividualBlurb3',
+          flex: 6,
+          src: 'project1.jpeg',
         },
         {
-          name: 'Support',
+          name: 'Individual4',
           icon: 'mdi-account',
-          blurb: 'Curabitur et nisi semper, <br>pellent.',
+          blurb: 'IndividualBlurb4',
+          flex: 2,
+          src: 'project1.jpeg',
+        },
+      ],
+      families: [
+        {
+          name: 'Family1',
+          icon: 'mdi-clipboard-text-outline',
+          blurb: 'FamilyBlurb1',
+          flex: 2,
+          src: 'project1.jpeg',
+        },
+        {
+          name: 'Family2',
+          icon: 'mdi-pencil-outline',
+          blurb: 'FamilyBlurb2',
+          flex: 2,
+          src: 'project1.jpeg',
+        },
+        {
+          name: 'Family3',
+          icon: 'mdi-settings-outline',
+          blurb: 'FamilyBlurb3',
+          flex: 2,
+          src: 'project1.jpeg',
+        },
+        {
+          name: 'Family4',
+          icon: 'mdi-account',
+          blurb: 'FamilyBlurb4',
+          flex: 2,
+          src: 'project1.jpeg',
         },
       ],
     }),

@@ -1,23 +1,25 @@
 <template>
-  <div id="blog">
-    <v-app>
-      <core-app-bar />
+  <v-app>
+    <core-app-bar />
 
-      <core-drawer />
+    <core-drawer />
 
-      <core-view />
+    <core-view />
 
-      <core-footer />
+    <core-footer />
 
-      <core-cta />
-    </v-app>
-  </div>
+    <core-cta />
+  </v-app>
 </template>
 
 <script>
   export default {
-    name: 'Blog',
+    name: 'App',
     components: {
+      CoreCta: () => import('@/components/core/Cta'),
+      CoreDrawer: () => import('@/components/core/Drawer'),
+      CoreFooter: () => import('@/components/core/Footer'),
+      CoreAppBar: () => import('@/components/core/AppBar'),
       CoreView: () => import('@/components/core/BlogView'),
     },
   }

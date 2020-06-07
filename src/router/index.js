@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '../views/Home.vue'
-import Blog from '../views/Blog.vue'
-import Welcome from '../views/Welcome.vue'
+import Home from '@/views/Home.vue'
+import Blog from '@/views/Blog.vue'
 
 Vue.use(Router)
 
@@ -13,7 +12,7 @@ export default new Router({
     {
       path: '/',
       name: 'Welcome',
-      component: Welcome,
+      component: Home,
     },
     {
       path: '/home',

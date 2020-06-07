@@ -4,14 +4,20 @@
     class="overflow-hidden"
   >
     <v-row no-gutters>
-      <v-col
-        class="hidden-sm-and-down"
-        md="6"
-      >
-        <v-img
-          :src="require('@/assets/welcome.png')"
+      <v-col>
+        <v-card
+          color="primary"
           height="100vh"
-        />
+          align="center"
+          justify="center"
+          tile
+        >
+          <v-img
+            :src="require('@/assets/Aimee.jpg')"
+            height="70vh"
+            width="50vh"
+          />
+        </v-card>
       </v-col>
 
       <v-col
@@ -30,22 +36,24 @@
         >
           <v-col
             cols="10"
-            md="6"
+            md="9"
           >
-            <base-heading>Welcome!</base-heading>
-            <base-text>
-              Lorem ipsum dolor sit amet, consectetur ad
-              ipiscin elit. Etiam vulputate augue vel felis gra
-              vida porta. Lorem ipsum dolor sit amet, cons
-              ectetur adipiscing elit.<br>
-              Lorem ipsum dolor sit amet, consectetur ad
-              ipiscin elit. Etiam vulputate augue vel felis gra
-              vida porta. Lorem ipsum dolor sit amet, cons
-              ectetur adipiscing elit.
-            </base-text>
-            <base-btn class="mt-4">
-              Learn More!
-            </base-btn>
+            <h1 class="display-3">
+              {{ $i18n.t('WelcomeName') }}
+            </h1></br>
+            <h2 class="display-1">
+              {{ $i18n.t('WelcomeTitle') }}
+            </h2></br>
+            <h2 class="headline">
+              {{ $i18n.t('WelcomeTitle2') }}
+            </h2></br>
+            <p>
+              {{ $i18n.t('Welcome') }}
+            </p>
+            <p>
+              {{ $i18n.t('Welcome2') }}
+            </p>
+            <social-media large/>
           </v-col>
         </v-row>
 
@@ -56,3 +64,12 @@
     </v-row>
   </section>
 </template>
+<script>
+  export default {
+    name: 'Welcome',
+
+    components: {
+      SocialMedia: () => import('@/components/SocialMedia'),
+    },
+  }
+</script>

@@ -19,9 +19,7 @@
         </base-heading>
 
         <base-text class="mb-5">
-          Lorem ipsum dolor sit amet, consectetur adipi<br>
-          scin elit. Etiam vulputate augue vel felis gravida<br>
-          porta. Lorem ipsum dolor sit amet.
+          {{ $i18n.t('AboutMe') }}
         </base-text>
 
         <base-subheading class="info--text">
