@@ -15,7 +15,7 @@
         <base-bubble-1 style="transform: translate(5%, -5%)" />
 
         <base-heading class="info--text">
-          About Me
+          The solution is here
         </base-heading>
 
         <base-text class="mb-5">
@@ -23,12 +23,11 @@
         </base-text>
 
         <base-subheading class="info--text">
-          Skills
+          Therapy
         </base-subheading>
 
         <base-text class="mb-5">
-          Lorem ipsum dolor sit amet, consecte tur adipi scin e<br>
-          lit. Etiam vulputate augu e vel felis gravida porta.
+          I'm here to help using various tools
         </base-text>
 
         <v-alert
@@ -66,7 +65,7 @@
         md="6"
       >
         <v-img
-          :src="require('@/assets/aboutme.png')"
+          :src="require('@/assets/background-balance-beach-boulder.jpg')"
           height="100%"
         />
       </v-col>
@@ -79,15 +78,15 @@
     data: () => ({
       skills: [
         {
-          name: 'Web Design',
+          name: 'Individual Therapy',
           value: 100,
         },
         {
-          name: 'Web Development',
+          name: 'Couple Therapy',
           value: 75,
         },
         {
-          name: 'Web Support',
+          name: 'Family Therapy',
           value: 90,
         },
       ],

@@ -37,10 +37,10 @@ export default new Vuetify({
   theme: {
     themes: {
       light: {
-        primary: '#64cea5',
-        secondary: '#8bdabc',
-        info: '#3dc28f',
-        accent: '#F0FFF0',
+        primary: '#549480',
+        secondary: '#8DBFAF',
+        info: '#2E5246',
+        accent: '#0F3529',
         anchor: '#F0FFF0',
         success: '#4dffd2',
         error: '#4dffd2',

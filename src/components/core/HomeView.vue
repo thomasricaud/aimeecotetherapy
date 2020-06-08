@@ -4,7 +4,9 @@
 
     <recent-projects />
 
-    <services />
+    <individual />
+
+    <family />
 
     <about-me />
 
@@ -19,7 +21,8 @@
     components: {
       Welcome: () => import('@/components/Welcome'),
       RecentProjects: () => import('@/components/RecentProjects'),
-      Services: () => import('@/components/Services'),
+      Individual: () => import('@/components/IndividualTherapy'),
+      Family: () => import('@/components/FamilyTherapy'),
       AboutMe: () => import('@/components/AboutMe'),
       GetInTouch: () => import('@/components/GetInTouch'),
     },

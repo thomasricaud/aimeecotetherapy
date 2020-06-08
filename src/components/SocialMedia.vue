@@ -7,6 +7,8 @@
       class="ma-2"
       color="info"
       :small="!large"
+      target="_blank"
+      :href= item.src
     >
       <v-icon
         dark
@@ -30,22 +32,27 @@
         {
           name: 'Twitter',
           icon: 'mdi-twitter',
+          src: 'http://www.twitter.com',
         },
         {
           name: 'Instagram',
           icon: 'mdi-instagram',
+          src: 'http://www.instagram.com',
         },
         {
           name: 'Facebook',
           icon: 'mdi-facebook',
+          src: 'https://www.facebook.com/AimeeCoteTherapy',
         },
         {
           name: 'Email',
           icon: 'mdi-email',
+          src: 'mailto:aimee.cote.therapy@gmail.com',
         },
         {
           name: 'Phone',
           icon: 'mdi-phone',
+          src: 'tel:+33621457898',
         },
       ],
     }),
