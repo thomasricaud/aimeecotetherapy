@@ -1,9 +1,9 @@
 <template>
   <section class="ma-12 pa-12">
-     <base-heading >
+    <base-heading>
       <h1>Session and Fee</h1>
     </base-heading>
-    <base-text >
+    <base-text>
       <p>Please leave your name and email and we can schedule a session</p>
       <li>Home base session</li>
       <li>In my office on Saturday</li>
