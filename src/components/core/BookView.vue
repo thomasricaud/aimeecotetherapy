@@ -46,7 +46,7 @@
             <v-text-field
               v-model="date"
               label="prefered date"
-              prepend-icon="calendar-day"
+              prepend-icon="fa-calendar-day"
               readonly
               v-bind="attrs"
               v-on="on"

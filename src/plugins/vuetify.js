@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import '@fortawesome/fontawesome-free/css/all.css'
 import Vuetify from 'vuetify/lib'
 import VueI18n from 'vue-i18n'
 import Vuelidate from 'vuelidate'
@@ -32,6 +33,9 @@ const i18n = new VueI18n({
 })
 
 export default new Vuetify({
+  icons: {
+    iconfont: 'fa',
+  },
   lang: {
     t: (key, ...params) => i18n.t(key, params),
   },
