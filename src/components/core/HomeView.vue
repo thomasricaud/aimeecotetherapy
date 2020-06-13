@@ -1,30 +1,29 @@
 <template>
   <div>
-    <welcome />
+    <welcome class="ma-12" />
 
-    <recent-projects />
+    <welcome-alert />
 
-    <individual />
+    <family class="ma-12"/>
 
-    <family />
+    <asystem class="ma-12" />
 
-    <about-me />
+    <new-to-therapy class="ma-12" />
 
-    <get-in-touch />
+    <my-approach class="ma-12" />
   </div>
 </template>
 
 <script>
   export default {
     name: 'CoreView',
-
     components: {
       Welcome: () => import('@/components/Welcome'),
-      RecentProjects: () => import('@/components/RecentProjects'),
-      Individual: () => import('@/components/IndividualTherapy'),
-      Family: () => import('@/components/FamilyTherapy'),
-      AboutMe: () => import('@/components/AboutMe'),
-      GetInTouch: () => import('@/components/GetInTouch'),
+      WelcomeAlert: () => import('@/components/WelcomeAlert'),
+      Family: () => import('@/components/FamilyTherapyRow'),
+      Asystem: () => import('@/components/Asystem'),
+      NewToTherapy: () => import('@/components/NewToTherapy'),
+      MyApproach: () => import('@/components/MyApproach'),
     },
   }
 </script>

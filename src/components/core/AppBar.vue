@@ -55,7 +55,6 @@
   // Utilities
   import {
     mapGetters,
-    mapMutations,
 
   } from 'vuex'
 
@@ -82,14 +81,6 @@
     },
 
     methods: {
-      ...mapMutations(['toggleDrawer']),
-      onClick (e, item) {
-        e.stopPropagation()
-
-        if (item.to || !item.href) return
-
-        this.$vuetify.goTo(item.href.endsWith('!') ? 0 : item.href)
-      },
       changeLocale (locale) {
         this.$i18n.locale = locale
       },
