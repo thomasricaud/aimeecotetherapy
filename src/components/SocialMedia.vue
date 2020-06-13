@@ -30,14 +30,14 @@
     data: () => ({
       items: [
         {
-          name: 'Twitter',
-          icon: 'mdi-twitter',
-          src: 'http://www.twitter.com',
+          name: 'Messenger',
+          icon: 'mdi-facebook-messenger',
+          src: 'https://www.messenger.com/t/AimeeCoteTherapy',
         },
         {
           name: 'Instagram',
           icon: 'mdi-instagram',
-          src: 'http://www.instagram.com',
+          src: 'https://www.instagram.com/aimee_cote_therapy',
         },
         {
           name: 'Facebook',
