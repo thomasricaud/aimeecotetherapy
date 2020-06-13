@@ -27,25 +27,22 @@
               small
               @click.stop=""
             >
-              {{ value.category }}
+              {{ $i18n.t(value.category) }}
             </v-chip>
-
             <h3 class="title font-weight-bold mb-2">
-              {{ value.title }}
+              {{ $i18n.t(value.title) }}
             </h3>
-
             <div class="caption">
-              {{ value.author }}<br>Date
+              {{ value.author }}
             </div>
           </v-col>
-
           <v-col align-self="end">
             <v-chip
               class="text-uppercase ma-0"
               color="primary"
               label
               small
-              @click.stop=""
+              @click="overlay = !overlay"
             >
               Read More
             </v-chip>
@@ -53,13 +50,32 @@
         </v-row>
       </v-img>
     </base-card>
+    <v-overlay
+      opacity="0.7"
+      :value="overlay"
+      color="primary"
+    >
+      <v-btn
+        icon
+        @click="overlay = false"
+      >
+        <v-icon>mdi-close</v-icon>
+      </v-btn>
+      <feed-read-more-display
+        :title="value.title"
+        :content="value.content"
+        :image="value.hero"
+      />
+    </v-overlay>
   </v-col>
 </template>
 
 <script>
   export default {
     name: 'FeedCard',
-
+    components: {
+      FeedReadMoreDisplay: () => import('@/components/FeedReadMoreDisplay'),
+    },
     props: {
       size: {
         type: Number,
@@ -70,6 +86,9 @@
         default: () => ({}),
       },
     },
+    data: () => ({
+      overlay: false,
+    }),
   }
 </script>
 

@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify/lib'
 import VueI18n from 'vue-i18n'
-
+import Vuelidate from 'vuelidate'
 Vue.use(Vuetify)
 Vue.use(VueI18n)
+Vue.use(Vuelidate)
 
 const messages = {
   en: {

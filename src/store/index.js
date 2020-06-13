@@ -16,6 +16,10 @@ export default new Vuex.Store({
         text: 'Blog',
         href: '/blog',
       },
+      {
+        text: 'Book a session',
+        href: '/book',
+      },
     ],
   },
   getters: {

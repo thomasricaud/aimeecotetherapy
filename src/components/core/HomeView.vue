@@ -4,7 +4,7 @@
 
     <welcome-alert />
 
-    <family class="ma-12"/>
+    <family class="ma-12" />
 
     <asystem class="ma-12" />
 

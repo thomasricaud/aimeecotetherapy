@@ -1,7 +1,7 @@
 <template>
   <base-card dark>
     <v-img
-      :src="require('@/assets/articles/blurcamera.jpg')"
+      :src="require('@/assets/logo.jpg')"
       class="grey lighten-2"
       height="400"
       width="100%"
@@ -16,19 +16,12 @@
           offset-md="5"
         >
           <h1 class="display-3 font-weight-light">
-            The Art Of Travel
+            Being Human
           </h1>
 
           <div class="subheading text-uppercase pl-2 mb-4">
-            Finding Beauty, One flight at a time
+            Finding Balance in your relationships
           </div>
-
-          <v-btn
-            color="primary"
-            depressed
-          >
-            Subscribe
-          </v-btn>
         </v-col>
       </v-row>
     </v-img>

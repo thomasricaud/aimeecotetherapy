@@ -1,85 +1,86 @@
 [
   {
-    "title": "Moroccan Days",
+    "title": "Girl With Therapist",
     "author": "John L",
-    "category": "Travel",
-    "hero": "moroccandays.jpg"
+    "category": "Events",
+    "content": "My therapist etsr dkdfgh fdsjjhfs oisudf ",
+    "hero": "girl-with-therapist.jpg"
   },
   {
-    "title": "Swedish Fishing",
+    "title": "Tiping point",
     "author": "Rachel L",
-    "category": "Leisure",
-    "hero": "autumnclouds.jpg"
+    "category": "Couple",
+    "hero": "Finding-Balance.jpg"
   },
   {
     "title": "The Adventure Begins",
-    "hero": "snowcup.jpg",
+    "hero": "family-sitting-with-therapist.jpg",
     "prominent": true
   },
   {
-    "title": "Paris in Spring",
+    "title": "Reaching out",
     "author": "John L",
-    "category": "Travel",
-    "hero": "christmas.jpg"
+    "category": "Couple",
+    "hero": "litle-girl-frawning.jpg"
   },
   {
-    "title": "Youthful Independence",
+    "title": "Family history",
     "author": "Rachel L",
-    "category": "Political",
-    "hero": "july4.jpg"
+    "category": "Family",
+    "hero": "myfamily.jpg"
   },
   {
-    "title": "Trial By Fire",
+    "title": "Caring for your child",
     "author": "Anthony R",
-    "category": "Cooking",
-    "hero": "firepots.jpg"
+    "category": "Family",
+    "hero": "dispute.jpg"
   },
   {
     "title": "Water Ventures",
     "author": "Rachel L",
-    "category": "Leisure",
+    "category": "Couple",
     "hero": "jellyfish.jpg"
   },
   {
     "title": "Mt. Zekial",
     "author": "Rachel L",
-    "category": "Travel",
+    "category": "Individual",
     "hero": "mountaincabin.jpg"
   },
   {
     "title": "Cozumel Caves",
     "author": "Rachel L",
-    "category": "Travel",
+    "category": "Individual",
     "hero": "lightcave.jpg"
   },
   {
     "title": "Amazing Ireland",
     "author": "Rachel L",
-    "category": "Travel",
+    "category": "Family",
     "hero": "greengrass.jpg"
   },
   {
     "title": "Cabin Fever",
     "author": "Rachel L",
-    "category": "Travel",
+    "category": "Couple",
     "hero": "snowcabin.jpg"
   },
   {
     "title": "To the ancient ruins",
     "author": "Rachel L",
-    "category": "Travel",
+    "category": "Individual",
     "hero": "ruins.jpg"
   },
   {
     "title": "New fashion trends",
     "author": "Rachel L",
-    "category": "Travel",
+    "category": "Couple",
     "hero": "umbrella.jpg"
   },
   {
     "title": "Go on a vacation",
     "author": "Rachel L",
-    "category": "Travel",
+    "category": "Individual",
     "hero": "adventurecave.jpg"
   }
 ]
