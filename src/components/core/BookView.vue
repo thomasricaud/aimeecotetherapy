@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-12">
+  <section>
     <base-heading>
       <h1>Session and Fee</h1>
     </base-heading>
@@ -11,11 +11,15 @@
       <li>Couple</li>
       <li>Family</li>
     </base-text>
-    <form class="">
+    <form
+      v-if="!savingSuccessful"
+      class="contact-form"
+      @submit.prevent="sendEmail"
+    >
       <v-text-field
         v-model="name"
         :error-messages="nameErrors"
-        :counter="10"
+        :counter="50"
         label="Name"
         required
         @input="$v.name.$touch()"
@@ -62,16 +66,16 @@
         v-model="textarea"
         :error-messages="textareaErrors"
         label="Message"
-        required
         @change="$v.textarea.$touch()"
         @blur="$v.textarea.$touch()"
       />
 
       <v-btn
         class="accent mr-4"
-        @click="submit"
+        type="submit"
+        value="Send"
       >
-        submit
+        send
       </v-btn>
       <v-btn
         class="accent mr-4"
@@ -80,26 +84,27 @@
         clear
       </v-btn>
     </form>
+    <v-alert
+      v-if="savingSuccessful"
+      type="success"
+    >
+      Your email was sent we will respond shortly
+    </v-alert>
   </section>
 </template>
 <script>
   import { validationMixin } from 'vuelidate'
-  import { required, maxLength, email } from 'vuelidate/lib/validators'
-
+  import { required, maxLength, email, alphaNum } from 'vuelidate/lib/validators'
+  import emailjs from 'emailjs-com'
   export default {
     mixins: [validationMixin],
 
     validations: {
-      name: { required, maxLength: maxLength(10) },
+      name: { required, maxLength: maxLength(50) },
       email: { required, email },
-      select: { required },
-      checkbox: {
-        checked (val) {
-          return val
-        },
-      },
+      date: { },
+      textarea: { alphaNum },
     },
-
     data: () => ({
       name: '',
       email: '',
@@ -110,30 +115,28 @@
         'Item 3',
         'Item 4',
       ],
-      checkbox: false,
+      textarea: '',
       date: new Date().toISOString().substr(0, 10),
       menu: false,
       modal: false,
       menu2: false,
+      savingSuccessful: false,
     }),
-
     computed: {
-      checkboxErrors () {
+      dateErrors () {
         const errors = []
-        if (!this.$v.checkbox.$dirty) return errors
-        !this.$v.checkbox.checked && errors.push('You must agree to continue!')
+        if (!this.$v.date.$dirty) return errors
         return errors
       },
-      selectErrors () {
+      textareaErrors () {
         const errors = []
-        if (!this.$v.select.$dirty) return errors
-        !this.$v.select.required && errors.push('Item is required')
+        if (!this.$v.textarea.$dirty) return errors
         return errors
       },
       nameErrors () {
         const errors = []
         if (!this.$v.name.$dirty) return errors
-        !this.$v.name.maxLength && errors.push('Name must be at most 10 characters long')
+        !this.$v.name.maxLength && errors.push('Name must be at most 50 characters long')
         !this.$v.name.required && errors.push('Name is required.')
         return errors
       },
@@ -147,6 +150,16 @@
     },
 
     methods: {
+      sendEmail (e) {
+        emailjs.sendForm('gmail', 'template_W4aisDYL', e.target, 'user_uCSQHcEpjWGwhD3pfhcYT')
+          .then((result) => {
+            console.log('SUCCESS!', result.status, result.text)
+            this.clear()
+            this.savingSuccessful = true
+          }, (error) => {
+            console.log('FAILED...', error)
+          })
+      },
       submit () {
         this.$v.$touch()
       },
@@ -154,8 +167,8 @@
         this.$v.$reset()
         this.name = ''
         this.email = ''
-        this.select = null
-        this.checkbox = false
+        this.textarea = ''
+        this.date = ''
       },
     },
   }
