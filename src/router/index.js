@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/views/Home.vue'
 import Blog from '@/views/Blog.vue'
 import Book from '@/views/Book.vue'
+import There from '@/views/There.vue'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/book',
       name: 'book',
       component: Book,
+    },
+    {
+      path: '/there',
+      name: 'there',
+      component: There,
     },
   ],
 })

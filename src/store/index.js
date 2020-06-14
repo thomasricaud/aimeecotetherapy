@@ -20,6 +20,10 @@ export default new Vuex.Store({
         text: 'Book a session',
         href: '/book',
       },
+      {
+        text: 'Getting there',
+        href: '/there',
+      },
     ],
   },
   getters: {

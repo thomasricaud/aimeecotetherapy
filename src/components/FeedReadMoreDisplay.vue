@@ -1,24 +1,31 @@
 <template>
   <section
-    id="feedreadmoredisplay"
+    id="FeedReadMoreDisplay"
   >
     <v-col>
       <v-row>
         <v-card
           class="secondary black-text fill-height pa-12 ma-12"
-          width="100vh"
+          min-width="50%"
         >
           <v-img
             :src="require(`@/assets/articles/${image}`)"
-            width="50vh"
+            max-width="50vh"
             class="float-left ma-12"
           />
-          <base-heading>
+          <v-card-text>
             <h1>{{ $i18n.t(title) }}</h1>
-          </base-heading>
-          <base-text>
+
             <p>{{ $i18n.t(content) }}</p>
-          </base-text>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn
+              icon
+              @click="overlay = false"
+            >
+              <v-icon>mdi-close</v-icon>
+            </v-btn>
+          </v-card-actions>
         </v-card>
       </v-row>
     </v-col>
@@ -27,6 +34,7 @@
 
 <script>
   export default {
+    name: 'FeedReadMoreDisplay',
     props: {
       title: String,
       content: Number,

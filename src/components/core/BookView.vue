@@ -1,5 +1,5 @@
 <template>
-  <section class="ma-12 pa-12">
+  <section class="pt-12">
     <base-heading>
       <h1>Session and Fee</h1>
     </base-heading>

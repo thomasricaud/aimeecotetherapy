@@ -1,12 +1,12 @@
 <template>
-  <book-view class="mt-10" />
+  <getting-there />
 </template>
 
 <script>
   export default {
     name: 'App',
     components: {
-      BookView: () => import('@/components/core/BookView'),
+      GettingThere: () => import('@/components/core/GettingThere'),
     },
   }
 </script>

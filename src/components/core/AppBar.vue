@@ -6,6 +6,7 @@
   >
     <v-app-bar-nav-icon
       class="hidden-md-and-up"
+      @click="toggleDrawer"
     />
 
     <v-container class="mx-auto py-0">
@@ -28,6 +29,7 @@
         <v-btn
           v-for="(link, i) in links"
           :key="i"
+          class="hidden-sm-and-down"
           text
           :to="link .href"
         >
@@ -43,7 +45,7 @@
           :items="langs"
           label="Change Language"
           hide-details
-          style="max-width: 300px;"
+          style="max-width: 150px;"
           @change="changeLocale"
         />
       </v-row>
@@ -55,7 +57,7 @@
   // Utilities
   import {
     mapGetters,
-
+    mapMutations,
   } from 'vuex'
 
   export default {
@@ -81,6 +83,7 @@
     },
 
     methods: {
+      ...mapMutations(['toggleDrawer']),
       changeLocale (locale) {
         this.$i18n.locale = locale
       },
