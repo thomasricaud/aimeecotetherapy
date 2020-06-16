@@ -12,10 +12,10 @@ export default new Vuex.Store({
         text: 'Home',
         href: '/home',
       },
-      {
-        text: 'Blog',
-        href: '/blog',
-      },
+ //     {
+ //       text: 'Blog',
+ //       href: '/blog',
+ //     },
       {
         text: 'Book a session',
         href: '/book',

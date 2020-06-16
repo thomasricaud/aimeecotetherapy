@@ -1,15 +1,15 @@
 <template>
   <section>
-    <base-heading>
-      <h1>Session and Fee</h1>
+    <base-heading class="ma-12">
+      <h1>{{ $i18n.t("BookTitle") }}</h1>
     </base-heading>
-    <base-text>
-      <p>Please leave your name and email and we can schedule a session</p>
-      <li>Home base session</li>
-      <li>In my office on Saturday</li>
-      <li>Indivdual</li>
-      <li>Couple</li>
-      <li>Family</li>
+    <base-text class="ma-12">
+      <p>{{ $i18n.t("Book1") }}</p>
+      <li>{{ $i18n.t("Book2") }}</li>
+      <li>{{ $i18n.t("Book3") }}</li>
+      <li>{{ $i18n.t("Book4") }}</li>
+      <li>{{ $i18n.t("Book5") }}</li>
+      <li>{{ $i18n.t("Book6") }}</li>
     </base-text>
     <form
       v-if="!savingSuccessful"
