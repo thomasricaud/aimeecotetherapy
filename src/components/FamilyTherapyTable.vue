@@ -110,7 +110,7 @@
           format: '',
           blurb: 'IndividualBlurb4',
           flex: 12,
-          src: 'project1.jpeg',
+          src: 'terrifying-event-word-cloud.jpg',
 
         },
         {
@@ -133,7 +133,7 @@
           format: '',
           blurb: 'FamilyBlurb2',
           flex: 8,
-          src: 'family-fighting-9920714.jpg',
+          src: 'mother-comforts-her-teen-daughter.jpg',
         },
         {
           name: 'Family3',
@@ -154,7 +154,7 @@
           format: '',
           blurb: 'FamilyBlurb5',
           flex: 4,
-          src: 'therapist-comforting-patient.jpg',
+          src: 'sad-girl-with-her-fighting-parents-behind-her.jpg',
         },
         {
           name: 'Family6',
