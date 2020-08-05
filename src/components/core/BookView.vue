@@ -9,6 +9,7 @@
       <li>{{ $i18n.t("Book3") }}</li>
       <li>{{ $i18n.t("Book4") }}</li>
       <li>{{ $i18n.t("Book5") }}</li>
+      </br>
       <p>{{ $i18n.t("Book6") }}</p>
     </base-text>
     <form
