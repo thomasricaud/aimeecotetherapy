@@ -6,7 +6,7 @@
     <v-img
       :src="require(`@/assets/closeup-photography-of-stacked-stones.jpg`)"
       width="50vh"
-      class="float-left ma-12"
+      class="float-md-right mx-auto my-12 ma-md-12"
     />
     <base-heading>
       <h1>How is a family like a system?</h1>

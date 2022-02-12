@@ -3,7 +3,7 @@
     id="newtotherapy"
   >
     <v-divider />
-    <v-row class="ma-12">
+    <v-row>
       <iframe
         height="250px"
         width="500px"
@@ -11,7 +11,7 @@
         frameborder="10"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
-        class="float-right ma-12"
+        class="mx-auto my-12"
       />
       <base-text>
         <h1>New to therapy?</h1>

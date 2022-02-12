@@ -9,7 +9,7 @@
         <v-img
           :src="require(`@/assets/family.jpg`)"
           width="50vh"
-          class="float-left ma-12"
+          class="float-md-left mx-auto ma-md-12"
         />
         <base-heading class="ma-5">
           <h1>My approach</h1>
@@ -23,7 +23,7 @@
         <v-img
           :src="require(`@/assets/shutterstock_1316614289.jpg`)"
           width="50vh"
-          class="float-right ma-12"
+          class="float-md-right mx-auto ma-md-12"
         />
         <base-text>
           <br><br><br><br>
