@@ -2,6 +2,7 @@
 Let say you want to create blog number X and add it to the web site.
 
 Try following the procedure below.
+
 ## new entry in data
 Create a new file ./src/data/blogX.json as a copy of ./src/data/blog2.json
 
