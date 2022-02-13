@@ -54,7 +54,7 @@
 <script>
   // Utilities
   import {
-    mapState,
+    mapGetters,
   } from 'vuex'
 
   export default {
@@ -65,18 +65,18 @@
     },
 
     data: () => ({
-      layout: [2, 2, 1, 2, 2, 3, 3, 3, 3, 3, 3],
+      layout: [1, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3],
       page: 1,
     }),
 
     computed: {
-      ...mapState(['articles']),
+      ...mapGetters({ articles: 'articles' }),
       pages () {
         return Math.ceil(this.articles.length / 11)
       },
       paginatedArticles () {
-        const start = (this.page - 1) * 11
-        const stop = this.page * 11
+        const start = (this.page - 1) * 9
+        const stop = this.page * 9
 
         return this.articles.slice(start, stop)
       },

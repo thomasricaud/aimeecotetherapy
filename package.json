@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "emailjs-com": "^2.4.1",
+    "front-matter": "^4.0.2",
+    "slugify": "^1.6.5",
     "vue": "^2.6.11",
     "vue-i18n": "^8.17.3",
     "vue-router": "^3.1.6",

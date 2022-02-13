@@ -5,27 +5,26 @@
     <v-col>
       <v-row>
         <v-card
-          class="secondary black-text fill-height pa-12 ma-12"
-          min-width="50%"
+          color="white"
+          height="90vh"
+          width="65vw"
         >
           <v-img
             :src="require(`@/assets/articles/${image}`)"
-            max-width="50vh"
-            class="float-left ma-12"
+            class="float-none"
+            height="50vh"
+            contain="true"
           />
-          <v-card-text>
-            <h1>{{ $i18n.t(title) }}</h1>
 
-            <p>{{ $i18n.t(content) }}</p>
+          <v-card-text>
+            <h1 class="black--text">
+              {{ $i18n.t(title) }}
+            </h1>
+            <br>
+            <p class="black--text ">
+              {{ $i18n.t(content) }}
+            </p>
           </v-card-text>
-          <v-card-actions>
-            <v-btn
-              icon
-              @click="overlay = false"
-            >
-              <v-icon>mdi-close</v-icon>
-            </v-btn>
-          </v-card-actions>
         </v-card>
       </v-row>
     </v-col>

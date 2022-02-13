@@ -1,7 +1,7 @@
 <template>
   <base-card dark>
     <v-img
-      :src="require('@/assets/logo.jpg')"
+      :src="require('@/assetsBigsize/logo.jpg')"
       class="grey lighten-2"
       height="400"
       width="100%"
@@ -15,11 +15,11 @@
           md="7"
           offset-md="5"
         >
-          <h1 class="display-3 font-weight-light">
-            Being Human
+          <h1 class="black--text display-3 font-weight-light">
+            Aimée Côté Therapy
           </h1>
 
-          <div class="subheading text-uppercase pl-2 mb-4">
+          <div class="black--text subheading text-uppercase pl-2 mb-4">
             Finding Balance in your relationships
           </div>
         </v-col>

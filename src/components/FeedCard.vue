@@ -8,6 +8,7 @@
       color="grey lighten-1"
       dark
       href="#!"
+      @click="overlay = !overlay"
     >
       <v-img
         :src="require(`@/assets/articles/${value.hero}`)"
@@ -15,7 +16,6 @@
         gradient="rgba(0, 0, 0, .42), rgba(0, 0, 0, .42)"
       >
         <v-row
-          v-if="!value.prominent"
           class="fill-height text-right ma-0"
         >
           <v-col cols="12">
@@ -25,7 +25,6 @@
               color="grey darken-3"
               text-color="white"
               small
-              @click.stop=""
             >
               {{ $i18n.t(value.category) }}
             </v-chip>
@@ -39,10 +38,9 @@
           <v-col align-self="end">
             <v-chip
               class="text-uppercase ma-0"
-              color="primary"
+              color="secondary"
               label
               small
-              @click="overlay = !overlay"
             >
               Read More
             </v-chip>
@@ -55,17 +53,19 @@
       :value="overlay"
       color="primary"
     >
-      <v-btn
-        icon
+      <v-card
+        color="white"
+
+        height="90vh"
+        width="65vw"
         @click="overlay = false"
       >
-        <v-icon>mdi-close</v-icon>
-      </v-btn>
-      <feed-read-more-display
-        :title="value.title"
-        :content="value.content"
-        :image="value.hero"
-      />
+        <feed-read-more-display
+          :title="value.title"
+          :content="value.content"
+          :image="value.hero"
+        />
+      </v-card>
     </v-overlay>
   </v-col>
 </template>
