@@ -3,16 +3,15 @@
     id="FeedReadMoreDisplay"
   >
     <v-col>
-      <v-row>
+      <v-row class="pt-6">
         <v-card
-          class="pt-16 ma-auto"
+          class="width-65vw mx-auto"
           color="white"
           height="90vh"
-          width="65vw"
         >
           <v-img
             :src="require(`@/assets/articles/${image}`)"
-            class="pt-16 float-none"
+            class="float-none mt-6"
             height="50vh"
             contain="true"
           />
@@ -22,9 +21,10 @@
               {{ $i18n.t(title) }}
             </h1>
             <br>
-            <p class="black--text ">
-              {{ $i18n.t(content) }}
-            </p>
+            <p
+              class="black--text "
+              v-html="$i18n.t(content)"
+            />
           </v-card-text>
         </v-card>
       </v-row>
@@ -34,7 +34,7 @@
 
 <script>
   export default {
-    name: 'FeedReadMoreDisplay',
+    name: 'BlogEntry',
     props: {
       title: String,
       content: String,

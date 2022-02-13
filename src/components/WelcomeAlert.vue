@@ -23,9 +23,7 @@
           </h1>
           <base-text>
             <br>
-            <p>
-              {{ $i18n.t(Prominentblog.content) }}
-            </p><p />
+            <p v-html="$i18n.t(Prominentblog.content)" /><p />
           </base-text>
         </v-alert>
       </v-col>

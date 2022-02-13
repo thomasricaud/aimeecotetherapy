@@ -1,20 +1,13 @@
 <template>
   <div>
-    <articles>
-      <banner class="mt-10" />
-    </articles>
-
-    <about />
-
-    <subscribe />
-
-    <social />
+    <banner class="mt-12" />
+    <articles />
   </div>
 </template>
 
 <script>
   export default {
-    name: 'CoreView',
+    name: 'Blog',
     components: {
       Articles: () => import('@/components/home/Articles'),
       Banner: () => import('@/components/home/Banner'),

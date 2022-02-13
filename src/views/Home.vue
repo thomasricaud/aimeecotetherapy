@@ -15,15 +15,15 @@
 </template>
 
 <script>
-export default {
-  name: "CoreView",
-  components: {
-    Welcome: () => import("@/components/Welcome"),
-    WelcomeAlert: () => import("@/components/WelcomeAlert"),
-    Family: () => import("@/components/FamilyTherapyRow"),
-    Asystem: () => import("@/components/Asystem"),
-    NewToTherapy: () => import("@/components/NewToTherapy"),
-    MyApproach: () => import("@/components/MyApproach")
+  export default {
+    name: 'Home',
+    components: {
+      Welcome: () => import('@/components/Welcome'),
+      WelcomeAlert: () => import('@/components/WelcomeAlert'),
+      Family: () => import('@/components/FamilyTherapyRow'),
+      Asystem: () => import('@/components/Asystem'),
+      NewToTherapy: () => import('@/components/NewToTherapy'),
+      MyApproach: () => import('@/components/MyApproach'),
+    },
   }
-};
 </script>

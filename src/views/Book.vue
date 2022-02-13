@@ -4,7 +4,7 @@
 
 <script>
   export default {
-    name: 'App',
+    name: 'Book',
     components: {
       BookView: () => import('@/components/core/BookView'),
     },

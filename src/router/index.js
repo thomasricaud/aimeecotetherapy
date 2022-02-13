@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home.vue'
 import Blog from '@/views/Blog.vue'
+import BlogEntry from '@/views/BlogEntry.vue'
 import Book from '@/views/Book.vue'
 import There from '@/views/There.vue'
 
@@ -25,6 +26,14 @@ export default new Router({
       path: '/blog',
       name: 'blog',
       component: Blog,
+    },
+    {
+      path: '/blogentry',
+      name: 'blogentry',
+      component: BlogEntry,
+      props: (route) => ({
+        ...route.params,
+    }),
     },
     {
       path: '/book',

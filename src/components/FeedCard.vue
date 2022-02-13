@@ -8,7 +8,7 @@
       color="grey lighten-1"
       dark
       href="#!"
-      @click="overlay = !overlay"
+      @click="navigateTo(value.title,value.content,value.hero)"
     >
       <v-img
         :src="require(`@/assets/articles/${value.hero}`)"
@@ -48,34 +48,12 @@
         </v-row>
       </v-img>
     </base-card>
-    <v-overlay
-      opacity="0.7"
-      :value="overlay"
-      color="primary"
-    >
-      <v-card
-        color="white"
-
-        height="90vh"
-        width="65vw"
-        @click="overlay = false"
-      >
-        <feed-read-more-display
-          :title="value.title"
-          :content="value.content"
-          :image="value.hero"
-        />
-      </v-card>
-    </v-overlay>
   </v-col>
 </template>
 
 <script>
   export default {
     name: 'FeedCard',
-    components: {
-      FeedReadMoreDisplay: () => import('@/components/FeedReadMoreDisplay'),
-    },
     props: {
       size: {
         type: Number,
@@ -89,6 +67,11 @@
     data: () => ({
       overlay: false,
     }),
+    methods: {
+      navigateTo (title, content, image) {
+        this.$router.push({ name: 'blogentry', params: { title: title, content: content, image: image } })
+      },
+    },
   }
 </script>
 

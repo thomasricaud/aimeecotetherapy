@@ -4,7 +4,7 @@
 
 <script>
   export default {
-    name: 'App',
+    name: 'There',
     components: {
       GettingThere: () => import('@/components/core/GettingThere'),
     },
