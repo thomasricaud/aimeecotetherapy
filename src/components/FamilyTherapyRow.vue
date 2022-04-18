@@ -16,7 +16,7 @@
       >
         <base-text>
           <h1 align="center">
-            Family Therapy, Couple Therapy, Individual Therapy can help you with
+            Therapy can help you with
           </h1>
         </base-text>
       </v-sheet>
