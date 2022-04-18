@@ -19,7 +19,7 @@
     name: 'Home',
     components: {
       Welcome: () => import('@/components/Welcome'),
-      WelcomeAlert: () => import('@/components/WelcomeAlert'),
+      //WelcomeAlert: () => import('@/components/WelcomeAlert'),
       Family: () => import('@/components/FamilyTherapyRow'),
       Asystem: () => import('@/components/Asystem'),
       NewToTherapy: () => import('@/components/NewToTherapy'),
