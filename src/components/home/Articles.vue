@@ -8,7 +8,7 @@
 
 <script>
   export default {
-    name: 'HomeAbout',
+    name: 'Articles',
 
     components: {
       Feed: () => import('@/components/Feed'),

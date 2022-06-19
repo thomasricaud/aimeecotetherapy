@@ -21,6 +21,7 @@
     <core-footer />
   </v-app>
 </template>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
 export default {
   name: "App",

@@ -28,12 +28,9 @@ export default new Router({
       component: Blog,
     },
     {
-      path: '/blogentry',
+      path: '/blogentry/:title/:content/:image',
       name: 'blogentry',
       component: BlogEntry,
-      props: (route) => ({
-        ...route.params,
-    }),
     },
     {
       path: '/book',

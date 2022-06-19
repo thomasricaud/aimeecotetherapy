@@ -1,5 +1,10 @@
 <template>
   <section>
+    <div
+      class="calendly-inline-widget"
+      data-url="https://calendly.com/aimee-cote-therapy"
+      style="min-width:320px;height:1000px;"
+    />
     <base-heading class="ma-12">
       <h1>{{ $i18n.t("BookTitle") }}</h1>
     </base-heading>
@@ -16,3 +21,12 @@
     </base-text>
   </section>
 </template>
+<script>
+  export default {
+    mounted() {
+      let recaptchaScript = document.createElement('script')
+      recaptchaScript.setAttribute('src', 'https://assets.calendly.com/assets/external/widget.js')
+      document.head.appendChild(recaptchaScript)
+    },
+  }
+</script>

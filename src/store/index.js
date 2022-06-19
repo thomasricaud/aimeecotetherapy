@@ -2,24 +2,9 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
-var flattenArticles = []
-var articljson = require.context('../data', true, /[A-Za-z0-9-_,\s]+\.json$/i)
-articljson.keys().reverse().forEach(key => {
-  const matched = key.match(/([A-Za-z0-9-_]+)\.json$/i)
-  if (matched && matched.length > 1) {
-    const blog = matched[1]
-    var arti = articljson(key)
-    if (arti.length === 1) {
-      arti[0].title = blog + '.title'
-      arti[0].content = blog + '.content'
-      arti[0].category = blog + '.category'
-      arti[0].hero = blog + '.jpg'
-      flattenArticles = [...flattenArticles, arti[0]]
-    } else {
-      flattenArticles = [...flattenArticles, ...articljson(key)]
-    }
-  }
-})
+
+var articljson = require.context('../locales/en', true, /^.*\/blog[0-9-_,\s]+\.json$/i)
+
 export default new Vuex.Store({
   state: {
     blogs: [],
@@ -34,7 +19,7 @@ export default new Vuex.Store({
         href: '/blog',
       },
       {
-        text: 'Contact me',
+        text: 'Schedule an appointment',
         href: '/book',
       },
       {
@@ -45,6 +30,19 @@ export default new Vuex.Store({
   },
   getters: {
     articles: state => {
+      var flattenArticles = []
+      articljson.keys().reverse().forEach(key => {
+        const matched = key.match(/\/([A-Za-z0-9-_]+)\.json$/i)
+        if (matched && matched.length > 1) {
+          const blog = matched[1]
+          var arti = articljson(key)
+            arti.title = blog + '.title'
+            arti.content = blog + '.content'
+            arti.category = blog + '.category'
+            arti.hero = blog + '.jpg'
+            flattenArticles = [...flattenArticles, arti]
+        }
+      })
       return flattenArticles
     },
     prominentblog: state => {

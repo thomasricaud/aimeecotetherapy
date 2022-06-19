@@ -19,11 +19,11 @@
           elevation="3"
         >
           <h1 class="display-1">
-            {{ $i18n.t(Prominentblog.title) }}
+            {{ $i18n.t('homePageAlert.title') }}
           </h1>
           <base-text>
             <br>
-            <p v-html="$i18n.t(Prominentblog.content)" /><p />
+            <p v-html="$i18n.t('homePageAlert.content')" /><p />
           </base-text>
         </v-alert>
       </v-col>
