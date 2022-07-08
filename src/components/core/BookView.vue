@@ -3,7 +3,7 @@
     <div
       class="calendly-inline-widget"
       data-url="https://calendly.com/aimee-cote-therapy"
-      style="min-width:320px;height:1000px;"
+      style="min-width:320px;height:1100px;"
     />
     <base-heading class="ma-12">
       <h1>{{ $i18n.t("BookTitle") }}</h1>
