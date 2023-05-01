@@ -4,14 +4,8 @@
   >
     <v-divider />
     <v-row>
-      <iframe
-        height="250px"
-        width="500px"
-        src="https://www.youtube.com/embed/vCQNtQA9Lg0"
-        frameborder="10"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        class="mx-auto my-12"
+      <youtube
+        :video-id="videoId"
       />
       <base-text>
         <h1>New to therapy?</h1>
@@ -20,3 +14,16 @@
     </v-row>
   </section>
 </template>
+<script>
+  // Utilities
+  import { mapGetters } from 'vuex'
+
+  export default {
+    data: () => ({
+      videoId: 'vCQNtQA9Lg0',
+    }),
+    computed: {
+      ...mapGetters({ Prominentblog: 'prominentblog' }),
+    },
+  }
+</script>

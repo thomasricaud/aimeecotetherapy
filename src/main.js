@@ -5,7 +5,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import i18n from './i18n'
-
+import VueYouTubeEmbed from 'vue-youtube-embed'
+ 
+Vue.use(VueYouTubeEmbed)
 Vue.config.productionTip = false
 
 new Vue({

@@ -30,21 +30,19 @@
             v-html="$i18n.t(value.content)"
           />
           <v-img
+            v-if="$i18n.t(value.image) != 'hide'"
             class="mx-auto"
-            :src="require(`@/assets/articles/${value.image}`)"
+            :src="require(`@/assets/articles/`+$i18n.t(value.image))"
             onerror="this.onerror=null; this.src='Default.jpg'"
             width="75%"
           /></v-img>
+          
         </v-col>
-        <v-col align-self="end">
-          <!--<v-chip
-              class="text-uppercase ma-0"
-              color="secondary"
-              label
-              small
-            >
-              Read More
-            </v-chip>-->
+        <v-col class="d-flex justify-center align-center">
+          <youtube
+            v-if="$i18n.t(value.video) != 'hide' "
+            :video-id="($i18n.t(value.video))"
+          />
         </v-col>
       </v-row>
       </v-img>
@@ -75,7 +73,7 @@
       },
     },
   }
-</script>
+  </script>
 
 <style>
 .v-image__image {

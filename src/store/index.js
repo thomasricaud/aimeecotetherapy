@@ -30,7 +30,7 @@ export default new Vuex.Store({
     articles: state => {
       var articljson = require.context('../locales/en', true, /^.*\/blog[0-9-_,\s]+\.json$/i)
       var flattenArticles = []
-      articljson.keys().forEach(key => {
+      articljson.keys().reverse().forEach(key => {
         const matched = key.match(/\/blog([0-9-_]+)\.json$/i)
         if (matched && matched.length > 1) {
           const blog = matched[1]
@@ -38,7 +38,8 @@ export default new Vuex.Store({
           title: 'blog' + blog + '.title',
           content: 'blog' + blog + '.content',
           category: 'blog' + blog + '.category',
-          image: 'blog' + blog + '.jpg',
+          image: 'blog' + blog + '.image',
+          video: 'blog' + blog + '.video',
           }
             flattenArticles = [...flattenArticles, article]
         }
