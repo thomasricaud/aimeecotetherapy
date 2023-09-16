@@ -1,5 +1,7 @@
 <template>
-  <book-view class="mt-10" />
+  <book-view
+class="mt-10"
+/>
 </template>
 
 <script>
