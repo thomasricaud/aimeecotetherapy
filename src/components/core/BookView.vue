@@ -9,7 +9,7 @@
 </template>
 <script>
   export default {
-    mounted() {
+    mounted () {
       let recaptchaScript = document.createElement('script')
       recaptchaScript.setAttribute('src', 'https://assets.calendly.com/assets/external/widget.js')
       document.head.appendChild(recaptchaScript)
