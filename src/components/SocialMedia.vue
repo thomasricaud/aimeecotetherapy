@@ -49,7 +49,7 @@ export default {
       {
         name: "Phone",
         icon: "mdi-phone",
-        src: "tel:+33651417925"
+        src: "tel:+33622701183"
       }
     ]
   })
