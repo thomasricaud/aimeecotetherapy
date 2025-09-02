@@ -46,10 +46,11 @@ export default new Vuex.Store({
       })
       return flattenArticles
     },
-    prominentblog: state => {
-      var prominentblog = {}
+    prominentblog: (state, getters) => {
+      const articles = getters.articles
+      let prominentblog = {}
 
-      for (const article of flattenArticles) {
+      for (const article of articles) {
         if (article.prominent) {
           prominentblog = article
         }
@@ -57,10 +58,11 @@ export default new Vuex.Store({
 
       return prominentblog
     },
-    categories: state => {
+    categories: (state, getters) => {
+      const articles = getters.articles
       const categories = []
 
-      for (const article of flattenArticles) {
+      for (const article of articles) {
         if (
           !article.category ||
           categories.find(category => category.text === article.category)
