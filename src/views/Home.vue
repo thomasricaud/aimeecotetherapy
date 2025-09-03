@@ -25,5 +25,14 @@
       NewToTherapy: () => import('@/components/NewToTherapy'),
       MyApproach: () => import('@/components/MyApproach'),
     },
+    metaInfo: {
+      title: 'Home',
+      meta: [
+        {
+          name: 'description',
+          content: 'Overview of therapy services and approach at Aimee Co Therapy'
+        }
+      ]
+    }
   }
 </script>
