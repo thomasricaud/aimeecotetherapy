@@ -19,11 +19,11 @@
 
           <v-card-text>
             <h1 class="black--text">
-              {{ $i18n.t(title) }}
+              {{ title }}
             </h1>
             <br>
             <p class="black--text ">
-              {{ $i18n.t(content) }}
+              {{ content }}
             </p>
           </v-card-text>
         </v-card>
