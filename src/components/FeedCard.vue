@@ -24,7 +24,7 @@
             {{ $i18n.t(value.title) }}
           </h3>
           <div class="caption">
-            {{ value.author }}
+            {{ $i18n.t(value.author) }}
           </div>
           <p
             v-html="$i18n.t(value.content)"

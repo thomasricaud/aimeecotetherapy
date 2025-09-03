@@ -16,7 +16,7 @@
       >
         <base-text>
           <h1 align="center">
-            Therapy can help you with
+            {{ $t('FamilyHelp') }}
           </h1>
         </base-text>
       </v-sheet>

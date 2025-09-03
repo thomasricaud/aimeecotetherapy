@@ -12,7 +12,7 @@
           class="float-md-left mx-auto ma-md-12"
         />
         <base-heading class="ma-5">
-          <h1>My approach</h1>
+          <h1>{{ $t('MyApproachTitle') }}</h1>
         </base-heading>
         <base-text>
           <br><br>

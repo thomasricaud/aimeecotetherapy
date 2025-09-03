@@ -1,6 +1,6 @@
 <template>
   <v-container class="pa-0">
-    <base-subheading>On Instagram</base-subheading>
+    <base-subheading>{{ $t('onInstagram') }}</base-subheading>
 
     <v-row>
       <v-col

@@ -8,8 +8,8 @@
         :video-id="videoId"
       />
       <base-text>
-        <h1>New to therapy?</h1>
-        <p>Choosing what type of therapist to see can be daunting. In this video, Prof. Martin Drapeau of McGill University describes 4 basic types of therapy.</p>
+        <h1>{{ $t('NewToTherapyTitle') }}</h1>
+        <p>{{ $t('NewToTherapyDescription') }}</p>
       </base-text>
     </v-row>
   </section>

@@ -8,14 +8,16 @@
     components: {
       GettingThere: () => import('@/components/core/GettingThere'),
     },
-    metaInfo: {
-      title: 'Getting There',
-      meta: [
-        {
-          name: 'description',
-          content: 'Directions and contact information for visiting Aimee Co Therapy'
-        }
-      ]
+    metaInfo () {
+      return {
+        title: this.$t('meta.thereTitle'),
+        meta: [
+          {
+            name: 'description',
+            content: this.$t('meta.thereDesc')
+          }
+        ]
+      }
     }
   }
 </script>
