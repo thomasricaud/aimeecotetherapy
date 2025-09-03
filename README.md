@@ -1,8 +1,10 @@
 # How to add a new blog
 
-> Requires Node 18+
+> Requires Node 18+ with OpenSSL legacy provider enabled
 
 Blog content is stored as Markdown files and can be managed through the Netlify CMS interface.
+
+The build script sets `NODE_OPTIONS=--openssl-legacy-provider` to support Webpack 4 under Node 18.
 
 ## Admin interface
 
