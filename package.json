@@ -23,7 +23,7 @@
     "vuelidate": "^0.7.5",
     "vuetify": "^2.2.23",
     "vuex": "^3.2.0",
-    "netlify-cms-app": "^2.15.82"
+    "netlify-cms-app": "^2.15.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
@@ -45,5 +45,8 @@
     "vue-template-compiler": "^2.6.11",
     "vuetify-loader": "^1.4.3",
     "raw-loader": "^4.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

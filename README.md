@@ -1,5 +1,7 @@
 # How to add a new blog
 
+> Requires Node 18+
+
 Blog content is stored as Markdown files and can be managed through the Netlify CMS interface.
 
 ## Admin interface
