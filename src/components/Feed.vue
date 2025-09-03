@@ -19,7 +19,7 @@
           v-if="page !== 1"
           class="ml-0"
           square
-          title="Previous page"
+          :title="$t('pagination.prev')"
           @click="page--"
         >
           <v-icon>mdi-chevron-left</v-icon>
@@ -30,7 +30,7 @@
         class="text-center subheading"
         cols="6"
       >
-        PAGE {{ page }} OF {{ pages }}
+        {{ $t('pagination.page_of', { page: page, pages: pages }) }}
       </v-col>
 
       <v-col
@@ -41,7 +41,7 @@
           v-if="pages > 1 && page < pages"
           class="mr-0"
           square
-          title="Next page"
+          :title="$t('pagination.next')"
           @click="page++"
         >
           <v-icon>mdi-chevron-right</v-icon>

@@ -13,7 +13,7 @@
         :href="link.href"
         @click="onClick($event, link)"
       >
-        <v-list-item-title v-text="link.text" />
+        <v-list-item-title v-text="$t(link.text)" />
       </v-list-item>
     </v-list>
   </v-navigation-drawer>

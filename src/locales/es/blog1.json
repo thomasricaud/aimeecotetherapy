@@ -1,5 +1,9 @@
 {
-    "blog1.title": "Article2",
-    "blog1.category": "Events",
-    "blog1.content": "Espgnol apist etsr dkdfgh fdsjjhfs oisudf "
+  "author": "Aimee cote",
+  "blog1.image": "blog1.jpg",
+  "blog1.video": "hide",
+  "blog1.title": "Los retos del aislamiento durante la pandemia de coronavirus",
+  "blog1.content": "Incertidumbre sobre el futuro, ansiedad por nuestro bienestar y la salud de nuestros seres queridos, niños aburridos y comportándose mal, más estrés en la relación con tu pareja<br> <li> Si estás lidiando con algo durante el aislamiento, hablar y pedir ayuda puede aligerar la carga. Por favor, contáctame si crees que puedo ayudarte.",
+  "blog1.category": "Familia"
 }
+

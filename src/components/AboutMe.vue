@@ -15,7 +15,7 @@
         <base-bubble-1 style="transform: translate(5%, -5%)" />
 
         <base-heading class="info--text">
-          The solution is here
+          {{ $i18n.t('AboutHeading') }}
         </base-heading>
 
         <base-text class="mb-5">
@@ -23,11 +23,11 @@
         </base-text>
 
         <base-subheading class="info--text">
-          Therapy
+          {{ $i18n.t('AboutSubheading') }}
         </base-subheading>
 
         <base-text class="mb-5">
-          I'm here to help using various tools
+          {{ $i18n.t('AboutHelp') }}
         </base-text>
 
         <v-alert
@@ -42,7 +42,7 @@
             <v-col
               class="text-uppercase"
               cols="6"
-              v-text="skill.name"
+              v-text="$i18n.t(skill.name)"
             />
 
             <v-col
@@ -78,15 +78,15 @@
     data: () => ({
       skills: [
         {
-          name: 'Individual Therapy',
+          name: 'AboutSkillIndividual',
           value: 100,
         },
         {
-          name: 'Couple Therapy',
+          name: 'AboutSkillCouple',
           value: 75,
         },
         {
-          name: 'Family Therapy',
+          name: 'AboutSkillFamily',
           value: 90,
         },
       ],

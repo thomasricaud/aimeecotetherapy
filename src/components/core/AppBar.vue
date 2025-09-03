@@ -24,7 +24,7 @@
               v-on="on"
             />
           </template>
-          <span>Couple, Family, and Individual Therapist</span>
+          <span>{{ $t('TooltipTherapist') }}</span>
         </v-tooltip>
         <v-btn
           v-for="(link, i) in links"
@@ -33,7 +33,7 @@
           text
           :to="link .href"
         >
-          {{ link.text }}
+          {{ $t(link.text) }}
         </v-btn>
 
         <v-spacer />
@@ -43,7 +43,7 @@
           item-text="text"
           item-value="locale"
           :items="langs"
-          label="Change Language"
+          :label="$t('ChangeLanguage')"
           hide-details
           style="max-width: 150px;"
           @change="changeLocale"

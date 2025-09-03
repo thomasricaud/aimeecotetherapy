@@ -9,19 +9,19 @@ export default new Vuex.Store({
     drawer: false,
     items: [
       {
-        text: 'Home',
+        text: 'nav.home',
         href: '/home',
       },
       {
-        text: 'Blog',
+        text: 'nav.blog',
         href: '/blog',
       },
       {
-        text: 'Schedule an appointment',
+        text: 'nav.book',
         href: '/book',
       },
       {
-        text: 'Getting there',
+        text: 'nav.there',
         href: '/there',
       },
     ],

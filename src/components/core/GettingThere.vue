@@ -16,10 +16,10 @@
       class="float-left pa-12"
     />
     <base-heading class="ma-12">
-      <h1>Getting There</h1>
+      <h1>{{ $t('nav.there') }}</h1>
     </base-heading>
     <base-text class="ma-12">
-      <p>My office is located at 15, Avenue de l'Europe, near the center of Chatou, with plenty of street parking available</p>
+      <p>{{ $t('GettingThereDescription') }}</p>
     </base-text>
     <v-img
       :src="require(`@/assets/officeChatou.jpg`)"
