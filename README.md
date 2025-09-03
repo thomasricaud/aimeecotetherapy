@@ -8,7 +8,7 @@ The build script sets `NODE_OPTIONS=--openssl-legacy-provider` to support Webpac
 
 ## Admin interface
 
-Run the site and visit `/admin` to create or edit posts with a WYSIWYG editor. Each post supports English, French and Spanish versions and an image selector.
+Run the site and visit `/admin` to create or edit posts with a WYSIWYG editor. Log in using **admin / passw0rd**. Each post supports English, French and Spanish versions and an image selector.
 
 ## Manual creation
 
