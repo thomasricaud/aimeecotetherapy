@@ -12,5 +12,14 @@
       Articles: () => import('@/components/home/Articles'),
       Banner: () => import('@/components/home/Banner'),
     },
+    metaInfo: {
+      title: 'Blog',
+      meta: [
+        {
+          name: 'description',
+          content: 'Latest therapy articles and news from Aimee Co Therapy'
+        }
+      ]
+    }
   }
 </script>

@@ -15,5 +15,16 @@
 <script>
   export default {
     name: 'BlogEntry',
+    metaInfo () {
+      return {
+        title: this.$i18n.t(this.$route.params.title),
+        meta: [
+          {
+            name: 'description',
+            content: this.$i18n.t(this.$route.params.content)
+          }
+        ]
+      }
+    }
   }
 </script>
