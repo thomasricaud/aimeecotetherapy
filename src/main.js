@@ -6,8 +6,10 @@ import router from './router'
 import store from './store'
 import i18n from './i18n'
 import VueYouTubeEmbed from 'vue-youtube-embed'
+import VueMeta from 'vue-meta' // eslint-disable-line import/no-unresolved
  
 Vue.use(VueYouTubeEmbed)
+Vue.use(VueMeta)
 Vue.config.productionTip = false
 
 new Vue({
