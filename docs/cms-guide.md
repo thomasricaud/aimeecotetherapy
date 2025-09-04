@@ -4,7 +4,7 @@ The Netlify CMS admin interface is available at `/admin` once the site is runnin
 
 ## Managing blog posts
 
-1. Log in with username `admin` and password `passw0rd`.
+1. When the login dialog appears, paste a GitHub personal access token to authorize the CMS.
 2. Open the **Blog** collection.
 3. Each post is stored in `src/content/blog/<slug>/<locale>.md` with front matter fields:
    - `title`

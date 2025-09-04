@@ -5,18 +5,6 @@
   <title>Content Manager</title>
 </head>
 <body>
-  <script>
-    const USER = 'admin';
-    const PASS = 'passw0rd';
-    const u = prompt('Username:');
-    const p = prompt('Password:');
-    if (u === USER && p === PASS) {
-      var s = document.createElement('script');
-      s.src = 'https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js';
-      document.body.appendChild(s);
-    } else {
-      document.write('<h1>Access denied</h1>');
-    }
-  </script>
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </body>
 </html>
