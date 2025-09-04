@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: codex/migrate-blog-articles-to-index.locale.md
+  branch: master
 publish_mode: editorial_workflow   # => workflow avec branches + PR
 media_folder: "public/img/uploads"
 public_folder: "/img/uploads"
