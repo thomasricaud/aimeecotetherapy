@@ -33,6 +33,7 @@
             v-if="value.image != 'hide'"
             class="mx-auto"
             :src="require(`@/assets/articles/${value.image}`)"
+            :alt="value.title"
             onerror="this.onerror=null; this.src='Default.jpg'"
             width="75%"
           /></v-img>

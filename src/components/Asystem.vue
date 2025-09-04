@@ -5,6 +5,7 @@
     <br />
     <v-img
       :src="require(`@/assets/closeup-photography-of-stacked-stones.jpg`)"
+      :alt="$t('asystemImageAlt')"
       width="100%"
       style="max-width:50vh;"
       class="float-md-right mx-auto my-12 ma-md-12"

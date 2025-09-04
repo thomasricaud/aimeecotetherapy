@@ -6,6 +6,7 @@
     width="100%"
     position="top right"
     :src="require('@/assets/bubbles1.png')"
+    :alt="$t('bubble1Alt')"
   />
 </template>
 

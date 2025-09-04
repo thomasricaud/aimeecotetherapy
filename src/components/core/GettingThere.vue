@@ -23,6 +23,7 @@
     </base-text>
     <v-img
       :src="require(`@/assets/officeChatou.jpg`)"
+      :alt="$t('officePhotoAlt')"
       width="100%"
       style="max-width:600px;"
       class="mx-auto my-12"

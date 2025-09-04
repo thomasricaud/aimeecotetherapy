@@ -16,6 +16,7 @@
           <v-col class="my-5 my-md-12 pa-2">
             <v-img
               :src="require('@/assets/Aimee.jpg')"
+              :alt="$t('welcomePhotoAlt')"
               width="100%"
               aspect-ratio="1"
             />

@@ -37,5 +37,17 @@
   "meta.bookDesc": "Schedule a therapy appointment with Aimee Co Therapy",
   "meta.thereTitle": "Getting There",
   "meta.thereDesc": "Directions and contact information for visiting Aimee Co Therapy",
-  "GettingThereDescription": "My office is located at 15, Avenue de l'Europe, near the center of Chatou, with plenty of street parking available"
+  "GettingThereDescription": "My office is located at 15, Avenue de l'Europe, near the center of Chatou, with plenty of street parking available",
+  "logoAlt": "Aimee Co Therapy logo",
+  "officePhotoAlt": "Office building in Chatou",
+  "aboutMePhotoAlt": "Stacked rocks on a beach",
+  "contactPhotoAlt": "Contact illustration",
+  "instagramPhotoAlt": "Instagram photo",
+  "bannerLogoAlt": "Aimee Co Therapy banner",
+  "welcomePhotoAlt": "Portrait of Aimee Cote",
+  "bubble1Alt": "Decorative bubbles",
+  "bubble2Alt": "Decorative bubbles",
+  "myApproachFamilyAlt": "Family walking together",
+  "myApproachTalkAlt": "Therapist speaking with client",
+  "asystemImageAlt": "Close-up of stacked stones"
 }

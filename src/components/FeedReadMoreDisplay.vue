@@ -12,6 +12,7 @@
         >
           <v-img
             :src="require(`@/assets/articles/${image}`)"
+            :alt="title"
             class="pt-16 float-none"
             height="50vh"
             contain="true"

@@ -66,6 +66,7 @@
       >
         <v-img
           :src="require('@/assets/background-balance-beach-boulder.jpg')"
+          :alt="$t('aboutMePhotoAlt')"
           height="100%"
         />
       </v-col>

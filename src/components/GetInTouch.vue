@@ -13,6 +13,7 @@
       >
         <v-img
           :src="require('@/assets/contact.png')"
+          :alt="$t('contactPhotoAlt')"
           height="100%"
         />
       </v-col>

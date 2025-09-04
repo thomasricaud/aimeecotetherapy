@@ -53,15 +53,16 @@
         class="color"
         :cols="card.flex"
       >
-        <v-card >
-          <v-img
-            v-if="card.src"
-            :src="require(`@/assets/${card.src}`)"
-            class="white--text"
-            color="rgba(0,0,0,1)"
-            height="20vh"
-            aspect-ratio="1"
-          >
+          <v-card >
+            <v-img
+              v-if="card.src"
+              :src="require(`@/assets/${card.src}`)"
+              class="white--text"
+              color="rgba(0,0,0,1)"
+              height="20vh"
+              aspect-ratio="1"
+              :alt="$t(card.name)"
+            >
             <v-card-title v-text="$i18n.t(card.name)" />
             <v-card-text v-text="$i18n.t(card.blurb)" />
           </v-img>

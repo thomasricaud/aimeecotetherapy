@@ -17,6 +17,7 @@
           <v-img
             v-if="post.src"
             :src="require(`@/assets/instagram/${post.src}`)"
+            :alt="$t('instagramPhotoAlt')"
             height="100%"
           />
         </base-card>

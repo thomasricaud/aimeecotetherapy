@@ -2,6 +2,7 @@
   <base-card dark>
     <v-img
       :src="require('@/assetsBigsize/logo.jpg')"
+      :alt="$t('bannerLogoAlt')"
       class="grey lighten-2"
       height="400"
       width="100%"
