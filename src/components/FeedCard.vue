@@ -17,31 +17,31 @@
             text-color="white"
             small
           >
-            {{ $i18n.t(value.category) }}
+            {{ value.category }}
           </v-chip>
 
           <h3 class="title font-weight-bold mb-2">
-            {{ $i18n.t(value.title) }}
+            {{ value.title }}
           </h3>
           <div class="caption">
-            {{ $i18n.t(value.author) }}
+            {{ value.author }}
           </div>
           <p
-            v-html="$i18n.t(value.content)"
+            v-html="value.content"
           />
           <v-img
-            v-if="$i18n.t(value.image) != 'hide'"
+            v-if="value.image != 'hide'"
             class="mx-auto"
-            :src="require(`@/assets/articles/`+$i18n.t(value.image))"
+            :src="require(`@/assets/articles/${value.image}`)"
             onerror="this.onerror=null; this.src='Default.jpg'"
             width="75%"
           /></v-img>
-          
+
         </v-col>
         <v-col class="d-flex justify-center align-center">
           <youtube
-            v-if="$i18n.t(value.video) != 'hide' "
-            :video-id="($i18n.t(value.video))"
+            v-if="value.video != 'hide' "
+            :video-id="value.video"
           />
         </v-col>
       </v-row>

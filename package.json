@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build",
     "lint": "vue-cli-service lint",
     "deploy": "yarn build && now && now alias",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'",
@@ -22,7 +22,8 @@
     "vue-youtube-embed": "^2.2.2",
     "vuelidate": "^0.7.5",
     "vuetify": "^2.2.23",
-    "vuex": "^3.2.0"
+    "vuex": "^3.2.0",
+    "netlify-cms-app": "^2.15.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
@@ -42,6 +43,10 @@
     "vue-cli-plugin-i18n": "~1.0.1",
     "vue-cli-plugin-vuetify": "^0.4.6",
     "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.4.3"
+    "vuetify-loader": "^1.4.3",
+    "raw-loader": "^4.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

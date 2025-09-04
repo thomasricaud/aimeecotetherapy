@@ -1,7 +1,11 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import fm from 'front-matter'
+import i18n from '@/i18n'
 
 Vue.use(Vuex)
+
+const markdownContext = require.context('!!raw-loader!../content/blog', true, /\.md$/)
 
 export default new Vuex.Store({
   state: {
@@ -28,57 +32,30 @@ export default new Vuex.Store({
   },
   getters: {
     articles: state => {
-      var articljson = require.context('../locales/en', true, /^.*\/blog[0-9-_,\s]+\.json$/i)
-      var flattenArticles = []
-      articljson.keys().reverse().forEach(key => {
-        const matched = key.match(/\/blog([0-9-_]+)\.json$/i)
-        if (matched && matched.length > 1) {
-          const blog = matched[1]
-          const article = {
-          title: 'blog' + blog + '.title',
-          content: 'blog' + blog + '.content',
-          category: 'blog' + blog + '.category',
-          image: 'blog' + blog + '.image',
-          video: 'blog' + blog + '.video',
-          }
-            flattenArticles = [...flattenArticles, article]
-        }
-      })
-      return flattenArticles
+      const locale = i18n.locale
+      return markdownContext.keys()
+        .filter(key => key.endsWith(`${locale}.md`))
+        .reverse()
+        .map(key => {
+          const { attributes, body } = fm(markdownContext(key).default)
+          return { ...attributes, content: body.trim() }
+        })
     },
-    prominentblog: state => {
-      var prominentblog = {}
-
-      for (const article of flattenArticles) {
-        if (article.prominent) {
-          prominentblog = article
-        }
-      }
-
-      return prominentblog
+    prominentblog: (state, getters) => {
+      return getters.articles.find(article => article.prominent) || {}
     },
-    categories: state => {
+    categories: (state, getters) => {
       const categories = []
-
-      for (const article of flattenArticles) {
-        if (
-          !article.category ||
-          categories.find(category => category.text === article.category)
-        ) {
+      for (const article of getters.articles) {
+        if (!article.category || categories.find(category => category.text === article.category)) {
           continue
         }
-
         const text = article.category
-
-        categories.push({
-          text,
-          href: text,
-        })
+        categories.push({ text, href: text })
       }
-
       return categories.sort().slice(0, 4)
     },
-    links: (state, getters) => {
+    links: state => {
       return state.items
     },
   },
