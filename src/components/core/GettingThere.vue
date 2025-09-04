@@ -15,10 +15,10 @@
       tabindex="0"
       class="mx-auto my-12"
     />
-    <base-heading class="ma-12">
+    <base-heading class="my-12">
       <h1>{{ $t('nav.there') }}</h1>
     </base-heading>
-    <base-text class="ma-12">
+    <base-text class="my-12">
       <p>{{ $t('GettingThereDescription') }}</p>
     </base-text>
     <v-img
