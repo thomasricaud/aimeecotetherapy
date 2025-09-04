@@ -44,16 +44,12 @@
           item-text="text"
           item-value="locale"
           :items="langs"
-          hide-details
           style="width: 130px;"
           @change="changeLocale"
         >
-          <template v-slot:selection="{ item }">
-            <div class="d-flex align-center">
-              <v-icon class="mr-1">fas fa-globe</v-icon>
-              <span class="mr-1">{{ $t('ChangeLanguage') }}:</span>
-              <span>{{ item.text }}</span>
-            </div>
+          <template v-slot:prepend-inner>
+            <v-icon class="mr-1">fas fa-globe</v-icon>
+            <span class="mr-1">{{ $t('ChangeLanguage') }}:</span>
           </template>
         </v-select>
       </v-row>
