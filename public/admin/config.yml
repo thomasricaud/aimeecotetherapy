@@ -2,7 +2,7 @@ backend:
   name: github
   repo: thomasricaud/aimeecotetherapy
   branch: main
-  auth: { token: true }
+  auth_type: token
 media_folder: "public/img/uploads"
 public_folder: "/img/uploads"
 i18n:
