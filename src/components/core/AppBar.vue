@@ -47,7 +47,7 @@
           :items="langs"
           :label="$t('ChangeLanguage')"
           hide-details
-          style="max-width: 150px;"
+          style="width: 150px;"
           @change="changeLocale"
         />
       </v-row>
