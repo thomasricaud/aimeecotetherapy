@@ -44,14 +44,11 @@
           item-text="text"
           item-value="locale"
           :items="langs"
-          style="width: 130px;"
+          append-outer-icon="fas fa-globe"
+          :label="$t('ChangeLanguage')"
+          style="max-width: 150px;"
           @change="changeLocale"
-        >
-          <template v-slot:prepend-inner>
-            <v-icon class="mr-1">fas fa-globe</v-icon>
-            <span class="mr-1">{{ $t('ChangeLanguage') }}:</span>
-          </template>
-        </v-select>
+        />
       </v-row>
     </v-container>
   </v-app-bar>
