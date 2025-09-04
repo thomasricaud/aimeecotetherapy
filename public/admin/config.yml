@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/aimeecotetherapy
+  repo: thomasricaud/aimeecotetherapy
   branch: main
   auth: { token: true }
 media_folder: "public/img/uploads"
