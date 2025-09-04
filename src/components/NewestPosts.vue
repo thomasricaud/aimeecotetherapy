@@ -14,6 +14,7 @@
       >
         <v-img
           :src="require(`@/assets/articles/${article.hero}`)"
+          :lazy-src="require('@/assets/white_wall.png')"
           class="mr-3"
           height="36"
           max-width="36"

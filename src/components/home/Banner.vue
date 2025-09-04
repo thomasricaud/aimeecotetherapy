@@ -2,6 +2,7 @@
   <base-card dark>
     <v-img
       :src="require('@/assetsBigsize/logo.jpg')"
+      :lazy-src="require('@/assets/white_wall.png')"
       class="grey lighten-2"
       height="400"
       width="100%"

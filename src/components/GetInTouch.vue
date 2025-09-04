@@ -13,6 +13,7 @@
       >
         <v-img
           :src="require('@/assets/contact.png')"
+          :lazy-src="require('@/assets/white_wall.png')"
           height="100%"
         />
       </v-col>

@@ -29,13 +29,14 @@
           <p
             v-html="value.content"
           />
-          <v-img
-            v-if="value.image != 'hide'"
-            class="mx-auto"
-            :src="require(`@/assets/articles/${value.image}`)"
-            onerror="this.onerror=null; this.src='Default.jpg'"
-            width="75%"
-          /></v-img>
+            <v-img
+              v-if="value.image != 'hide'"
+              class="mx-auto"
+              :src="require(`@/assets/articles/${value.image}`)"
+              :lazy-src="require('@/assets/white_wall.png')"
+              onerror="this.onerror=null; this.src='Default.jpg'"
+              width="75%"
+            />
 
         </v-col>
         <v-col class="d-flex justify-center align-center">
@@ -45,7 +46,6 @@
           />
         </v-col>
       </v-row>
-      </v-img>
     </base-card>
   </v-col>
 </template>
