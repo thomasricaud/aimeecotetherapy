@@ -5,9 +5,33 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: #2E5246;
-  background-color: #F0FFF0;
+  background-color: #FFFFFF;
 }
 
 a {
   color: #549480;
+}
+
+.category {
+  display: inline-block;
+  background-color: #1B5E20;
+  color: #FFFFFF;
+  padding: 4px 8px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.title {
+  color: #000000;
+  margin: 0 0 8px;
+}
+
+.author {
+  color: #000000;
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+}
+
+.body {
+  font-size: 1rem;
 }
