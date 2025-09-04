@@ -14,6 +14,7 @@
         <v-img
           :src="require('@/assets/contact.png')"
           :lazy-src="require('@/assets/white_wall.png')"
+          :alt="$t('getInTouch.imageAlt')"
           height="100%"
         />
       </v-col>

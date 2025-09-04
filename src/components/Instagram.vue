@@ -18,6 +18,7 @@
           v-if="post.src"
           :src="require(`@/assets/instagram/${post.src}`)"
           :lazy-src="require('@/assets/white_wall.png')"
+          :alt="$t(post.alt)"
           height="100%"
         />
         </base-card>
@@ -32,12 +33,12 @@
 
     data: () => ({
       posts: [
-        { src: 'adventurealtitude.jpg' },
-        { src: 'garden.jpg' },
-        { src: 'pigduck.jpg' },
-        { src: 'rain.jpg' },
-        { src: 'spices.jpg' },
-        { src: 'sunset.jpg' },
+        { src: 'adventurealtitude.jpg', alt: 'InstagramAdventureAlt' },
+        { src: 'garden.jpg', alt: 'InstagramGardenAlt' },
+        { src: 'pigduck.jpg', alt: 'InstagramPigDuckAlt' },
+        { src: 'rain.jpg', alt: 'InstagramRainAlt' },
+        { src: 'spices.jpg', alt: 'InstagramSpicesAlt' },
+        { src: 'sunset.jpg', alt: 'InstagramSunsetAlt' },
       ],
     }),
   }

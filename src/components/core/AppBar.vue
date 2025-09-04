@@ -21,6 +21,7 @@
               height="48"
               width="48"
               max-width="48"
+              alt="Aimee Cote Therapy logo"
               @click="$vuetify.goTo(0)"
               v-on="on"
             />

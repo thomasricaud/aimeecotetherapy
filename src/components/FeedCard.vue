@@ -34,6 +34,7 @@
               class="mx-auto"
               :src="require(`@/assets/articles/${value.image}`)"
               :lazy-src="require('@/assets/white_wall.png')"
+              :alt="value.title"
               onerror="this.onerror=null; this.src='Default.jpg'"
               width="75%"
             />
