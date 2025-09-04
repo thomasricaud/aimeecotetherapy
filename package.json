@@ -10,12 +10,13 @@
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'",
     "sitemap": "node scripts/generate-sitemap.js"
   },
-  "dependencies": {
-    "emailjs-com": "^2.4.1",
-    "front-matter": "^4.0.2",
-    "slugify": "^1.6.5",
-    "vue": "^2.6.11",
-    "vue-i18n": "^8.17.3",
+    "dependencies": {
+      "emailjs-com": "^2.4.1",
+      "front-matter": "^4.0.2",
+      "marked": "^9.0.0",
+      "slugify": "^1.6.5",
+      "vue": "^2.6.11",
+      "vue-i18n": "^8.17.3",
     "vue-router": "^3.1.6",
     "vue-meta": "^2.4.0",
     "vue-youtube": "^1.4.0",
