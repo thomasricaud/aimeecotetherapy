@@ -41,15 +41,20 @@
         <v-spacer />
         <v-select
           v-model="$i18n.locale"
-          append-outer-icon="fas fa-globe"
           item-text="text"
           item-value="locale"
           :items="langs"
-          :label="$t('ChangeLanguage')"
           hide-details
-          style="width: 150px;"
+          style="width: 130px;"
           @change="changeLocale"
-        />
+        >
+          <template v-slot:selection>
+            <div class="d-flex align-center">
+              <v-icon class="mr-1">fas fa-globe</v-icon>
+              {{ $t('ChangeLanguage') }}
+            </div>
+          </template>
+        </v-select>
       </v-row>
     </v-container>
   </v-app-bar>
