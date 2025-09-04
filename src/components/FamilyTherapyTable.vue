@@ -61,6 +61,7 @@
             color="rgba(0,0,0,1)"
             height="20vh"
             aspect-ratio="1"
+            :alt="$i18n.t(card.name)"
           >
             <v-card-title v-text="$i18n.t(card.name)" />
             <v-card-text v-text="$i18n.t(card.blurb)" />

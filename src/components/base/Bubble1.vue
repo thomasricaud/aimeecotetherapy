@@ -7,6 +7,7 @@
     position="top right"
     :src="require('@/assets/bubbles1.png')"
     :lazy-src="require('@/assets/white_wall.png')"
+    alt="Decorative bubble"
   />
 </template>
 

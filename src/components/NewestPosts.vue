@@ -17,6 +17,7 @@
           :lazy-src="require('@/assets/white_wall.png')"
           class="mr-3"
           height="36"
+          :alt="article.title"
           max-width="36"
         />
 

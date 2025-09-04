@@ -15,6 +15,7 @@
             :lazy-src="require('@/assets/white_wall.png')"
             class="pt-16 float-none"
             height="50vh"
+            :alt="title"
             contain="true"
           />
 

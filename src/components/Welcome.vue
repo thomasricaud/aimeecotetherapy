@@ -17,6 +17,7 @@
             <v-img
               :src="require('@/assets/Aimee.jpg')"
               :lazy-src="require('@/assets/white_wall.png')"
+              :alt="$t('WelcomePortraitAlt')"
               width="100%"
               aspect-ratio="1"
             />

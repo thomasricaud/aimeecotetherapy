@@ -6,6 +6,7 @@
     <v-img
       :src="require(`@/assets/closeup-photography-of-stacked-stones.jpg`)"
       :lazy-src="require('@/assets/white_wall.png')"
+      :alt="$t('ASystemImageAlt')"
       width="100%"
       style="max-width:50vh;"
       class="float-md-right mx-auto my-12 ma-md-12"

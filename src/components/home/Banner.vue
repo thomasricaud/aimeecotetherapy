@@ -3,6 +3,7 @@
     <v-img
       :src="require('@/assetsBigsize/logo.jpg')"
       :lazy-src="require('@/assets/white_wall.png')"
+      alt="Aimee Cote Therapy logo"
       class="grey lighten-2"
       height="400"
       width="100%"
