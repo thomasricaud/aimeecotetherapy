@@ -1,8 +1,7 @@
 backend:
-  name: github
-  repo: thomasricaud/aimeecotetherapy
-  branch: main
-  auth: { token: true }
+  name: git-gateway
+  branch: master
+publish_mode: editorial_workflow   # => workflow avec branches + PR
 media_folder: "public/img/uploads"
 public_folder: "/img/uploads"
 i18n:
