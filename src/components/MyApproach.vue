@@ -8,7 +8,8 @@
       <v-container>
         <v-img
           :src="require(`@/assets/family.jpg`)"
-          width="50vh"
+          width="100%"
+          style="max-width:50vh;"
           class="float-md-left mx-auto ma-md-12"
         />
         <base-heading class="ma-5">
@@ -22,7 +23,8 @@
       <v-container>
         <v-img
           :src="require(`@/assets/shutterstock_1316614289.jpg`)"
-          width="50vh"
+          width="100%"
+          style="max-width:50vh;"
           class="float-md-right mx-auto ma-md-12"
         />
         <base-text>

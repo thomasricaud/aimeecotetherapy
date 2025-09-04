@@ -1,7 +1,8 @@
 <template>
   <v-card
     elevation="1"
-    width="740px"
+    width="100%"
+    style="max-width:740px;"
     class="mx-auto"
     align="center"
   >
@@ -19,7 +20,8 @@
           v-if="card.section_title"
           color="transparent"
           outlined="false"
-          width="740px"
+          width="100%"
+          style="max-width:740px;"
           class="fill-height"
         >
           <v-card-text class="display-2 accent--text pa-12">
