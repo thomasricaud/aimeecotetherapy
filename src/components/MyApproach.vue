@@ -7,6 +7,7 @@
     <v-container>
         <v-img
           :src="require(`@/assets/family.jpg`)"
+          :lazy-src="require('@/assets/white_wall.png')"
           width="100%"
           style="max-width:50vh;"
           class="float-md-left mx-auto ma-md-12"
@@ -22,6 +23,7 @@
     <v-container>
         <v-img
           :src="require(`@/assets/shutterstock_1316614289.jpg`)"
+          :lazy-src="require('@/assets/white_wall.png')"
           width="100%"
           style="max-width:50vh;"
           class="float-md-right mx-auto ma-md-12"

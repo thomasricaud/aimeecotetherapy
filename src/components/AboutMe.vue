@@ -66,6 +66,7 @@
       >
         <v-img
           :src="require('@/assets/background-balance-beach-boulder.jpg')"
+          :lazy-src="require('@/assets/white_wall.png')"
           height="100%"
         />
       </v-col>

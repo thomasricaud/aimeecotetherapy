@@ -14,11 +14,12 @@
           height="88"
           tag="a"
         >
-          <v-img
-            v-if="post.src"
-            :src="require(`@/assets/instagram/${post.src}`)"
-            height="100%"
-          />
+        <v-img
+          v-if="post.src"
+          :src="require(`@/assets/instagram/${post.src}`)"
+          :lazy-src="require('@/assets/white_wall.png')"
+          height="100%"
+        />
         </base-card>
       </v-col>
     </v-row>

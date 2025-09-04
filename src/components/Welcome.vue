@@ -16,6 +16,7 @@
           <v-col class="my-5 my-md-12 pa-2">
             <v-img
               :src="require('@/assets/Aimee.jpg')"
+              :lazy-src="require('@/assets/white_wall.png')"
               width="100%"
               aspect-ratio="1"
             />
