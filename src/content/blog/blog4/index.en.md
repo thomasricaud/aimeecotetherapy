@@ -1,6 +1,6 @@
 ---
 title: Why we should stop blaming "inconsistent parenting" for those epic meltdowns
-author: Aimee cote
+author: Aimee Cote
 category: Family
 image: hide
 video: hide
