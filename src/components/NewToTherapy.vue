@@ -3,7 +3,7 @@
     id="newtotherapy"
   >
     <v-divider />
-    <v-row>
+    <v-row no-gutters>
       <youtube
         :video-id="videoId"
       />

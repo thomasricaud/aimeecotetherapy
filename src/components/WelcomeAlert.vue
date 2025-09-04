@@ -10,6 +10,7 @@
       class="height"
       align="center"
       justify="center"
+      no-gutters
     >
       <v-col
         cols="10"

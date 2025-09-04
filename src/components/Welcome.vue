@@ -13,7 +13,7 @@
           no-gutters
           align="center"
         >
-          <v-col class="ma-5 ma-md-12">
+          <v-col class="my-5 my-md-12">
             <v-img
               :src="require('@/assets/Aimee.jpg')"
               width="100%"
