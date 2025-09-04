@@ -1,8 +1,7 @@
 backend:
-  name: github
+  name: git-gateway
+  branch: master
   repo: thomasricaud/aimeecotetherapy
-  branch: main
-  auth_type: token
 media_folder: "public/img/uploads"
 public_folder: "/img/uploads"
 i18n:
