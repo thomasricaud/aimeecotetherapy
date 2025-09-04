@@ -18,6 +18,8 @@ collections:
     path: "{{slug}}/{{locale}}"   # crée en.md, fr.md, es.md dans chaque sous-dossier
     extension: "md"
     i18n: true
+    format: "frontmatter"
+    summary: "{{title}}"
     preview_path: "blog/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string", i18n: true }
