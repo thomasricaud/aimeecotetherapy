@@ -14,6 +14,7 @@
         <v-img
           :src="require('@/assets/contact.png')"
           height="100%"
+          alt="Contact illustration"
         />
       </v-col>
 

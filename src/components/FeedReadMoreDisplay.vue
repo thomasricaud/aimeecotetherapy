@@ -15,6 +15,7 @@
             class="pt-16 float-none"
             height="50vh"
             contain="true"
+            :alt="$i18n.t(title)"
           />
 
           <v-card-text>

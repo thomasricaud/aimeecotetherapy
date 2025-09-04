@@ -10,6 +10,7 @@
           :src="require(`@/assets/family.jpg`)"
           width="50vh"
           class="float-md-left mx-auto ma-md-12"
+          alt="Smiling family outdoors"
         />
         <base-heading class="ma-5">
           <h1>My approach</h1>
@@ -24,6 +25,7 @@
           :src="require(`@/assets/shutterstock_1316614289.jpg`)"
           width="50vh"
           class="float-md-right mx-auto ma-md-12"
+          alt="Therapy session illustration"
         />
         <base-text>
           <br><br><br><br>

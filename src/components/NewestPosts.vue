@@ -17,6 +17,7 @@
           class="mr-3"
           height="36"
           max-width="36"
+          :alt="$i18n.t(article.title)"
         />
 
         <div>

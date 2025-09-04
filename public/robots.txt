@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Allow: /blog
+Allow: /book
+Allow: /there
+Allow: /home
+Sitemap: https://www.aimeecotetherapy.com/sitemap.xml

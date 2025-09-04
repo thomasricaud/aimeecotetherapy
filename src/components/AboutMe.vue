@@ -67,6 +67,7 @@
         <v-img
           :src="require('@/assets/background-balance-beach-boulder.jpg')"
           height="100%"
+          alt="Balanced stones on a beach"
         />
       </v-col>
     </v-row>

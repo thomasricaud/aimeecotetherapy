@@ -17,6 +17,7 @@
           <v-img
             v-if="post.src"
             :src="require(`@/assets/instagram/${post.src}`)"
+            :alt="post.alt"
             height="100%"
           />
         </base-card>
@@ -31,12 +32,12 @@
 
     data: () => ({
       posts: [
-        { src: 'adventurealtitude.jpg' },
-        { src: 'garden.jpg' },
-        { src: 'pigduck.jpg' },
-        { src: 'rain.jpg' },
-        { src: 'spices.jpg' },
-        { src: 'sunset.jpg' },
+        { src: 'adventurealtitude.jpg', alt: 'Hiker looking over mountains' },
+        { src: 'garden.jpg', alt: 'Lush garden pathway' },
+        { src: 'pigduck.jpg', alt: 'Toy pig and duck in water' },
+        { src: 'rain.jpg', alt: 'Raindrops on a window' },
+        { src: 'spices.jpg', alt: 'Assorted spices in bowls' },
+        { src: 'sunset.jpg', alt: 'Colorful sunset over water' },
       ],
     }),
   }

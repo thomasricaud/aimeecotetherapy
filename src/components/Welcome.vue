@@ -16,6 +16,7 @@
           <v-col class="ma-5 ma-md-12">
             <v-img
               :src="require('@/assets/Aimee.jpg')"
+              :alt="$i18n.t('WelcomeAlt')"
               width="100%"
               aspect-ratio="1"
             />

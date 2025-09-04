@@ -7,6 +7,7 @@
       :src="require(`@/assets/closeup-photography-of-stacked-stones.jpg`)"
       width="50vh"
       class="float-md-right mx-auto my-12 ma-md-12"
+      alt="Stacked stones close-up"
     />
     <base-heading>
       <h1>{{ $i18n.t("ASystem") }}</h1>

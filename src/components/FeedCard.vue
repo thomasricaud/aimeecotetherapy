@@ -35,7 +35,8 @@
             :src="require(`@/assets/articles/`+$i18n.t(value.image))"
             onerror="this.onerror=null; this.src='Default.jpg'"
             width="75%"
-          /></v-img>
+            :alt="$i18n.t(value.title)"
+          />
           
         </v-col>
         <v-col class="d-flex justify-center align-center">
@@ -45,7 +46,6 @@
           />
         </v-col>
       </v-row>
-      </v-img>
     </base-card>
   </v-col>
 </template>

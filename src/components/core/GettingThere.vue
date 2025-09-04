@@ -23,6 +23,7 @@
     </base-text>
     <v-img
       :src="require(`@/assets/officeChatou.jpg`)"
+      alt="Office exterior in Chatou"
       width="100%"
       class="float-left ma-12"
     />

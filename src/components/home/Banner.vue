@@ -2,6 +2,7 @@
   <base-card dark>
     <v-img
       :src="require('@/assetsBigsize/logo.jpg')"
+      :alt="$i18n.t('LogoAlt')"
       class="grey lighten-2"
       height="400"
       width="100%"

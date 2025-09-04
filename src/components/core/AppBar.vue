@@ -15,6 +15,7 @@
           <template v-slot:activator="{ on }">
             <v-img
               :src="require('@/assets/logo.jpg')"
+              :alt="$i18n.t('LogoAlt')"
               class="mr-5"
               contain
               height="48"

@@ -6,6 +6,7 @@
     width="100%"
     position="bottom left"
     :src="require('@/assets/bubbles2.png')"
+    alt="Decorative bubbles"
   />
 </template>
 
