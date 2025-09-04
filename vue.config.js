@@ -3,7 +3,7 @@ module.exports = {
     disableHostCheck: true,
   },
 
-  transpileDependencies: ['vuetify', 'marked'],
+  transpileDependencies: ['vuetify'],
 
   pluginOptions: {
     i18n: {

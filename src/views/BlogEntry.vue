@@ -5,9 +5,9 @@
       {{ $i18n.t($route.params.title) }}
     </h1>
     <br>
-    <p
-      class="black--text "
-      v-html="$i18n.t($route.params.content)"
+    <div
+      class="black--text"
+      v-html="$route.params.content"
     />
   </div>
 </template>
