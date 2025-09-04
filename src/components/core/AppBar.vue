@@ -48,10 +48,11 @@
           style="width: 130px;"
           @change="changeLocale"
         >
-          <template v-slot:selection>
+          <template v-slot:selection="{ item }">
             <div class="d-flex align-center">
               <v-icon class="mr-1">fas fa-globe</v-icon>
-              {{ $t('ChangeLanguage') }}
+              <span class="mr-1">{{ $t('ChangeLanguage') }}:</span>
+              <span>{{ item.text }}</span>
             </div>
           </template>
         </v-select>
