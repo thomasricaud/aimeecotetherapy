@@ -9,8 +9,8 @@
       @click="toggleDrawer"
     />
 
-    <v-container class="mx-auto py-0">
-      <v-row align="center">
+    <v-container class="mx-auto py-0" fluid>
+      <v-row align="center" no-gutters>
         <v-tooltip bottom>
           <template v-slot:activator="{ on }">
             <v-img

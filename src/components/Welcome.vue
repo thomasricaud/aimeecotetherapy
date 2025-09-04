@@ -13,7 +13,7 @@
           no-gutters
           align="center"
         >
-          <v-col class="ma-5 ma-md-12">
+          <v-col class="my-5 my-md-12 pa-2">
             <v-img
               :src="require('@/assets/Aimee.jpg')"
               width="100%"
@@ -31,7 +31,7 @@
           no-gutters
           align="center"
         >
-          <base-text class="py-12">
+          <base-text class="py-12 pl-md-6">
             <h1 class="display-3">
               {{ $i18n.t("WelcomeName") }}
             </h1>

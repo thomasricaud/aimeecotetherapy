@@ -12,7 +12,7 @@
     >
       <v-sheet
         width="100%"
-        class="ma-5 pa-1"
+        class="my-5 pa-1"
       >
         <base-text>
           <h1 align="center">

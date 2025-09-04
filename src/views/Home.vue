@@ -1,16 +1,16 @@
 <template>
   <div>
-    <welcome class="ma-5" />
+    <welcome class="my-5" />
 
-    <welcome-alert />
+    <welcome-alert class="my-5" />
 
-    <family class="ma-5" />
+    <family class="my-5" />
 
-    <asystem class="ma-5" />
+    <asystem class="my-5" />
 
-    <new-to-therapy class="ma-5" />
+    <new-to-therapy class="my-5" />
 
-    <my-approach class="ma-5" />
+    <my-approach class="my-5" />
   </div>
 </template>
 
