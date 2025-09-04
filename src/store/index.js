@@ -5,7 +5,7 @@ import i18n from '@/i18n'
 
 Vue.use(Vuex)
 
-const markdownContext = require.context('!!raw-loader!../content/blog', true, /\.md$/)
+const markdownContext = require.context('!!raw-loader!../content/blog', true, /index\.[a-z]{2}\.md$/)
 
 export default new Vuex.Store({
   state: {
@@ -34,7 +34,7 @@ export default new Vuex.Store({
     articles: state => {
       const locale = i18n.locale
       return markdownContext.keys()
-        .filter(key => key.endsWith(`${locale}.md`))
+        .filter(key => key.match(new RegExp(`index\\.${locale}\\.md$`)))
         .reverse()
         .map(key => {
           const { attributes, body } = fm(markdownContext(key).default)
