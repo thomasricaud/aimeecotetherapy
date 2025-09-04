@@ -1,6 +1,5 @@
 ---
-title: Rester avec la souffrance plutôt que de tomber dans le piège de la
-  recherche de solutions
+title: Rester avec la souffrance vs le piège de la recherche de solutions
 author: Aimee cote
 category: Individuel
 image: blog14.jpg
