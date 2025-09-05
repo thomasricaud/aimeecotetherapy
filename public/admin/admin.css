@@ -9,58 +9,62 @@
 }
 
 body {
-  font-family: Inter, Lato, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  font-family: Inter, Lato, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  background-color: var(--color-bg) !important;
+  color: var(--color-text) !important;
 }
 
-.nc-appHeader {
-  background-color: var(--color-brand);
-  color: #fff;
-  box-shadow: var(--shadow);
-  min-height: 56px;
-  padding: 0 1rem;
+/* use attribute selectors to match Decap's generated class names */
+body [class*="nc-appHeader"] {
+  background-color: var(--color-brand) !important;
+  color: #fff !important;
+  box-shadow: var(--shadow) !important;
+  min-height: 56px !important;
+  padding: 0 1rem !important;
 }
 
-.nc-sidebar {
-  background-color: var(--color-bg);
+body [class*="nc-sidebar"] {
+  background-color: var(--color-bg) !important;
 }
 
-.nc-sidebar a {
-  color: var(--color-brand);
-  text-decoration: none;
+body [class*="nc-sidebar"] a {
+  color: var(--color-brand) !important;
+  text-decoration: none !important;
 }
 
-.nc-sidebar a:hover {
-  text-decoration: underline;
+body [class*="nc-sidebar"] a:hover {
+  text-decoration: underline !important;
 }
 
-.nc-button {
-  border-radius: var(--radius);
-  padding: 0.5rem 1rem;
-  background: var(--color-brand);
-  color: #fff;
-  transition: background 0.3s ease;
+body .nc-button,
+body [class*="nc-button"] {
+  border-radius: var(--radius) !important;
+  padding: 0.5rem 1rem !important;
+  background: var(--color-brand) !important;
+  color: #fff !important;
+  transition: background 0.3s ease !important;
 }
 
-.nc-button:hover,
-.nc-button:focus {
-  background: linear-gradient(45deg, var(--color-brand), var(--color-brand-2));
+body .nc-button:hover,
+body .nc-button:focus,
+body [class*="nc-button"]:hover,
+body [class*="nc-button"]:focus {
+  background: linear-gradient(45deg, var(--color-brand), var(--color-brand-2)) !important;
 }
 
-.nc-entryEditor,
-.nc-previewPane {
-  background: #fff;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 1rem;
+body [class*="nc-entryEditor"],
+body [class*="nc-previewPane"] {
+  background: #fff !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow) !important;
+  padding: 1rem !important;
 }
 
-.nc-entryEditor .CodeMirror,
-.nc-entryEditor textarea {
-  background: #f6f5f3;
-  border-radius: var(--radius);
-  padding: 1rem;
-  font-size: 1rem;
+body [class*="nc-entryEditor"] .CodeMirror,
+body [class*="nc-entryEditor"] textarea {
+  background: #f6f5f3 !important;
+  border-radius: var(--radius) !important;
+  padding: 1rem !important;
+  font-size: 1rem !important;
 }
 
