@@ -3,10 +3,46 @@
 <head>
   <meta charset="utf-8" />
   <title>Content Manager</title>
-  <link rel="stylesheet" href="./admin.css" />
+  <link rel="stylesheet" href="/admin/admin.css" />
 </head>
 <body>
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   <script src="/admin/preview.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var head = document.head;
+
+      function injectAdminCss() {
+        var existing = head.querySelector('link[data-injected-admin]');
+        if (existing) existing.remove();
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '/admin/admin.css?v=' + Date.now();
+        link.setAttribute('data-injected-admin', '');
+        head.appendChild(link);
+      }
+
+      injectAdminCss();
+
+      var observer = new MutationObserver(function (mutations) {
+        for (var i = 0; i < mutations.length; i++) {
+          var added = mutations[i].addedNodes;
+          for (var j = 0; j < added.length; j++) {
+            var node = added[j];
+            if (
+              node.nodeType === Node.ELEMENT_NODE &&
+              node.tagName === 'STYLE' &&
+              node.getAttribute('data-emotion') !== null
+            ) {
+              injectAdminCss();
+              return;
+            }
+          }
+        }
+      });
+
+      observer.observe(head, { childList: true });
+    });
+  </script>
 </body>
 </html>
