@@ -1,12 +1,66 @@
+:root {
+  --color-bg: #faf9f7;
+  --color-text: #2a2a2a;
+  --color-accent: #c5b5a5;
+  --color-brand: #4a7c77;
+  --color-brand-2: #7fb2ad;
+  --radius: 10px;
+  --shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
+  font-family: Inter, Lato, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
-.nc-app-header {
-  background-color: #4a76fd;
-}
-
-.nc-app-header h1 {
+.nc-appHeader {
+  background-color: var(--color-brand);
   color: #fff;
+  box-shadow: var(--shadow);
+  min-height: 56px;
+  padding: 0 1rem;
 }
+
+.nc-sidebar {
+  background-color: var(--color-bg);
+}
+
+.nc-sidebar a {
+  color: var(--color-brand);
+  text-decoration: none;
+}
+
+.nc-sidebar a:hover {
+  text-decoration: underline;
+}
+
+.nc-button {
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  background: var(--color-brand);
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.nc-button:hover,
+.nc-button:focus {
+  background: linear-gradient(45deg, var(--color-brand), var(--color-brand-2));
+}
+
+.nc-entryEditor,
+.nc-previewPane {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.nc-entryEditor .CodeMirror,
+.nc-entryEditor textarea {
+  background: #f6f5f3;
+  border-radius: var(--radius);
+  padding: 1rem;
+  font-size: 1rem;
+}
+
