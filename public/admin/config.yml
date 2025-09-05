@@ -18,12 +18,12 @@ collections:
     extension: "md"
     format: "frontmatter"
     i18n: true
-    summary: "{{title}}"
+    summary: "{{slug}} {{title}}"
     preview_path: "blog/{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string", i18n: true }
-      - { label: "Author", name: "author", widget: "string", required: false, i18n: true }
+      - { label: "Author", name: "author", widget: "string", required: false, i18n: duplicate }
       - { label: "Category", name: "category", widget: "string", required: false, i18n: true }
       - { label: "Cover Image", name: "image", widget: "image", required: false, i18n: duplicate }
-      - { label: "Video", name: "video", widget: "string", required: false, i18n: true }
+      - { label: "Video", name: "video", widget: "string", required: false, i18n: duplicate }
       - { label: "Body",  name: "body",  widget: "markdown", i18n: true }

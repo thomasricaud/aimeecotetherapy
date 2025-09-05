@@ -11,7 +11,8 @@
           width="65vw"
         >
           <v-img
-            :src="require(`@/assets/articles/${image}`)"
+            v-if="image && image !== 'hide'"
+            :src="image"
             :lazy-src="require('@/assets/white_wall.png')"
             class="pt-16 float-none"
             height="50vh"
