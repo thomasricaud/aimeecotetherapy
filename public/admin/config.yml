@@ -12,6 +12,8 @@ collections:
   - name: "blog"
     label: "Blog"
     folder: "src/content/blog"
+    media_folder: "../../../public/img/uploads"
+    public_folder: "/img/uploads"
     create: true
     slug: "{{slug}}"
     path: "{{slug}}/index"
