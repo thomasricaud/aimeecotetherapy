@@ -13,7 +13,8 @@
         cols="12"
       >
         <v-img
-          :src="require(`@/assets/articles/${article.hero}`)"
+          v-if="article.image && article.image !== 'hide'"
+          :src="article.image"
           :lazy-src="require('@/assets/white_wall.png')"
           class="mr-3"
           height="36"

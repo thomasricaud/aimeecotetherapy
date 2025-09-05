@@ -27,4 +27,4 @@ video: "hide"
 Uncertainty about the future, anxiety about our well being and our loved ones' health...
 ```
 
-Add images to `src/assets/articles`.
+Add images to `public/img/uploads`.

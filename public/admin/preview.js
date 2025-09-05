@@ -4,7 +4,7 @@ const BlogPreview = createClass({
   render: function() {
     const entry = this.props.entry;
     const image = entry.getIn(['data', 'image']);
-    const imageUrl = image ? this.props.getAsset(image) : null;
+    const imageUrl = image && image !== 'hide' ? this.props.getAsset(image) : null;
     return h('div', {},
       h('div', { className: 'category' }, entry.getIn(['data', 'category'])),
       h('h1', { className: 'title' }, entry.getIn(['data', 'title'])),
