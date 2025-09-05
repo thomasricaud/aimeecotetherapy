@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: codex/update-image-directory-and-cms-preview-dlj08w
 publish_mode: editorial_workflow   # => workflow avec branches + PR
 media_folder: "public/img/uploads"
 public_folder: "/img/uploads"
