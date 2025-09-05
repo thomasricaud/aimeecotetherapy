@@ -2,7 +2,7 @@
 title: Sitting with suffering vs. the trap of problem-solving
 author: Aimee Cote
 category: Individual
-image: blog14.jpg
+image: "/img/uploads/blog14.jpg"
 video: hide
 ---
 <div>Think about the most recent time that someone came to you with a problem. Maybe it was your child, partner, or friend. Did you respond with something along the lines of "maybe you should do " or "have you tried "; Did the person smile and thank you? Or did they become quiet and stop talking? Or maybe they argued with you that their problem was much more serious than you realized and there was no way your solution would work.<br><br>

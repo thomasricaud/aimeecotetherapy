@@ -30,9 +30,9 @@
             v-html="value.content"
           />
             <v-img
-              v-if="value.image != 'hide'"
+              v-if="value.image && value.image !== 'hide'"
               class="mx-auto"
-              :src="require(`@/assets/articles/${value.image}`)"
+              :src="value.image"
               :lazy-src="require('@/assets/white_wall.png')"
               :alt="value.title"
               onerror="this.onerror=null; this.src='Default.jpg'"
