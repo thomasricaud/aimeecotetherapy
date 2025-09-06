@@ -14,3 +14,9 @@ This file provides guidance for automated agents working in this repository.
 - Use `npm install` to add dependencies and update `package-lock.json` when needed.
 - Build the project with `npm run build` to verify production readiness.
 
+## 1) Environment invariants
+
+- Use exactly:
+  - `node -v` → `v22.19.0`
+  - `npm -v` → `11.4.2`
+- **DevDependencies must be installed** (required for `vue-cli-service`).
