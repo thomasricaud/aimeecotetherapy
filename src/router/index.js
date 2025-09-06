@@ -38,7 +38,7 @@ export default new Router({
       children: [
         { path: '', name: 'home', component: Home },
         { path: 'blog', name: 'blog', component: Blog },
-        { path: 'blogentry/:title/:content/:image', name: 'blogentry', component: BlogEntry },
+        { path: 'blog/:slug', name: 'blogentry', component: BlogEntry },
         { path: 'book', name: 'book', component: Book },
         { path: 'there', name: 'there', component: There },
       ],
