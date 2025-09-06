@@ -1,4 +1,8 @@
-# netlify.toml
+[build]
+  command = "npm run build"
+  publish = "dist"
+
 [build.environment]
-NODE_VERSION = "22"       # .nvmrc/.node-version possible aussi
-NPM_VERSION  = "11.4.2"   # <-- épingle npm ici
+  NODE_VERSION = "22"
+  NPM_VERSION  = "11.4.2"
+  NPM_FLAGS    = "--include=dev"
