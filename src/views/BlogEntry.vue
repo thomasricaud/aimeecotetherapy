@@ -21,6 +21,11 @@
       {{ article.author }}
     </div>
     <br>
+    <p
+      class="black--text"
+      v-html="article.content"
+    />
+    <br>
     <v-img
       v-if="article.image && article.image !== 'hide'"
       class="mx-auto"
@@ -29,11 +34,6 @@
       :alt="article.title"
       onerror="this.onerror=null; this.src='Default.jpg'"
       width="75%"
-    />
-    <br>
-    <p
-      class="black--text"
-      v-html="article.content"
     />
   </div>
 </template>
