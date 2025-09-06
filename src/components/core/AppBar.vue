@@ -32,7 +32,7 @@
         <v-spacer />
         <v-select
           v-model="$i18n.locale"
-          append-outer-icon="mdi-earth"
+          :append-outer-icon="mdiEarth"
           item-text="text"
           item-value="locale"
           :items="langs"
@@ -49,6 +49,7 @@
 <script>
   // Utilities
   import SmartPicture from '@/components/SmartPicture.vue'
+  import { mdiEarth } from '@mdi/js'
   import {
     mapGetters,
     mapMutations,
@@ -77,6 +78,7 @@
       ...mapGetters(['links']),
       logoSrc () { return require('@/assets/logo.jpg') },
       logoStyle () { return 'height:48px;width:48px;object-fit:contain;display:inline-block;' },
+      mdiEarth () { return mdiEarth },
     },
 
     methods: {

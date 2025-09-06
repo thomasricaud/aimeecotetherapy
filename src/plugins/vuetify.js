@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import '@mdi/font/css/materialdesignicons.css'
+// Switch to SVG icons instead of webfont
 import Vuetify from 'vuetify/lib'
 import VueI18n from 'vue-i18n'
 import Vuelidate from 'vuelidate'
@@ -34,7 +34,7 @@ const i18n = new VueI18n({
 
 export default new Vuetify({
   icons: {
-    iconfont: 'mdi',
+    iconfont: 'mdiSvg',
   },
   lang: {
     t: (key, ...params) => i18n.t(key, params),

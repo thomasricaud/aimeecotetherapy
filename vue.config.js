@@ -63,7 +63,6 @@ module.exports = {
     if (process.env.NODE_ENV !== 'production') return
     const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
     const PrerenderSPAPlugin = require('prerender-spa-plugin')
-    const Critters = require('critters-webpack-plugin')
     config.plugins = config.plugins || []
     // NOTE: Image minimization via image-minimizer-webpack-plugin is currently disabled
     // due to AJV/schema-utils version constraints in this project. We will enable it later.
@@ -104,16 +103,7 @@ module.exports = {
         })
       )
     }
-    // Inline critical CSS and load the rest non-blocking
-    config.plugins.push(new Critters({
-      preload: 'swap',
-      preloadFonts: true,
-      pruneSource: true,
-      compress: true,
-      inlineFonts: true,
-      mergeStylesheets: true,
-      // multipage support
-      additionalStylesheets: [],
-    }))
+    // Note: Critical CSS inlining was removed due to layout regressions
+    // (hidden-* utilities pruned, duplicate router-view visible).
   }
 }

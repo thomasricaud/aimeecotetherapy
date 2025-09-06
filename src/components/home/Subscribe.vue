@@ -60,9 +60,8 @@
                   <v-icon
                     class="elevation-4"
                     dark
-                  >
-                    mdi-email-outline
-                  </v-icon>
+                    :icon="mdiEmailOutline"
+                  />
                 </v-list-item-avatar>
 
                 <v-list-item-title>EMAIL</v-list-item-title>
@@ -77,9 +76,8 @@
                   <v-icon
                     class="elevation-4"
                     dark
-                  >
-                    mdi-map-marker
-                  </v-icon>
+                    :icon="mdiMapMarker"
+                  />
                 </v-list-item-avatar>
 
                 <v-list-item-title>ADDRESS</v-list-item-title>
@@ -94,9 +92,8 @@
                   <v-icon
                     class="elevation-4"
                     dark
-                  >
-                    mdi-phone
-                  </v-icon>
+                    :icon="mdiPhone"
+                  />
                 </v-list-item-avatar>
 
                 <v-list-item-title>PHONE</v-list-item-title>
@@ -114,7 +111,13 @@
 </template>
 
 <script>
+  import { mdiEmailOutline, mdiMapMarker, mdiPhone } from '@mdi/js'
   export default {
     name: 'HomeSubscribe',
+    computed: {
+      mdiEmailOutline () { return mdiEmailOutline },
+      mdiMapMarker () { return mdiMapMarker },
+      mdiPhone () { return mdiPhone },
+    }
   }
 </script>

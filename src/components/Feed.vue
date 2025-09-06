@@ -22,7 +22,7 @@
           :title="$t('pagination.prev')"
           @click="page--"
         >
-          <v-icon>mdi-chevron-left</v-icon>
+          <v-icon :icon="mdiChevronLeft" />
         </base-btn>
       </v-col>
 
@@ -44,7 +44,7 @@
           :title="$t('pagination.next')"
           @click="page++"
         >
-          <v-icon>mdi-chevron-right</v-icon>
+          <v-icon :icon="mdiChevronRight" />
         </base-btn>
       </v-col>
     </v-row>
@@ -57,6 +57,7 @@
     mapGetters,
   } from 'vuex'
 
+  import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
   export default {
     name: 'Feed',
 
@@ -80,6 +81,8 @@
 
         return this.articles.slice(start, stop)
       },
+      mdiChevronLeft () { return mdiChevronLeft },
+      mdiChevronRight () { return mdiChevronRight },
     },
 
     watch: {
