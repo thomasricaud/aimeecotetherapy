@@ -1,10 +1,11 @@
 ---
-title: "Finding balance through systemic therapy in Chatou"
+title: Finding balance through systemic therapy in Chatou
 author: Aimee Cote
-category: "Family"
-image: "/img/uploads/family-sitting-with-therapist.jpg"
-video: "hide"
-description: "In Chatou, systemic family therapy rebuilds communication and strengthens bonds for couples and families facing life's challenges."
+category: Family
+image: /img/uploads/family-sitting-with-therapist.jpg
+video: hide
+description: In Chatou, systemic family therapy rebuilds communication and
+  strengthens bonds for couples and families facing life's challenges.
 ---
 
 <p>Modern life can strain couple and family relationships. Busy schedules, life transitions and communication differences often upset our harmony. This is where <strong>systemic family therapy</strong> truly matters. In <strong>Chatou</strong>, personalised <strong>couple and family therapy</strong> restores dialogue and strengthens bonds.</p>

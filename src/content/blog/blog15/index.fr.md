@@ -1,12 +1,12 @@
 ---
-title: "Retrouver l'équilibre grâce à la thérapie systémique à Chatou"
+title: Retrouver l'équilibre grâce à la thérapie systémique à Chatou
 author: Aimee Cote
-category: "Famille"
-image: "/img/uploads/family-sitting-with-therapist.jpg"
-video: "hide"
-description: "À Chatou, la thérapie systémique rétablit le dialogue et renforce les liens familiaux pour surmonter les défis du quotidien."
+category: Famille
+image: /img/uploads/family-sitting-with-therapist.jpg
+video: hide
+description: À Chatou, la thérapie systémique rétablit le dialogue et renforce
+  les liens familiaux pour surmonter les défis du quotidien.
 ---
-
 <p>Dans nos vies modernes, les relations de couple et familiales sont souvent mises à l'épreuve. Entre le rythme professionnel, les transitions de vie et les différences de communication, il est parfois difficile de garder un équilibre harmonieux. C’est dans ce contexte que la <strong>thérapie systémique</strong> prend tout son sens. À <strong>Chatou</strong>, un accompagnement personnalisé en <strong>thérapie de couple et familiale</strong> permet de rétablir le dialogue et de renforcer les liens.</p>
 
 <h2>Qu’est-ce que la thérapie systémique ?</h2>
@@ -41,9 +41,9 @@ description: "À Chatou, la thérapie systémique rétablit le dialogue et renfo
 
 <p>C’est aussi un véritable soutien psychologique pour les parents et les enfants qui traversent des moments de transition.</p>
 
-<h2>Psychothérapie à Chatou et dans les Yvelines</h2>
+<h2>Thérapie à Chatou et dans les Yvelines</h2>
 
-<p>Situé à Chatou, le cabinet est facilement accessible depuis Rueil-Malmaison, Croissy et Le Vésinet. Que vous cherchiez un <strong>psychothérapeute Yvelines 78</strong> ou une <strong>consultation thérapeute familiale à Chatou</strong>, vous trouverez un espace confidentiel et bienveillant.</p>
+<p>Situé à Chatou, le cabinet est facilement accessible depuis Rueil-Malmaison, Croissy et Le Vésinet. Que vous cherchiez un <strong>thérapeute Yvelines 78</strong> ou une <strong>consultation thérapeute familiale à Chatou</strong>, vous trouverez un espace confidentiel et bienveillant.</p>
 
 <h2>Un accompagnement relationnel adapté à chacun</h2>
 
@@ -65,4 +65,4 @@ description: "À Chatou, la thérapie systémique rétablit le dialogue et renfo
 <li>Bénéficier d’un accompagnement avec un <strong>thérapeute systémique bilingue à Chatou</strong></li>
 </ul>
 
-<p>👉 Contactez Aimée Coté, psychothérapeute à Chatou, pour un premier échange bienveillant.</p>
+<p>👉 Contactez Aimée Coté, psychopraticienne à Chatou, pour un premier échange bienveillant.</p>
