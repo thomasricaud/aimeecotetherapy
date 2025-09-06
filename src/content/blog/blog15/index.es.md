@@ -1,10 +1,11 @@
 ---
-title: "Recuperar el equilibrio gracias a la terapia sistémica en Chatou"
+title: Recuperar el equilibrio gracias a la terapia sistémica en Chatou
 author: Aimee Cote
-category: "Familia"
-image: "/img/uploads/family-sitting-with-therapist.jpg"
-video: "hide"
-description: "En Chatou, la terapia familiar sistémica restablece el diálogo y refuerza los vínculos para afrontar los retos cotidianos."
+category: Familia
+image: /img/uploads/family-sitting-with-therapist.jpg
+video: hide
+description: En Chatou, la terapia familiar sistémica restablece el diálogo y
+  refuerza los vínculos para afrontar los retos cotidianos.
 ---
 
 <p>En la vida moderna, las relaciones de pareja y familiares suelen ponerse a prueba. Entre el ritmo profesional, las transiciones vitales y las diferencias de comunicación, mantener un equilibrio armonioso puede resultar difícil. En este contexto, la <strong>terapia sistémica</strong> cobra todo su sentido. En <strong>Chatou</strong>, un acompañamiento personalizado en <strong>terapia de pareja y familiar</strong> permite restablecer el diálogo y fortalecer los lazos.</p>
