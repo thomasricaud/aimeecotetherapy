@@ -9,14 +9,14 @@ import i18n from '@/i18n'
 
 Vue.use(Router)
 
-const supportedLanguages = ['fr', 'en', 'es']
+const supportedLanguages = ['en', 'fr', 'es']
 
 function getBrowserLanguage () {
   if (typeof navigator !== 'undefined') {
     const browser = navigator.language.split('-')[0]
     if (supportedLanguages.includes(browser)) return browser
   }
-  return 'fr'
+  return 'en'
 }
 
 export default new Router({
