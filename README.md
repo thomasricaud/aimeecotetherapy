@@ -19,7 +19,7 @@ Example of an English post:
 ```
 ---
 title: "Challenges of Isolation during the Coronavirus Pandemic"
-author: "Aimee cote"
+author: Aimee Cote
 category: "Family"
 image: "blog1.jpg"
 video: "hide"
