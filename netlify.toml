@@ -1,8 +1,9 @@
 [build]
-  command = "npm run build"
+  command = "npm run build:prerender && npm run optimize:images"
   publish = "dist"
 
 [build.environment]
   NODE_VERSION = "22"
   NPM_VERSION  = "11.4.2"
   NPM_FLAGS    = "--include=dev"
+  ENABLE_PRERENDER = "1"

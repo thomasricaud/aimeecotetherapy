@@ -5,7 +5,7 @@
 const fs = require('fs')
 const path = require('path')
 const os = require('os')
-const { ImagePool } = require('@squoosh/lib')
+const sharp = require('sharp')
 
 const DIST_DIR = path.resolve(__dirname, '..', 'dist')
 const EXTS = new Set(['.jpg', '.jpeg', '.png'])
@@ -22,39 +22,40 @@ async function* walk (dir) {
   }
 }
 
+async function convert (file) {
+  const webpOut = file + '.webp'
+  const avifOut = file + '.avif'
+  if (!fs.existsSync(webpOut)) {
+    await sharp(file).webp({ quality: 75 }).toFile(webpOut)
+  }
+  if (!fs.existsSync(avifOut)) {
+    await sharp(file).avif({ quality: 50 }).toFile(avifOut)
+  }
+}
+
 async function main () {
-  const imagePool = new ImagePool(Math.max(1, os.cpus().length - 1))
-  const tasks = []
+  const concurrency = Math.max(1, os.cpus().length - 1)
+  const queue = []
+  let count = 0
 
   for await (const file of walk(DIST_DIR)) {
     const ext = path.extname(file).toLowerCase()
     if (!EXTS.has(ext)) continue
-
-    // Skip if variants already exist
-    const webpOut = file + '.webp'
-    const avifOut = file + '.avif'
-    if (fs.existsSync(webpOut) && fs.existsSync(avifOut)) continue
-
-    tasks.push((async () => {
-      const input = await fs.promises.readFile(file)
-      const image = imagePool.ingestImage(input)
-      await image.encode({
-        webp: { quality: 75 },
-        avif: { cqLevel: 33 },
-      })
-      const { webp, avif } = await image.encodedWith
-      if (webp && !fs.existsSync(webpOut)) await fs.promises.writeFile(webpOut, webp.binary)
-      if (avif && !fs.existsSync(avifOut)) await fs.promises.writeFile(avifOut, avif.binary)
-    })())
+    const task = convert(file).then(() => { count++ })
+    queue.push(task)
+    if (queue.length >= concurrency) {
+      await Promise.race(queue).catch(() => {})
+      // remove settled promises
+      for (let i = queue.length - 1; i >= 0; i--) {
+        if (queue[i].status === 'fulfilled' || queue[i].status === 'rejected') queue.splice(i, 1)
+      }
+    }
   }
-
-  await Promise.all(tasks)
-  await imagePool.close()
-  console.log(`Optimized ${tasks.length} images to WebP/AVIF variants`)
+  await Promise.allSettled(queue)
+  console.log(`Optimized ${count} images to WebP/AVIF variants`)
 }
 
 main().catch((err) => {
   console.error(err)
   process.exit(1)
 })
-
