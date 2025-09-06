@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import '@fortawesome/fontawesome-free/css/all.css'
+import '@mdi/font/css/materialdesignicons.css'
 import Vuetify from 'vuetify/lib'
 import VueI18n from 'vue-i18n'
 import Vuelidate from 'vuelidate'
@@ -34,6 +35,7 @@ const i18n = new VueI18n({
 
 export default new Vuetify({
   icons: {
+    // Keep FontAwesome as default, MDI classes still work when CSS is loaded
     iconfont: 'fa',
   },
   lang: {

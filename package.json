@@ -16,6 +16,7 @@
     "optimize:images": "node scripts/optimize-images.js"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "emailjs-com": "^2.4.1",
     "front-matter": "^4.0.2",
     "netlify-cms-app": "2.15.72",
