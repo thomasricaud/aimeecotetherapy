@@ -3,14 +3,7 @@
     <v-divider />
     <br />
     <br />
-    <v-img
-      :src="require(`@/assets/closeup-photography-of-stacked-stones.jpg`)"
-      :lazy-src="require('@/assets/white_wall.png')"
-      :alt="$t('ASystemImageAlt')"
-      width="100%"
-      style="max-width:50vh;"
-      class="float-md-right mx-auto my-12 ma-md-12"
-    />
+    <SmartPicture :src="stonesSrc" :alt="$t('ASystemImageAlt')" img-class="float-md-right mx-auto my-12 ma-md-12" :img-style="'max-width:50vh;width:100%;height:auto;'" />
     <base-heading>
       <h1>{{ $i18n.t("ASystem") }}</h1>
     </base-heading>
@@ -24,3 +17,12 @@
     </base-text>
   </section>
 </template>
+<script>
+import SmartPicture from '@/components/SmartPicture.vue'
+export default {
+  components: { SmartPicture },
+  computed: {
+    stonesSrc () { return require('@/assets/closeup-photography-of-stacked-stones.jpg') },
+  }
+}
+</script>

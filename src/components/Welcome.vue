@@ -14,13 +14,7 @@
           align="center"
         >
           <v-col class="my-5 my-md-12 pa-2">
-            <v-img
-              :src="require('@/assets/Aimee.jpg')"
-              :lazy-src="require('@/assets/white_wall.png')"
-              :alt="$t('WelcomePortraitAlt')"
-              width="100%"
-              aspect-ratio="1"
-            />
+            <SmartPicture :src="aimeeSrc" :alt="$t('WelcomePortraitAlt')" img-class="w-100" :img-style="'width:100%;height:auto;object-fit:cover;aspect-ratio:1/1;'" />
           </v-col>
         </v-row>
       </v-col>
@@ -60,11 +54,16 @@
   </section>
 </template>
 <script>
+  import SmartPicture from '@/components/SmartPicture.vue'
   export default {
     name: 'Welcome',
 
     components: {
+      SmartPicture,
       SocialMedia: () => import('@/components/SocialMedia'),
+    },
+    computed: {
+      aimeeSrc () { return require('@/assets/Aimee.jpg') },
     },
   }
 </script>

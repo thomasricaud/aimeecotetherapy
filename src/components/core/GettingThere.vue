@@ -21,13 +21,15 @@
     <base-text class="my-12">
       <p>{{ $t('GettingThereDescription') }}</p>
     </base-text>
-    <v-img
-      :src="require(`@/assets/officeChatou.jpg`)"
-      :lazy-src="require('@/assets/white_wall.png')"
-      :alt="$t('GettingThereOfficeAlt')"
-      width="100%"
-      style="max-width:600px;"
-      class="mx-auto my-12"
-    />
+    <SmartPicture :src="officeSrc" :alt="$t('GettingThereOfficeAlt')" img-class="mx-auto my-12" :img-style="'max-width:600px;width:100%;height:auto;'" />
   </section>
 </template>
+<script>
+import SmartPicture from '@/components/SmartPicture.vue'
+export default {
+  components: { SmartPicture },
+  computed: {
+    officeSrc () { return require('@/assets/officeChatou.jpg') },
+  }
+}
+</script>
