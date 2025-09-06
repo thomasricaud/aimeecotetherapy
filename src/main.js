@@ -19,3 +19,10 @@ new Vue({
   i18n,
   render: h => h(App)
 }).$mount('#app')
+
+// Signal to prerenderer when the app finished rendering
+if (typeof document !== 'undefined') {
+  Vue.nextTick(() => {
+    try { document.dispatchEvent(new Event('x-app-rendered')) } catch (e) {}
+  })
+}

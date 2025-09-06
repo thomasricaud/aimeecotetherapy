@@ -5,13 +5,15 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run sitemap && vue-cli-service build",
+    "build:prerender": "cross-env ENABLE_PRERENDER=1 vue-cli-service build",
     "lint": "eslint scripts",
     "deploy": "yarn build && now && now alias",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'",
     "sitemap": "node scripts/generate-sitemap.js",
     "versions": "node -v && npm -v && npx vue-cli-service --version",
     "test": "jest",
-    "seo-check": "npx lhci autorun --config=lighthouserc.js"
+    "seo-check": "npx lhci autorun --config=lighthouserc.js",
+    "optimize:images": "node scripts/optimize-images.js"
   },
   "dependencies": {
     "emailjs-com": "^2.4.1",
@@ -96,6 +98,11 @@
       "ajv": "6.12.6",
       "ajv-formats": "1.6.1",
       "ajv-keywords": "3.5.2"
+    },
+    "image-minimizer-webpack-plugin": {
+      "schema-utils": "^4.2.0",
+      "ajv": "^8.12.0",
+      "ajv-keywords": "^5.1.0"
     }
   },
   "engines": {
