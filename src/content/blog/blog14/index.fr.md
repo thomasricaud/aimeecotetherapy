@@ -4,6 +4,7 @@ author: Aimee cote
 category: Individuel
 image: "/img/uploads/blog14.jpg"
 video: hide
+description: "Quand un proche souffre, résistez à l’envie de tout résoudre. Restez présent, validez ses émotions et laissez les solutions émerger."
 ---
 Pensez à la dernière fois que quelqu'un est venu vous voir avec un problème. Peut‑être était‑ce votre enfant, votre partenaire ou un ami. Avez‑vous répondu par quelque chose du genre "tu devrais peut‑être..." ou "as‑tu essayé..." ? La personne vous a‑t‑elle souri et remercié ? Ou bien s'est‑elle tue et a cessé de parler ? Peut‑être même a‑t‑elle argumenté que son problème était bien plus sérieux que vous ne le pensiez et qu'il n'y avait aucune chance que votre solution fonctionne.<br><br>
 
