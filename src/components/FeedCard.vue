@@ -5,6 +5,7 @@
   >
     <base-card
       color="lighten-10"
+      @click="navigateTo(value.slug)"
     >
       <v-row
         class="fill-height ma-0"
@@ -69,8 +70,8 @@
       overlay: false,
     }),
     methods: {
-      navigateTo (title, content, image) {
-        this.$router.push({ name: 'blogentry', params: { title: title, content: content, image: image } })
+      navigateTo (slug) {
+        this.$router.push({ name: 'blogentry', params: { lang: this.$route.params.lang, slug } })
       },
     },
   }

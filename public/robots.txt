@@ -1,4 +1,18 @@
 User-agent: *
 Allow: /
-
+Allow: /fr/blog/les-defis-de-lisolement-pendant-la-pandemie-de-coronavirus
+Allow: /fr/blog/rester-avec-la-souffrance-vs-le-piege-de-la-recherche-de-solutions
+Allow: /fr/blog/dissociation
+Allow: /fr/blog/beyond-behaviors-une-approche-innovante-des-comportements-difficiles
+Allow: /fr/blog/pourquoi-nous-devrions-arreter-de-blamer-linconstance-parentale-pour-ces-crises-spectaculaires
+Allow: /en/blog/challenges-of-isolation-during-the-coronavirus-pandemic
+Allow: /en/blog/sitting-with-suffering-vs-the-trap-of-problem-solving
+Allow: /en/blog/dissociation
+Allow: /en/blog/beyond-behaviors-an-innovative-approach-to-challenging-behavior
+Allow: /en/blog/why-we-should-stop-blaming-inconsistent-parenting-for-those-epic-meltdowns
+Allow: /es/blog/los-retos-del-aislamiento-durante-la-pandemia-de-coronavirus
+Allow: /es/blog/acompanar-el-sufrimiento-frente-a-la-trampa-de-solucionar-el-problema
+Allow: /es/blog/disociacion
+Allow: /es/blog/beyond-behaviors-un-enfoque-innovador-para-los-comportamientos-desafiantes
+Allow: /es/blog/por-que-deberiamos-dejar-de-culpar-a-la-falta-de-constancia-parental-por-esas-rabietas-epicas
 Sitemap: https://www.aimeecotetherapy.com/sitemap.xml

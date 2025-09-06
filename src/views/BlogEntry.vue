@@ -17,8 +17,8 @@
     name: 'BlogEntry',
     computed: {
       article () {
-        const title = this.$route.params.title
-        return this.$store.getters.articles.find(a => a.title === title) || {}
+        const slug = this.$route.params.slug
+        return this.$store.getters.articles.find(a => a.slug === slug) || {}
       }
     },
     metaInfo () {

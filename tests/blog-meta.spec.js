@@ -15,7 +15,8 @@ describe('BlogEntry meta tags', () => {
           {
             title: 'Test Article',
             description: 'A short description',
-            content: '<p>Content</p>'
+            content: '<p>Content</p>',
+            slug: 'test-article'
           }
         ]
       }
@@ -25,7 +26,7 @@ describe('BlogEntry meta tags', () => {
       localVue,
       store,
       mocks: {
-        $route: { params: { title: 'Test Article' } }
+        $route: { params: { slug: 'test-article' } }
       }
     })
 
