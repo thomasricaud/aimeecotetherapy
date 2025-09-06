@@ -4,49 +4,97 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build",
+    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "deploy": "yarn build && now && now alias",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'",
-    "sitemap": "node scripts/generate-sitemap.js"
+    "sitemap": "node scripts/generate-sitemap.js",
+    "versions": "node -v && npm -v && npx vue-cli-service --version",
+    "test": "jest"
   },
   "dependencies": {
     "emailjs-com": "^2.4.1",
     "front-matter": "^4.0.2",
+    "netlify-cms-app": "2.15.72",
     "slugify": "^1.6.5",
     "vue": "^2.6.11",
     "vue-i18n": "^8.17.3",
-    "vue-router": "^3.1.6",
     "vue-meta": "^2.4.0",
+    "vue-router": "^3.1.6",
     "vue-youtube": "^1.4.0",
     "vue-youtube-embed": "^2.2.2",
     "vuelidate": "^0.7.5",
     "vuetify": "^2.2.23",
-    "vuex": "^3.2.0",
-    "netlify-cms-app": "^2.15.0"
+    "vuex": "^3.2.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
     "@intlify/vue-i18n-loader": "^1.0.0",
-    "@vue/cli-plugin-babel": "^4.3.1",
-    "@vue/cli-service": "^4.3.1",
-    "@vue/eslint-config-standard": "^5.1.2",
+    "@vue/cli-service": "^5.0.9",
+    "@vue/eslint-config-standard": "^8.0.1",
     "@vue/test-utils": "^1.0.0-beta.33",
+    "@vue/cli-plugin-babel": "^5.0.9",
+    "jest": "^25.5.4",
+    "vue-jest": "^3.0.4",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^25.4.0",
-    "eslint": "^6.8.0",
+    "eslint": "^8.57.1",
     "eslint-config-vuetify": "^0.6.0",
-    "eslint-plugin-vue": "^6.2.2",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-vue": "^9.33.0",
+    "raw-loader": "^4.0.2",
     "sass": "^1.26.3",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^12.6.0",
+    "terser-webpack-plugin": "5.3.10",
+    "css-minimizer-webpack-plugin": "3.4.1",
     "vue-cli-plugin-i18n": "~1.0.1",
     "vue-cli-plugin-vuetify": "^0.4.6",
     "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.4.3",
-    "raw-loader": "^4.0.2"
+    "vuetify-loader": "^1.7.3",
+    "webpack": "^5.0.0"
+  },
+  "overrides": {
+    "@vue/vue-loader-v15": "npm:vue-loader@15.11.1",
+
+    "terser-webpack-plugin": {
+      "schema-utils": "3.3.0",
+      "ajv": "6.12.6",
+      "ajv-keywords": "3.5.2"
+    },
+    "css-minimizer-webpack-plugin": {
+      "schema-utils": "3.3.0",
+      "ajv": "6.12.6",
+      "ajv-keywords": "3.5.2"
+    },
+    "mini-css-extract-plugin": {
+      "schema-utils": "3.3.0",
+      "ajv": "6.12.6",
+      "ajv-keywords": "3.5.2"
+    },
+
+    "webpack": {
+      "schema-utils": "3.3.0",
+      "ajv": "6.12.6",
+      "ajv-formats": "1.6.1",
+      "ajv-keywords": "3.5.2"
+    },
+    "webpack-dev-server": {
+      "schema-utils": "3.3.0",
+      "ajv": "6.12.6",
+      "ajv-formats": "1.6.1",
+      "ajv-keywords": "3.5.2"
+    },
+    "webpack-dev-middleware": {
+      "schema-utils": "3.3.0",
+      "ajv": "6.12.6",
+      "ajv-formats": "1.6.1",
+      "ajv-keywords": "3.5.2"
+    }
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22.0.0"
   }
 }
