@@ -14,7 +14,7 @@ export default new Vuex.Store({
     items: [
       {
         text: 'nav.home',
-        href: '/home',
+        href: '/',
       },
       {
         text: 'nav.blog',
@@ -56,7 +56,11 @@ export default new Vuex.Store({
       return categories.sort().slice(0, 4)
     },
     links: state => {
-      return state.items
+      const locale = i18n.locale
+      return state.items.map(link => {
+        const base = link.href === '/' ? '' : link.href
+        return { ...link, href: `/${locale}${base}` }
+      })
     },
   },
   mutations: {

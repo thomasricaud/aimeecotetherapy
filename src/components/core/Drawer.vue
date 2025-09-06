@@ -9,8 +9,7 @@
       <v-list-item
         v-for="(link, i) in links"
         :key="i"
-        :to="link.to"
-        :href="link.href"
+        :to="link.href"
         @click="onClick($event, link)"
       >
         <v-list-item-title v-text="$t(link.text)" />
@@ -46,15 +45,10 @@
       onClick (e, item) {
         e.stopPropagation()
 
-        if (item.to === '/') {
+        if (item.href === `/${this.$i18n.locale}`) {
           this.$vuetify.goTo(0)
-          this.setDrawer(false)
-          return
         }
 
-        if (item.to || !item.href) return
-
-        this.$vuetify.goTo(item.href)
         this.setDrawer(false)
       },
     },
