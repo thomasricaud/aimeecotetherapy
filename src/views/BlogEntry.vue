@@ -28,6 +28,14 @@
           {
             name: 'description',
             content: this.article.description || ''
+          },
+          {
+            property: 'og:description',
+            content: this.article.description || ''
+          },
+          {
+            name: 'twitter:description',
+            content: this.article.description || ''
           }
         ]
       }

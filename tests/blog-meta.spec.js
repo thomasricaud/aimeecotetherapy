@@ -8,7 +8,7 @@ localVue.use(Vuex)
 localVue.use(VueMeta)
 
 describe('BlogEntry meta tags', () => {
-  it('renders title and description meta tag', () => {
+  it('renders title and description meta tags', () => {
     const store = new Vuex.Store({
       getters: {
         articles: () => [
@@ -34,5 +34,13 @@ describe('BlogEntry meta tags', () => {
     const description = meta.metaInfo.meta.find(m => m.name === 'description')
     expect(description).toBeTruthy()
     expect(description.content).toBe('A short description')
+
+    const ogDesc = meta.metaInfo.meta.find(m => m.property === 'og:description')
+    expect(ogDesc).toBeTruthy()
+    expect(ogDesc.content).toBe('A short description')
+
+    const twitterDesc = meta.metaInfo.meta.find(m => m.name === 'twitter:description')
+    expect(twitterDesc).toBeTruthy()
+    expect(twitterDesc.content).toBe('A short description')
   })
 })
