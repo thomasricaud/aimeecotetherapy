@@ -57,11 +57,7 @@
                 <v-list-item-avatar
                   color="primary"
                 >
-                  <v-icon
-                    class="elevation-4"
-                    dark
-                    :icon="mdiEmailOutline"
-                  />
+                  <v-icon class="elevation-4" dark>$emailOutline</v-icon>
                 </v-list-item-avatar>
 
                 <v-list-item-title>EMAIL</v-list-item-title>
@@ -73,11 +69,7 @@
 
               <v-list-item>
                 <v-list-item-avatar color="primary">
-                  <v-icon
-                    class="elevation-4"
-                    dark
-                    :icon="mdiMapMarker"
-                  />
+                  <v-icon class="elevation-4" dark>$mapMarker</v-icon>
                 </v-list-item-avatar>
 
                 <v-list-item-title>ADDRESS</v-list-item-title>
@@ -89,11 +81,7 @@
 
               <v-list-item>
                 <v-list-item-avatar color="primary">
-                  <v-icon
-                    class="elevation-4"
-                    dark
-                    :icon="mdiPhone"
-                  />
+                  <v-icon class="elevation-4" dark>$phone</v-icon>
                 </v-list-item-avatar>
 
                 <v-list-item-title>PHONE</v-list-item-title>
@@ -111,13 +99,7 @@
 </template>
 
 <script>
-  import { mdiEmailOutline, mdiMapMarker, mdiPhone } from '@mdi/js'
   export default {
     name: 'HomeSubscribe',
-    computed: {
-      mdiEmailOutline () { return mdiEmailOutline },
-      mdiMapMarker () { return mdiMapMarker },
-      mdiPhone () { return mdiPhone },
-    }
   }
 </script>

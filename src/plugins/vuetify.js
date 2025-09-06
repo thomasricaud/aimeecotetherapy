@@ -1,6 +1,20 @@
 import Vue from 'vue'
 // Switch to SVG icons instead of webfont
 import Vuetify from 'vuetify/lib'
+// Register only the SVG icons we use
+import {
+  mdiEarth,
+  mdiCalendar,
+  mdiChevronLeft,
+  mdiChevronRight,
+  mdiEmailOutline,
+  mdiMapMarker,
+  mdiPhone,
+  mdiFacebookMessenger,
+  mdiInstagram,
+  mdiFacebook,
+  mdiEmail,
+} from '@mdi/js'
 import VueI18n from 'vue-i18n'
 import Vuelidate from 'vuelidate'
 Vue.use(Vuetify)
@@ -35,6 +49,19 @@ const i18n = new VueI18n({
 export default new Vuetify({
   icons: {
     iconfont: 'mdiSvg',
+    values: {
+      earth: mdiEarth,
+      calendar: mdiCalendar,
+      chevronLeft: mdiChevronLeft,
+      chevronRight: mdiChevronRight,
+      emailOutline: mdiEmailOutline,
+      mapMarker: mdiMapMarker,
+      phone: mdiPhone,
+      facebookMessenger: mdiFacebookMessenger,
+      instagram: mdiInstagram,
+      facebook: mdiFacebook,
+      email: mdiEmail,
+    },
   },
   lang: {
     t: (key, ...params) => i18n.t(key, params),

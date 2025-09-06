@@ -10,13 +10,12 @@
       target="_blank"
       :href="item.src"
     >
-      <v-icon dark :icon="item.icon" />
+      <v-icon dark v-text="item.icon" />
     </v-btn>
   </div>
 </template>
 
 <script>
-import { mdiFacebookMessenger, mdiInstagram, mdiFacebook, mdiEmail, mdiPhone } from '@mdi/js'
 export default {
   props: {
     large: {
@@ -27,11 +26,11 @@ export default {
 
   data: () => ({
     items: [
-      { name: 'Messenger', icon: mdiFacebookMessenger, src: 'https://www.messenger.com/t/AimeeCoteTherapy' },
-      { name: 'Instagram', icon: mdiInstagram, src: 'https://www.instagram.com/aimee_cote_therapy' },
-      { name: 'Facebook', icon: mdiFacebook, src: 'https://www.facebook.com/AimeeCoteTherapy' },
-      { name: 'Email', icon: mdiEmail, src: 'mailto:aimee.cote.therapy@gmail.com' },
-      { name: 'Phone', icon: mdiPhone, src: 'tel:+33622701183' },
+      { name: 'Messenger', icon: '$facebookMessenger', src: 'https://www.messenger.com/t/AimeeCoteTherapy' },
+      { name: 'Instagram', icon: '$instagram', src: 'https://www.instagram.com/aimee_cote_therapy' },
+      { name: 'Facebook', icon: '$facebook', src: 'https://www.facebook.com/AimeeCoteTherapy' },
+      { name: 'Email', icon: '$email', src: 'mailto:aimee.cote.therapy@gmail.com' },
+      { name: 'Phone', icon: '$phone', src: 'tel:+33622701183' },
     ]
   })
 };

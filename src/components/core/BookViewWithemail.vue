@@ -47,7 +47,7 @@
             <v-text-field
               v-model="date"
               label="prefered date"
-              :prepend-icon="mdiCalendar"
+              prepend-icon="$calendar"
               readonly
               v-bind="attrs"
               v-on="on"
@@ -80,7 +80,6 @@
 import { validationMixin } from "vuelidate";
 import { required, maxLength, email, alphaNum } from "vuelidate/lib/validators";
 import emailjs from "emailjs-com";
-import { mdiCalendar } from '@mdi/js'
 export default {
   mixins: [validationMixin],
 
@@ -103,7 +102,6 @@ export default {
     savingSuccessful: false
   }),
   computed: {
-    mdiCalendar () { return mdiCalendar },
     dateErrors() {
       const errors = [];
       if (!this.$v.date.$dirty) return errors;
