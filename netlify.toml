@@ -1,0 +1,4 @@
+# netlify.toml
+[build.environment]
+NODE_VERSION = "22"       # .nvmrc/.node-version possible aussi
+NPM_VERSION  = "11.4.2"   # <-- épingle npm ici
