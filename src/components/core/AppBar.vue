@@ -87,6 +87,15 @@
     methods: {
       ...mapMutations(['toggleDrawer']),
       changeLocale (locale) {
+        const { name, params, query, hash } = this.$route
+        if (params.lang !== locale) {
+          this.$router.push({
+            name,
+            params: { ...params, lang: locale },
+            query,
+            hash,
+          })
+        }
         this.$i18n.locale = locale
       },
     },
