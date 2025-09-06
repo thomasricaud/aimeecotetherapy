@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import fm from 'front-matter'
-import slugify from 'slugify'
 import i18n from '@/i18n'
 
 Vue.use(Vuex)
@@ -39,7 +38,7 @@ export default new Vuex.Store({
         .reverse()
         .map(key => {
           const { attributes, body } = fm(markdownContext(key).default)
-          const slug = slugify(attributes.title, { lower: true, strict: true })
+          const slug = key.split('/')[1]
           return { ...attributes, slug, content: body.trim() }
         })
     },

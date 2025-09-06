@@ -2,7 +2,7 @@
   "message": "bonjour i18n !!",
   "key1": "voici le message1",
   "WelcomeName": "Aimee Cote",
-  "WelcomeTitle2": "Une thérapeute bilingue francais / anglais , à Chatou (78400) ",
+  "WelcomeTitle2": "Une thérapeute familiale bilingue français / anglais à Chatou (Yvelines 78)",
   "WelcomeTitle": "Thérapeute de couple , familiale et individuelle / psychopraticienne",
   "Welcome": "Pratiquant une thérapie empathique et axée sur la croissance, j'apporte un soutien dans le cadre de séances familiales ou individuelles. Que vous soyez confronté à des problèmes comportementaux des enfants ou adolescents , à des défis parentaux, à des conflits interculturels, à des phases transitoires de votre vie ou à tout type d'autre problème, la thérapie peut vous guider vers la voie à suivre .",
   "Welcome2": "Si vous avez des interrogations sur la façon dont la thérapie peut vous être utile dans votre situation particulière, n'hésitez pas à m'envoyer un message sur Facebook ou m'appeler au 0651417925.",
@@ -49,8 +49,7 @@
   "AboutHelp": "Je suis là pour vous aider en utilisant divers outils.",
   "AboutSkillIndividual": "Thérapie individuelle",
   "AboutSkillCouple": "Thérapie de couple",
-  "AboutSkillFamily": "Thérapie familiale"
-,
+  "AboutSkillFamily": "Thérapie familiale",
   "FamilyHelp": "La thérapie peut vous aider pour",
   "pagination.prev": "Page précédente",
   "pagination.next": "Page suivante",
@@ -72,9 +71,9 @@
   "nav.book": "Prendre rendez-vous",
   "nav.there": "Y aller",
   "meta.homeTitle": "Accueil",
-  "meta.homeDesc": "Aperçu des services de thérapie et de l'approche chez Aimee Co Therapy",
+  "meta.homeDesc": "Thérapeute familiale à Chatou, Yvelines 78 : thérapie de couple et familiale et psychothérapie familiale",
   "meta.blogTitle": "Blog",
-  "meta.blogDesc": "Derniers articles de thérapie et nouvelles d'Aimee Co Therapy",
+  "meta.blogDesc": "Articles de thérapie familiale pour améliorer la communication familiale et soutenir parents et enfants à Chatou",
   "meta.bookTitle": "Réserver une séance",
   "meta.bookDesc": "Planifier un rendez-vous de thérapie avec Aimee Co Therapy",
   "meta.thereTitle": "Y aller",
@@ -94,4 +93,3 @@
   "InstagramSpicesAlt": "Assortiment d'épices",
   "InstagramSunsetAlt": "Coucher de soleil éclatant"
 }
-
