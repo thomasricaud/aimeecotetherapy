@@ -1,7 +1,5 @@
 const fs = require('fs')
 const path = require('path')
-const fm = require('front-matter')
-const slugify = require('slugify')
 
 const baseUrl = 'https://www.aimeecotetherapy.com'
 const routes = ['/', '/blog', '/book', '/there', '/home']
@@ -17,10 +15,9 @@ function getBlogRoutes (lang) {
   const slugs = new Set()
   dirs.forEach(d => {
     const file = path.join(blogDir, d, `index.${lang}.md`)
-    const content = fs.readFileSync(file, 'utf-8')
-    const { attributes } = fm(content)
-    const slug = slugify(attributes.title, { lower: true, strict: true })
-    slugs.add(`/blog/${slug}`)
+    if (fs.existsSync(file)) {
+      slugs.add(`/blog/${d}`)
+    }
   })
   return Array.from(slugs)
 }
