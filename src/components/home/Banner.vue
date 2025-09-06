@@ -1,13 +1,13 @@
 <template>
   <base-card dark>
-    <v-img
-      :src="require('@/assetsBigsize/logo.jpg')"
-      :lazy-src="require('@/assets/white_wall.png')"
-      alt="Aimee Cote Therapy logo"
-      class="grey lighten-2"
-      height="400"
-      width="100%"
-    >
+      <v-img
+        :src="'/.netlify/images?url=' + require('@/assetsBigsize/logo.jpg') + '&format=auto'"
+        :lazy-src="require('@/assets/white_wall.png')"
+        :alt="$t('LogoAlt')"
+        class="grey lighten-2"
+        height="400"
+        width="100%"
+      >
       <v-row
         class="fill-height"
         align="start"

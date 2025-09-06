@@ -13,21 +13,21 @@
       <v-row align="center" no-gutters>
         <v-tooltip bottom>
           <template v-slot:activator="{ on }">
-            <v-img
-              :src="require('@/assets/logo.jpg')"
-              :lazy-src="require('@/assets/white_wall.png')"
-              class="mr-5"
-              contain
-              height="48"
-              width="48"
-              max-width="48"
-              alt="Aimee Cote Therapy logo"
-              @click="$vuetify.goTo(0)"
-              v-on="on"
-            />
-          </template>
-          <span>{{ $t('TooltipTherapist') }}</span>
-        </v-tooltip>
+              <v-img
+                src="/.netlify/images?url=/logo.jpg&format=auto"
+                :lazy-src="require('@/assets/white_wall.png')"
+                class="mr-5"
+                contain
+                height="48"
+                width="48"
+                max-width="48"
+                :alt="$t('LogoAlt')"
+                @click="$vuetify.goTo(0)"
+                v-on="on"
+              />
+            </template>
+            <span>{{ $t('TooltipTherapist') }}</span>
+          </v-tooltip>
         <v-btn
           v-for="(link, i) in links"
           :key="i"
