@@ -33,7 +33,7 @@
           :key="i"
           class="hidden-sm-and-down"
           text
-          :to="link .href"
+          :to="link.href"
         >
           {{ $t(link.text) }}
         </v-btn>
