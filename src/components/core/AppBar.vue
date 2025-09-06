@@ -13,18 +13,9 @@
       <v-row align="center" no-gutters>
         <v-tooltip bottom>
           <template v-slot:activator="{ on }">
-            <v-img
-              :src="require('@/assets/logo.jpg')"
-              :lazy-src="require('@/assets/white_wall.png')"
-              class="mr-5"
-              contain
-              height="48"
-              width="48"
-              max-width="48"
-              alt="Aimee Cote Therapy logo"
-              @click="$vuetify.goTo(0)"
-              v-on="on"
-            />
+            <span v-on="on" @click="$vuetify.goTo(0)">
+              <SmartPicture :src="logoSrc" alt="Aimee Cote Therapy logo" img-class="mr-5" :img-style="logoStyle" />
+            </span>
           </template>
           <span>{{ $t('TooltipTherapist') }}</span>
         </v-tooltip>
@@ -41,7 +32,7 @@
         <v-spacer />
         <v-select
           v-model="$i18n.locale"
-          append-outer-icon="fas fa-globe"
+          append-outer-icon="$earth"
           item-text="text"
           item-value="locale"
           :items="langs"
@@ -57,6 +48,7 @@
 
 <script>
   // Utilities
+  import SmartPicture from '@/components/SmartPicture.vue'
   import {
     mapGetters,
     mapMutations,
@@ -64,6 +56,7 @@
 
   export default {
     name: 'CoreAppBar',
+    components: { SmartPicture },
     data: () => ({
       langs: [
         {
@@ -82,6 +75,8 @@
     }),
     computed: {
       ...mapGetters(['links']),
+      logoSrc () { return require('@/assets/logo.jpg') },
+      logoStyle () { return 'height:48px;width:48px;object-fit:contain;display:inline-block;' },
     },
 
     methods: {

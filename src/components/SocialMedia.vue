@@ -26,31 +26,11 @@ export default {
 
   data: () => ({
     items: [
-      {
-        name: "Messenger",
-        icon: "mdi-facebook-messenger",
-        src: "https://www.messenger.com/t/AimeeCoteTherapy"
-      },
-      {
-        name: "Instagram",
-        icon: "mdi-instagram",
-        src: "https://www.instagram.com/aimee_cote_therapy"
-      },
-      {
-        name: "Facebook",
-        icon: "mdi-facebook",
-        src: "https://www.facebook.com/AimeeCoteTherapy"
-      },
-      {
-        name: "Email",
-        icon: "mdi-email",
-        src: "mailto:aimee.cote.therapy@gmail.com"
-      },
-      {
-        name: "Phone",
-        icon: "mdi-phone",
-        src: "tel:+33622701183"
-      }
+      { name: 'Messenger', icon: '$facebookMessenger', src: 'https://www.messenger.com/t/AimeeCoteTherapy' },
+      { name: 'Instagram', icon: '$instagram', src: 'https://www.instagram.com/aimee_cote_therapy' },
+      { name: 'Facebook', icon: '$facebook', src: 'https://www.facebook.com/AimeeCoteTherapy' },
+      { name: 'Email', icon: '$email', src: 'mailto:aimee.cote.therapy@gmail.com' },
+      { name: 'Phone', icon: '$phone', src: 'tel:+33622701183' },
     ]
   })
 };

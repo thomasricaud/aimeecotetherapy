@@ -22,7 +22,7 @@
           :title="$t('pagination.prev')"
           @click="page--"
         >
-          <v-icon>mdi-chevron-left</v-icon>
+          <v-icon>$chevronLeft</v-icon>
         </base-btn>
       </v-col>
 
@@ -44,7 +44,7 @@
           :title="$t('pagination.next')"
           @click="page++"
         >
-          <v-icon>mdi-chevron-right</v-icon>
+          <v-icon>$chevronRight</v-icon>
         </base-btn>
       </v-col>
     </v-row>

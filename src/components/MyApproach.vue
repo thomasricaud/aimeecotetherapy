@@ -5,14 +5,7 @@
     <v-divider />
 
     <v-container>
-        <v-img
-          :src="require(`@/assets/family.jpg`)"
-          :lazy-src="require('@/assets/white_wall.png')"
-          :alt="$t('MyApproachFamilyAlt')"
-          width="100%"
-          style="max-width:50vh;"
-          class="float-md-left mx-auto ma-md-12"
-        />
+        <SmartPicture :src="familySrc" :alt="$t('MyApproachFamilyAlt')" img-class="float-md-left mx-auto ma-md-12" :img-style="'max-width:50vh;width:100%;height:auto;'" />
         <base-heading class="my-5">
           <h1>{{ $t('MyApproachTitle') }}</h1>
         </base-heading>
@@ -22,14 +15,7 @@
         </base-text>
     </v-container>
     <v-container>
-        <v-img
-          :src="require(`@/assets/shutterstock_1316614289.jpg`)"
-          :lazy-src="require('@/assets/white_wall.png')"
-          :alt="$t('MyApproachTherapyAlt')"
-          width="100%"
-          style="max-width:50vh;"
-          class="float-md-right mx-auto ma-md-12"
-        />
+        <SmartPicture :src="therapySrc" :alt="$t('MyApproachTherapyAlt')" img-class="float-md-right mx-auto ma-md-12" :img-style="'max-width:50vh;width:100%;height:auto;'" />
         <base-text>
           <br><br><br><br>
           <p v-html="$i18n.t('myapproach2')" />
@@ -37,3 +23,13 @@
     </v-container>
   </section>
 </template>
+<script>
+import SmartPicture from '@/components/SmartPicture.vue'
+export default {
+  components: { SmartPicture },
+  computed: {
+    familySrc () { return require('@/assets/family.jpg') },
+    therapySrc () { return require('@/assets/shutterstock_1316614289.jpg') },
+  }
+}
+</script>

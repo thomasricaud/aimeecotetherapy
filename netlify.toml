@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "npm run build && npm run optimize:images"
   publish = "dist"
 
 [build.environment]

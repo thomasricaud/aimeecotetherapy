@@ -19,3 +19,12 @@ new Vue({
   i18n,
   render: h => h(App)
 }).$mount('#app')
+
+// Signal to prerenderer only after the initial route is fully ready
+if (typeof document !== 'undefined' && router) {
+  router.onReady(() => {
+    Vue.nextTick(() => {
+      try { document.dispatchEvent(new Event('x-app-rendered')) } catch (e) {}
+    })
+  })
+}

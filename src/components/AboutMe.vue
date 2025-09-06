@@ -64,19 +64,16 @@
         class="hidden-sm-and-down"
         md="6"
       >
-        <v-img
-          :src="require('@/assets/background-balance-beach-boulder.jpg')"
-          :lazy-src="require('@/assets/white_wall.png')"
-          :alt="$t('AboutImageAlt')"
-          height="100%"
-        />
+        <SmartPicture :src="aboutImg" :alt="$t('AboutImageAlt')" img-class="aboutme__img" :img-style="'height:100%;width:100%;object-fit:cover;'" />
       </v-col>
     </v-row>
   </section>
 </template>
 
 <script>
+  import SmartPicture from '@/components/SmartPicture.vue'
   export default {
+    components: { SmartPicture },
     data: () => ({
       skills: [
         {
@@ -93,5 +90,8 @@
         },
       ],
     }),
+    computed: {
+      aboutImg () { return require('@/assets/background-balance-beach-boulder.jpg') },
+    },
   }
 </script>

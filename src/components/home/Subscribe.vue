@@ -57,12 +57,7 @@
                 <v-list-item-avatar
                   color="primary"
                 >
-                  <v-icon
-                    class="elevation-4"
-                    dark
-                  >
-                    mdi-email-outline
-                  </v-icon>
+                  <v-icon class="elevation-4" dark>$emailOutline</v-icon>
                 </v-list-item-avatar>
 
                 <v-list-item-title>EMAIL</v-list-item-title>
@@ -74,12 +69,7 @@
 
               <v-list-item>
                 <v-list-item-avatar color="primary">
-                  <v-icon
-                    class="elevation-4"
-                    dark
-                  >
-                    mdi-map-marker
-                  </v-icon>
+                  <v-icon class="elevation-4" dark>$mapMarker</v-icon>
                 </v-list-item-avatar>
 
                 <v-list-item-title>ADDRESS</v-list-item-title>
@@ -91,12 +81,7 @@
 
               <v-list-item>
                 <v-list-item-avatar color="primary">
-                  <v-icon
-                    class="elevation-4"
-                    dark
-                  >
-                    mdi-phone
-                  </v-icon>
+                  <v-icon class="elevation-4" dark>$phone</v-icon>
                 </v-list-item-avatar>
 
                 <v-list-item-title>PHONE</v-list-item-title>
