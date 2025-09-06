@@ -29,11 +29,15 @@ describe('BlogEntry meta tags', () => {
       }
     })
 
-    const meta = wrapper.vm.$meta().refresh()
-    expect(meta.metaInfo.title).toBe('Test Article')
-    const description = meta.metaInfo.meta.find(m => m.name === 'description')
-    expect(description).toBeTruthy()
-    expect(description.content).toBe('A short description')
+      const meta = wrapper.vm.$meta().refresh()
+      expect(meta.metaInfo.title).toBe('Test Article')
+      const description = meta.metaInfo.meta.find(m => m.name === 'description')
+      expect(description).toBeTruthy()
+      expect(description.content).toBe('A short description')
+
+      const robots = meta.metaInfo.meta.find(m => m.name === 'robots')
+      expect(robots).toBeTruthy()
+      expect(robots.content).toBe('index,follow')
 
     const ogDesc = meta.metaInfo.meta.find(m => m.property === 'og:description')
     expect(ogDesc).toBeTruthy()

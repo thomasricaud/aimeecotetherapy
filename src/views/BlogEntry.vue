@@ -21,15 +21,19 @@
         return this.$store.getters.articles.find(a => a.title === title) || {}
       }
     },
-    metaInfo () {
-      return {
-        title: this.article.title,
-        meta: [
-          {
-            name: 'description',
-            content: this.article.description || ''
-          },
-          {
+      metaInfo () {
+        return {
+          title: this.article.title,
+          meta: [
+            {
+              name: 'robots',
+              content: 'index,follow'
+            },
+            {
+              name: 'description',
+              content: this.article.description || ''
+            },
+            {
             property: 'og:description',
             content: this.article.description || ''
           },
