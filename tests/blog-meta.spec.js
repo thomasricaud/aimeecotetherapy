@@ -39,12 +39,20 @@ describe('BlogEntry meta tags', () => {
       expect(robots).toBeTruthy()
       expect(robots.content).toBe('index,follow')
 
-    const ogDesc = meta.metaInfo.meta.find(m => m.property === 'og:description')
-    expect(ogDesc).toBeTruthy()
-    expect(ogDesc.content).toBe('A short description')
+      const ogTitle = meta.metaInfo.meta.find(m => m.property === 'og:title')
+      expect(ogTitle).toBeTruthy()
+      expect(ogTitle.content).toBe('Test Article')
 
-    const twitterDesc = meta.metaInfo.meta.find(m => m.name === 'twitter:description')
-    expect(twitterDesc).toBeTruthy()
-    expect(twitterDesc.content).toBe('A short description')
+      const ogDesc = meta.metaInfo.meta.find(m => m.property === 'og:description')
+      expect(ogDesc).toBeTruthy()
+      expect(ogDesc.content).toBe('A short description')
+
+      const twitterTitle = meta.metaInfo.meta.find(m => m.name === 'twitter:title')
+      expect(twitterTitle).toBeTruthy()
+      expect(twitterTitle.content).toBe('Test Article')
+
+      const twitterDesc = meta.metaInfo.meta.find(m => m.name === 'twitter:description')
+      expect(twitterDesc).toBeTruthy()
+      expect(twitterDesc.content).toBe('A short description')
   })
 })
