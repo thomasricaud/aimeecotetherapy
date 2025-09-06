@@ -1,6 +1,6 @@
 ---
 title: "Beyond Behaviors: An innovative approach to challenging behavior"
-author: "Aimee cote"
+author: Aimee Cote
 category: "Family"
 image: "hide"
 video: "N_mdbaXM6F8"

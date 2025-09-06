@@ -1,6 +1,6 @@
 ---
 title: Acompañar el sufrimiento frente a la trampa de solucionar el problema
-author: Aimee cote
+author: Aimee Cote
 category: Individual
 image: "/img/uploads/blog14.jpg"
 video: hide

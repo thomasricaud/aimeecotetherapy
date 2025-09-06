@@ -1,6 +1,6 @@
 ---
 title: "Por qué deberíamos dejar de culpar a la falta de constancia parental por esas rabietas épicas"
-author: "Aimee cote"
+author: Aimee Cote
 category: "Familia"
 image: "/img/uploads/blog5.jpg"
 video: "hide"

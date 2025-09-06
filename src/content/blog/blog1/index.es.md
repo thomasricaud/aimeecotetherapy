@@ -1,6 +1,6 @@
 ---
 title: "Los retos del aislamiento durante la pandemia de coronavirus"
-author: "Aimee cote"
+author: Aimee Cote
 category: "Familia"
 image: "/img/uploads/blog1.jpg"
 video: "hide"

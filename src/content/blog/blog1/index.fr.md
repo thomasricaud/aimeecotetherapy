@@ -1,6 +1,6 @@
 ---
 title: "Les défis de l'isolement pendant la pandémie de coronavirus"
-author: "Aimee cote"
+author: Aimee Cote
 category: "Famille"
 image: "/img/uploads/blog1.jpg"
 video: "hide"

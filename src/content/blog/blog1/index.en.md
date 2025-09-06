@@ -1,6 +1,6 @@
 ---
 title: "Challenges of Isolation during the Coronavirus Pandemic"
-author: "Aimee cote"
+author: Aimee Cote
 category: "Family"
 image: "/img/uploads/blog1.jpg"
 video: "hide"

@@ -1,6 +1,6 @@
 ---
 title: Rester avec la souffrance vs le piège de la recherche de solutions
-author: Aimee cote
+author: Aimee Cote
 category: Individuel
 image: "/img/uploads/blog14.jpg"
 video: hide

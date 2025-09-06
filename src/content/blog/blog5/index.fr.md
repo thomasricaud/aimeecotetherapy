@@ -1,6 +1,6 @@
 ---
 title: "Pourquoi nous devrions arrêter de blâmer l'inconstance parentale pour ces crises spectaculaires"
-author: "Aimee cote"
+author: Aimee Cote
 category: "Famille"
 image: "/img/uploads/blog5.jpg"
 video: "hide"

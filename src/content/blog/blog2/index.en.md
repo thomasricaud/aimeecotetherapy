@@ -1,6 +1,6 @@
 ---
 title: "Dissociation"
-author: "Aimee cote"
+author: Aimee Cote
 category: "Individual"
 image: "/img/uploads/blog2.jpg"
 video: "hide"

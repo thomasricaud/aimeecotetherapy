@@ -1,6 +1,6 @@
 ---
 title: "Beyond Behaviors: un enfoque innovador para los comportamientos desafiantes"
-author: "Aimee cote"
+author: Aimee Cote
 category: "Familia"
 image: "hide"
 video: "N_mdbaXM6F8"
