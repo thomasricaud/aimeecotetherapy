@@ -32,7 +32,7 @@
         <v-spacer />
         <v-select
           v-model="$i18n.locale"
-          append-outer-icon="fas fa-globe"
+          append-outer-icon="mdi-earth"
           item-text="text"
           item-value="locale"
           :items="langs"
