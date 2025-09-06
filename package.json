@@ -10,7 +10,8 @@
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'",
     "sitemap": "node scripts/generate-sitemap.js",
     "versions": "node -v && npm -v && npx vue-cli-service --version",
-    "test": "jest"
+    "test": "jest",
+    "seo-check": "npx lhci autorun --config=lighthouserc.js"
   },
   "dependencies": {
     "emailjs-com": "^2.4.1",

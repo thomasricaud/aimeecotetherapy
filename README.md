@@ -28,3 +28,9 @@ Uncertainty about the future, anxiety about our well being and our loved ones' h
 ```
 
 Add images to `public/img/uploads`.
+
+## SEO checks
+
+Use `npm run seo-check` to run Lighthouse in CI mode against all localized
+pages. Set the `SITE_URL` environment variable to point to the deployed site
+or leave it unset to check a local server at `http://localhost:8080`.
