@@ -4,9 +4,79 @@
   <meta charset="utf-8" />
   <title>Content Manager</title>
   <link rel="stylesheet" href="/admin/admin.css" />
+  <!-- Cursor jump fix for Slate-based editors in Netlify/Decap CMS -->
+  <style id="cms-cursor-fix">
+    [data-slate-editor] {
+      -webkit-user-modify: read-write !important;
+    }
+  </style>
 </head>
 <body>
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script>
+    (function loadCMS() {
+      function log(msg) { try { console.log('[CMS]', msg) } catch (e) {} }
+      function load(src, next) {
+        var s = document.createElement('script');
+        s.src = src; s.async = true;
+        s.onload = function () { log('loaded ' + src); next && next(false) };
+        s.onerror = function () { log('failed ' + src); next && next(true) };
+        document.body.appendChild(s);
+      }
+      function boot() {
+        var ok = !!(window.CMS || window.NetlifyCmsApp);
+        if (!ok) log('CMS global missing after load');
+      }
+      // Primary: official CDN bundle for Netlify CMS
+      load('https://unpkg.com/netlify-cms@2.10.192/dist/netlify-cms.js', function (err) {
+        if (err) {
+          // Fallback: Decap CMS (community continuation)
+          load('https://unpkg.com/decap-cms@2.15.0/dist/decap-cms.js', boot);
+        } else {
+          boot();
+        }
+      });
+      function showHelpOverlay() {
+        var wrap = document.createElement('div');
+        wrap.style.cssText = 'position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:9999;background:#b00020;color:#fff;padding:24px;box-sizing:border-box';
+        var box = document.createElement('div');
+        box.style.cssText = 'max-width:920px;width:100%;background:rgba(0,0,0,0.2);padding:20px;border-radius:8px;font:15px/1.5 system-ui,Segoe UI,Roboto,sans-serif';
+        box.innerHTML = (
+          '<h2 style="margin:0 0 8px">CMS failed to load</h2>' +
+          '<p style="margin:0 0 12px">Possible CDN/CSP/network issue. Try reloading, or open one of the following to verify availability:</p>' +
+          '<ul style="margin:0 0 12px 20px">' +
+          '<li><a style="color:#fff;text-decoration:underline" target="_blank" rel="noopener" href="https://unpkg.com/netlify-cms@2/dist/">unpkg: netlify-cms@2 (browse)</a></li>' +
+          '<li><a style="color:#fff;text-decoration:underline" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/npm/netlify-cms@2/dist/">jsDelivr: netlify-cms@2 (browse)</a></li>' +
+          '<li><a style="color:#fff;text-decoration:underline" target="_blank" rel="noopener" href="https://registry.npmjs.org/netlify-cms">npm registry: netlify-cms (JSON)</a></li>' +
+          '<li><a style="color:#fff;text-decoration:underline" target="_blank" rel="noopener" href="https://unpkg.com/decap-cms@2/dist/">unpkg: decap-cms@2 (browse)</a></li>' +
+          '</ul>' +
+          '<div id="cms-versions" style="opacity:.9">Loading recent versions…</div>'
+        );
+        wrap.appendChild(box);
+        document.body.appendChild(wrap);
+
+        // Try to list recent versions for convenience
+        try {
+          fetch('https://registry.npmjs.org/netlify-cms', { mode: 'cors' })
+            .then(function (r) { return r.ok ? r.json() : Promise.reject(r.statusText) })
+            .then(function (j) {
+              var list = Object.keys(j.versions || {});
+              var recent = list.slice(-10).reverse();
+              var latest = (j['dist-tags'] && j['dist-tags'].latest) || '';
+              var html = '<div>Latest: <code>' + latest + '</code></div>';
+              if (recent.length) {
+                html += '<div style="margin-top:6px">Recent: ' + recent.map(function (v) { return '<code style="margin-right:6px">' + v + '</code>' }).join('') + '</div>';
+              }
+              document.getElementById('cms-versions').innerHTML = html;
+            })
+            .catch(function () { /* ignore */ });
+        } catch (e) { /* ignore */ }
+      }
+
+      setTimeout(function () {
+        if (!(window.CMS || window.NetlifyCmsApp)) showHelpOverlay();
+      }, 4000);
+    })();
+  </script>
   <script src="/admin/preview.js"></script>
 </body>
 </html>

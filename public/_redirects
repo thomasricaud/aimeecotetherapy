@@ -1,3 +1,5 @@
+/admin /admin/index.html 200
+/admin/* /admin/index.html 200
 / /en/ 302
 /fr/* /index.fr.html 200
 /es/* /index.es.html 200
