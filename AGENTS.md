@@ -15,9 +15,20 @@ This file provides guidance for automated agents working in this repository.
 - Build the project with `npm run build` to verify production readiness.
 - Run `npm run seo-check` to audit SEO metadata across locales.
 
+### Images workflow (important)
+
+- Originals live in `src/assetsBigsize/` and must remain untouched.
+- Only optimized images are kept in `src/assets/` and referenced by the app.
+- Generate optimized downsized assets: `npm run assets:optimize`.
+- Generate `.webp`/`.avif` variants next to each asset (to be committed): `npm run picture:optimize`.
+- Restore a specific asset from `assetsBigsize`, re-optimize and regenerate variants: `npm run assets:restore -- <relative-path>` (e.g. `logo.jpg`).
+- Commit the produced `.webp`/`.avif` files so deploys don’t recompute them.
+- Components should use `SmartPicture` with `asset-path` (relative to `@/assets`). SmartPicture renders the image only if a `.webp` or `.avif` variant exists; otherwise it shows a hint to run `picture:optimize`.
+
 ## 1) Environment invariants
 
 - Use exactly:
   - `node -v` → `v22.19.0`
   - `npm -v` → `11.4.2`
-- **DevDependencies must be installed** (required for `vue-cli-service`).
+- DevDependencies must be installed (required for `vue-cli-service`).
+

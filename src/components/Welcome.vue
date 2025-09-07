@@ -14,7 +14,7 @@
           align="center"
         >
           <v-col class="my-5 my-md-12 pa-2">
-            <SmartPicture :src="aimeeSrc" :alt="$t('WelcomePortraitAlt')" img-class="w-100" :img-style="'width:100%;height:auto;object-fit:cover;aspect-ratio:1/1;'" />
+            <SmartPicture asset-path="Aimee.jpg" :alt="$t('WelcomePortraitAlt')" img-class="w-100" :img-style="'width:100%;height:auto;object-fit:cover;aspect-ratio:1/1;'" />
           </v-col>
         </v-row>
       </v-col>
@@ -61,9 +61,6 @@
     components: {
       SmartPicture,
       SocialMedia: () => import('@/components/SocialMedia'),
-    },
-    computed: {
-      aimeeSrc () { return require('@/assets/Aimee.jpg') },
     },
   }
 </script>

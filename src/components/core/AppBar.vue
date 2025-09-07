@@ -14,7 +14,7 @@
         <v-tooltip bottom>
           <template v-slot:activator="{ on }">
             <span v-on="on" @click="$vuetify.goTo(0)">
-              <SmartPicture :src="logoSrc" alt="Aimee Cote Therapy logo" img-class="mr-5" :img-style="logoStyle" />
+              <SmartPicture asset-path="logo.jpg" alt="Aimee Cote Therapy logo" img-class="mr-5" :img-style="logoStyle" />
             </span>
           </template>
           <span>{{ $t('TooltipTherapist') }}</span>
@@ -75,7 +75,6 @@
     }),
     computed: {
       ...mapGetters(['links']),
-      logoSrc () { return require('@/assets/logo.jpg') },
       logoStyle () { return 'height:48px;width:48px;object-fit:contain;display:inline-block;' },
     },
 
