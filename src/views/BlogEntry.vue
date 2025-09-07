@@ -50,6 +50,8 @@
     metaInfo () {
       const title = this.article.title || ''
       const description = this.article.description || ''
+      const path = this.$route?.path || '/'
+      const canonical = `https://aimeecotetherapy.com${path.endsWith('/') ? path : path + '/'}`
       return {
         title,
         meta: [
@@ -59,6 +61,9 @@
           { vmid: 'og:description', property: 'og:description', content: description },
           { vmid: 'twitter:title', name: 'twitter:title', content: title },
           { vmid: 'twitter:description', name: 'twitter:description', content: description }
+        ],
+        link: [
+          { vmid: 'canonical', rel: 'canonical', href: canonical }
         ]
       }
     }
