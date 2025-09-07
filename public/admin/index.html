@@ -4,6 +4,12 @@
   <meta charset="utf-8" />
   <title>Content Manager</title>
   <link rel="stylesheet" href="/admin/admin.css" />
+  <!-- Cursor jump fix for Slate-based editors in Netlify/Decap CMS -->
+  <style id="cms-cursor-fix">
+    [data-slate-editor] {
+      -webkit-user-modify: read-write !important;
+    }
+  </style>
 </head>
 <body>
   <script>
