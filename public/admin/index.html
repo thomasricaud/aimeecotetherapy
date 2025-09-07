@@ -20,9 +20,11 @@
         var ok = !!(window.CMS || window.NetlifyCmsApp);
         if (!ok) log('CMS global missing after load');
       }
-      load('https://unpkg.com/netlify-cms-app@2.15.72/dist/netlify-cms.js', function (err) {
+      // Primary: official CDN bundle for Netlify CMS
+      load('https://unpkg.com/netlify-cms@2.15.72/dist/netlify-cms.js', function (err) {
         if (err) {
-          load('https://unpkg.com/netlify-cms@2.15.72/dist/netlify-cms.js', boot);
+          // Fallback: Decap CMS (community continuation)
+          load('https://unpkg.com/decap-cms@2.15.0/dist/decap-cms.js', boot);
         } else {
           boot();
         }
@@ -31,7 +33,7 @@
         if (!(window.CMS || window.NetlifyCmsApp)) {
           var warn = document.createElement('div');
           warn.style.cssText = 'position:fixed;inset:0;display:flex;align-items:center;justify-content:center;font:16px/1.4 system-ui,Segoe UI,Roboto,sans-serif;color:#fff;background:#b00020;z-index:9999;text-align:center;padding:16px';
-          warn.textContent = 'Netlify CMS failed to load. Check CDN/CSP or network.';
+          warn.textContent = 'CMS failed to load (CDN/CSP). Try reloading or check network.';
           document.body.appendChild(warn);
         }
       }, 4000);
