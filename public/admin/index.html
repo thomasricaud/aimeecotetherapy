@@ -29,13 +29,45 @@
           boot();
         }
       });
+      function showHelpOverlay() {
+        var wrap = document.createElement('div');
+        wrap.style.cssText = 'position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:9999;background:#b00020;color:#fff;padding:24px;box-sizing:border-box';
+        var box = document.createElement('div');
+        box.style.cssText = 'max-width:920px;width:100%;background:rgba(0,0,0,0.2);padding:20px;border-radius:8px;font:15px/1.5 system-ui,Segoe UI,Roboto,sans-serif';
+        box.innerHTML = (
+          '<h2 style="margin:0 0 8px">CMS failed to load</h2>' +
+          '<p style="margin:0 0 12px">Possible CDN/CSP/network issue. Try reloading, or open one of the following to verify availability:</p>' +
+          '<ul style="margin:0 0 12px 20px">' +
+          '<li><a style="color:#fff;text-decoration:underline" target="_blank" rel="noopener" href="https://unpkg.com/netlify-cms@2/dist/">unpkg: netlify-cms@2 (browse)</a></li>' +
+          '<li><a style="color:#fff;text-decoration:underline" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/npm/netlify-cms@2/dist/">jsDelivr: netlify-cms@2 (browse)</a></li>' +
+          '<li><a style="color:#fff;text-decoration:underline" target="_blank" rel="noopener" href="https://registry.npmjs.org/netlify-cms">npm registry: netlify-cms (JSON)</a></li>' +
+          '<li><a style="color:#fff;text-decoration:underline" target="_blank" rel="noopener" href="https://unpkg.com/decap-cms@2/dist/">unpkg: decap-cms@2 (browse)</a></li>' +
+          '</ul>' +
+          '<div id="cms-versions" style="opacity:.9">Loading recent versions…</div>'
+        );
+        wrap.appendChild(box);
+        document.body.appendChild(wrap);
+
+        // Try to list recent versions for convenience
+        try {
+          fetch('https://registry.npmjs.org/netlify-cms', { mode: 'cors' })
+            .then(function (r) { return r.ok ? r.json() : Promise.reject(r.statusText) })
+            .then(function (j) {
+              var list = Object.keys(j.versions || {});
+              var recent = list.slice(-10).reverse();
+              var latest = (j['dist-tags'] && j['dist-tags'].latest) || '';
+              var html = '<div>Latest: <code>' + latest + '</code></div>';
+              if (recent.length) {
+                html += '<div style="margin-top:6px">Recent: ' + recent.map(function (v) { return '<code style="margin-right:6px">' + v + '</code>' }).join('') + '</div>';
+              }
+              document.getElementById('cms-versions').innerHTML = html;
+            })
+            .catch(function () { /* ignore */ });
+        } catch (e) { /* ignore */ }
+      }
+
       setTimeout(function () {
-        if (!(window.CMS || window.NetlifyCmsApp)) {
-          var warn = document.createElement('div');
-          warn.style.cssText = 'position:fixed;inset:0;display:flex;align-items:center;justify-content:center;font:16px/1.4 system-ui,Segoe UI,Roboto,sans-serif;color:#fff;background:#b00020;z-index:9999;text-align:center;padding:16px';
-          warn.textContent = 'CMS failed to load (CDN/CSP). Try reloading or check network.';
-          document.body.appendChild(warn);
-        }
+        if (!(window.CMS || window.NetlifyCmsApp)) showHelpOverlay();
       }, 4000);
     })();
   </script>
