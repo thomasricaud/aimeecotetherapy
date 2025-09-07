@@ -26,6 +26,8 @@
       MyApproach: () => import('@/components/MyApproach'),
     },
     metaInfo () {
+      const path = this.$route?.path || '/'
+      const canonical = `https://aimeecotetherapy.com${path.endsWith('/') ? path : path + '/'}`
       return {
         title: this.$t('meta.homeTitle'),
         meta: [
@@ -33,6 +35,9 @@
             name: 'description',
             content: this.$t('meta.homeDesc')
           }
+        ],
+        link: [
+          { vmid: 'canonical', rel: 'canonical', href: canonical }
         ]
       }
     }

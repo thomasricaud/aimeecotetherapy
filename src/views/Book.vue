@@ -11,6 +11,8 @@ class="mt-10"
       BookView: () => import('@/components/core/BookView'),
     },
     metaInfo () {
+      const path = this.$route?.path || '/'
+      const canonical = `https://aimeecotetherapy.com${path.endsWith('/') ? path : path + '/'}`
       return {
         title: this.$t('meta.bookTitle'),
         meta: [
@@ -18,6 +20,9 @@ class="mt-10"
             name: 'description',
             content: this.$t('meta.bookDesc')
           }
+        ],
+        link: [
+          { vmid: 'canonical', rel: 'canonical', href: canonical }
         ]
       }
     }
