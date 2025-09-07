@@ -39,11 +39,6 @@ a {
   font-size: 1rem;
 }
 
-.body--disabled {
-  opacity: 0.8;
-  font-style: italic;
-}
-
 .image {
   display: block;
   max-width: 75%;
