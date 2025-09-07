@@ -13,7 +13,10 @@
     "versions": "node -v && npm -v && npx vue-cli-service --version",
     "test": "jest",
     "seo-check": "npx lhci autorun --config=lighthouserc.js",
-    "optimize:images": "node scripts/optimize-images.js"
+    "optimize:images": "node scripts/optimize-images.js",
+    "picture:optimize": "node scripts/generate-source-variants.js",
+    "assets:optimize": "node scripts/resize-source-assets.js",
+    "assets:restore": "node scripts/restore-from-bigsize.js"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",

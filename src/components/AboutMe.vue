@@ -64,7 +64,7 @@
         class="hidden-sm-and-down"
         md="6"
       >
-        <SmartPicture :src="aboutImg" :alt="$t('AboutImageAlt')" img-class="aboutme__img" :img-style="'height:100%;width:100%;object-fit:cover;'" />
+        <SmartPicture asset-path="background-balance-beach-boulder.jpg" :alt="$t('AboutImageAlt')" img-class="aboutme__img" :img-style="'height:100%;width:100%;object-fit:cover;'" />
       </v-col>
     </v-row>
   </section>
@@ -90,8 +90,6 @@
         },
       ],
     }),
-    computed: {
-      aboutImg () { return require('@/assets/background-balance-beach-boulder.jpg') },
-    },
+    computed: {},
   }
 </script>

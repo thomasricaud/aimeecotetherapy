@@ -1,7 +1,7 @@
 <template>
   <base-card dark>
     <v-img
-      :src="require('@/assetsBigsize/logo.jpg')"
+      :src="require('@/assets/logo.jpg')"
       :lazy-src="require('@/assets/white_wall.png')"
       alt="Aimee Cote Therapy logo"
       class="grey lighten-2"

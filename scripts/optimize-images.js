@@ -7,7 +7,10 @@ const path = require('path')
 const os = require('os')
 const sharp = require('sharp')
 
-const DIST_DIR = path.resolve(__dirname, '..', 'dist')
+// Directory to scan for images. Defaults to the built `dist/` folder but can
+// be overridden by providing a relative path as the first CLI argument, e.g.
+// `node scripts/optimize-images.js public`.
+const TARGET_DIR = path.resolve(__dirname, '..', process.argv[2] || 'dist')
 const EXTS = new Set(['.jpg', '.jpeg', '.png'])
 
 async function* walk (dir) {
@@ -38,7 +41,7 @@ async function main () {
   const queue = []
   let count = 0
 
-  for await (const file of walk(DIST_DIR)) {
+  for await (const file of walk(TARGET_DIR)) {
     const ext = path.extname(file).toLowerCase()
     if (!EXTS.has(ext)) continue
     const task = convert(file).then(() => { count++ })

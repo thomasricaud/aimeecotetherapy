@@ -12,7 +12,7 @@
         md="6"
       >
         <v-img
-          :src="require('@/assets/contact.png')"
+          :src="require('@/assets/contact.jpg')"
           :lazy-src="require('@/assets/white_wall.png')"
           :alt="$t('getInTouch.imageAlt')"
           height="100%"

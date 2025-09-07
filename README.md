@@ -27,7 +27,28 @@ video: "hide"
 Uncertainty about the future, anxiety about our well being and our loved ones' health...
 ```
 
-Add images to `public/img/uploads`.
+## Images and assets
+
+This project manages images through `src/assets` and `src/assetsBigsize`:
+
+- Originals: store large, uncompressed sources under `src/assetsBigsize/`.
+- Working assets: only optimized files live in `src/assets/`. These are the files imported by Vue components and copied into `dist/` by the build.
+
+Workflows:
+
+- Optimize existing assets (resize/recompress in-place):
+  - `npm run assets:optimize`
+- Generate modern formats next to each asset (checked into Git):
+  - `npm run picture:optimize` (creates `.webp` and `.avif` beside each `.jpg/.png` in `src/assets`)
+- Restore a specific file from the original, then optimize and create variants:
+  - `npm run assets:restore -- <relative-path>`
+  - Example: `npm run assets:restore -- logo.jpg`
+
+SmartPicture component usage:
+
+- Use `<SmartPicture asset-path="Aimee.jpg" />` with a path relative to `@/assets`.
+- SmartPicture displays the image only if an optimized variant (`.webp` or `.avif`) exists next to the file in `src/assets`.
+- If no variant is found, SmartPicture shows a hint telling you to run `npm run picture:optimize` and commit the generated files.
 
 ## SEO checks
 
