@@ -8,7 +8,8 @@
   var ReactRef = window.React;
   var h = window.h || (ReactRef && ReactRef.createElement);
 
-  CMSref.registerPreviewStyle('/admin/preview.css');
+  // Use relative path so it works under any base path on Netlify
+  CMSref.registerPreviewStyle('./preview.css');
 
   const BlogPreviewBase = (props) => {
     const { entry, widgetFor, getAsset } = props;
