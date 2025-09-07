@@ -1,37 +1,46 @@
-CMS.registerPreviewStyle('/admin/preview.css');
-
-// Passive, memoized preview component (no side effects)
-const BlogPreviewBase = (props) => {
-  const { entry, widgetFor, getAsset } = props;
-  const data = entry.get('data');
-  const image = data.get('image');
-
-  let imageSrc = null;
-  if (image && image !== 'hide') {
-    const asset = getAsset(image);
-    if (asset) {
-      if (typeof asset === 'string') imageSrc = asset;
-      else if (asset.url) imageSrc = asset.url;
-      else if (typeof asset.toString === 'function') imageSrc = asset.toString();
-    }
+(function initPreview() {
+  var CMSref = window.CMS || window.NetlifyCmsApp;
+  if (!CMSref) {
+    setTimeout(initPreview, 50);
+    return;
   }
 
-  return h('div', {},
-    h('div', { className: 'category' }, data.get('category')),
-    h('h1', { className: 'title' }, data.get('title')),
-    h('p', { className: 'author' }, data.get('author')),
-    h('div', { className: 'body' }, widgetFor('body')),
-    imageSrc ? h('img', { className: 'image', src: imageSrc, alt: data.get('title') }) : null
-  );
-};
+  var ReactRef = window.React;
+  var h = window.h || (ReactRef && ReactRef.createElement);
 
-// Custom props equality: ignore body/description to avoid cursor jumps
-const areEqual = (prevProps, nextProps) => {
-  const prevData = prevProps.entry.get('data').delete('body').delete('description');
-  const nextData = nextProps.entry.get('data').delete('body').delete('description');
-  return prevData.equals(nextData);
-};
+  CMSref.registerPreviewStyle('/admin/preview.css');
 
-const BlogPreview = React.memo(BlogPreviewBase, areEqual);
+  const BlogPreviewBase = (props) => {
+    const { entry, widgetFor, getAsset } = props;
+    const data = entry.get('data');
+    const image = data.get('image');
 
-CMS.registerPreviewTemplate('blog', BlogPreview);
+    let imageSrc = null;
+    if (image && image !== 'hide') {
+      const asset = getAsset(image);
+      if (asset) {
+        if (typeof asset === 'string') imageSrc = asset;
+        else if (asset.url) imageSrc = asset.url;
+        else if (typeof asset.toString === 'function') imageSrc = asset.toString();
+      }
+    }
+
+    return h('div', {},
+      h('div', { className: 'category' }, data.get('category')),
+      h('h1', { className: 'title' }, data.get('title')),
+      h('p', { className: 'author' }, data.get('author')),
+      h('div', { className: 'body' }, widgetFor('body')),
+      imageSrc ? h('img', { className: 'image', src: imageSrc, alt: data.get('title') }) : null
+    );
+  };
+
+  const areEqual = (prevProps, nextProps) => {
+    const prevData = prevProps.entry.get('data').delete('body').delete('description');
+    const nextData = nextProps.entry.get('data').delete('body').delete('description');
+    return prevData.equals(nextData);
+  };
+
+  const BlogPreview = (ReactRef && ReactRef.memo) ? ReactRef.memo(BlogPreviewBase, areEqual) : BlogPreviewBase;
+
+  CMSref.registerPreviewTemplate('blog', BlogPreview);
+})();
