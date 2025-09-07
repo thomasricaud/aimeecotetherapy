@@ -15,7 +15,6 @@ const BlogPreview = createClass({
       h('div', { className: 'category' }, data.get('category')),
       h('h1', { className: 'title' }, data.get('title')),
       h('p', { className: 'author' }, data.get('author')),
-      h('p', { className: 'description' }, data.get('description')),
       h('div', { className: 'body' }, widgetFor('body')),
       imageUrl ? h('img', { className: 'image', src: imageUrl.toString(), alt: data.get('title') }) : null
     );
