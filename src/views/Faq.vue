@@ -9,10 +9,10 @@
       />
       <h1 class="mb-6 primary--text">{{ $t('faq.title') }}</h1>
       <ul class="pa-0">
-        <li v-for="item in faqs" :key="item.q" class="mb-4">
+        <li v-for="(item, idx) in faqs" :key="idx" class="mb-4">
           <div class="pa-4 secondary lighten-5 text-left">
-            <strong class="secondary--text">{{ $t(item.q) }}</strong>
-            <p class="mt-2">{{ $t(item.a) }}</p>
+            <strong class="secondary--text">{{ item.question }}</strong>
+            <p class="mt-2">{{ item.answer }}</p>
           </div>
         </li>
       </ul>
@@ -27,20 +27,9 @@ import SmartPicture from '@/components/SmartPicture'
 export default {
   name: 'Faq',
   components: { SmartPicture },
-  data () {
-    return {
-      faqs: [
-        { q: 'faq.q1', a: 'faq.a1' },
-        { q: 'faq.q2', a: 'faq.a2' },
-        { q: 'faq.q3', a: 'faq.a3' },
-        { q: 'faq.q4', a: 'faq.a4' },
-        { q: 'faq.q5', a: 'faq.a5' },
-        { q: 'faq.q6', a: 'faq.a6' },
-        { q: 'faq.q7', a: 'faq.a7' },
-        { q: 'faq.q8', a: 'faq.a8' },
-        { q: 'faq.q9', a: 'faq.a9' },
-        { q: 'faq.q10', a: 'faq.a10' }
-      ]
+  computed: {
+    faqs () {
+      return this.$store.getters.faqs
     }
   },
   metaInfo () {
@@ -52,8 +41,8 @@ export default {
     const base = 'https://aimeecotetherapy.com'
     const mainEntity = this.faqs.map(f => ({
       '@type': 'Question',
-      name: this.$t(f.q),
-      acceptedAnswer: { '@type': 'Answer', text: this.$t(f.a) }
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer }
     }))
     graph['@graph'].push(
       { '@type': 'WebSite', '@id': `${base}/#website`, url: base + '/', name: 'Aimee Cote Therapy' },
