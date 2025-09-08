@@ -1,7 +1,7 @@
 <template>
-  <div class="pt-10 text-center">
+  <div class="pt-16 text-center">
     <SmartPicture
-      asset-path="logo.png"
+      asset-path="logo.jpg"
       alt-key="faq.logoAlt"
       img-class="mx-auto mb-6"
     />
