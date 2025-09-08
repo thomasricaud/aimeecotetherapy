@@ -34,37 +34,103 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Aimee Cote Therapy",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "15 Avenue de l'Europe",
-          "addressLocality": "Chatou",
-          "postalCode": "78400",
-          "addressCountry": "FR"
-        },
-        "telephone": "+33 6 22 70 11 83",
-        "makesOffer": [
+        "@graph": [
           {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Couple Therapy"
-            }
+            "@type": ["LocalBusiness", "ProfessionalService"],
+            "@id": "https://aimeecotetherapy.com/#business",
+            "name": "Aimee Cote Thérapie",
+            "description": "Aimee Cote, psychothérapeute à Chatou (Yvelines), spécialisée en thérapie systémique de couple et familiale, bilingue français anglais. Elle accompagne familles internationales, couples et individus pour améliorer la communication, résoudre les conflits et renforcer un bien-être durable.",
+            "url": "https://aimeecotetherapy.com/fr/",
+            "image": "https://aimeecotetherapy.com/logo.jpg",
+            "telephone": "+33 6 22 70 11 83",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "15 Avenue de l'Europe",
+              "addressLocality": "Chatou",
+              "postalCode": "78400",
+              "addressCountry": "FR"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+33 6 22 70 11 83",
+              "contactType": "service client",
+              "areaServed": "FR",
+              "availableLanguage": ["fr", "en", "es"]
+            },
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Thérapie de couple",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Thérapie de couple",
+                  "description": "Accompagnement des couples pour améliorer la communication et résoudre les conflits."
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Thérapie familiale",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Thérapie familiale",
+                  "description": "Guidance pour renforcer les liens familiaux et surmonter les difficultés."
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Thérapie individuelle",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Thérapie individuelle",
+                  "description": "Soutien personnalisé pour favoriser l'épanouissement et le bien-être."
+                }
+              }
+            ]
           },
           {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Family Therapy"
-            }
+            "@type": "WebSite",
+            "@id": "https://aimeecotetherapy.com/fr/#website",
+            "url": "https://aimeecotetherapy.com/fr/",
+            "name": "Aimee Cote Thérapie",
+            "description": "Aimee Cote, psychothérapeute à Chatou (Yvelines), spécialisée en thérapie systémique de couple et familiale, bilingue français anglais. Elle accompagne familles internationales, couples et individus pour améliorer la communication, résoudre les conflits et renforcer un bien-être durable.",
+            "inLanguage": "fr",
+            "publisher": {"@id": "https://aimeecotetherapy.com/#business"}
           },
           {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Individual Therapy"
-            }
+            "@type": "WebPage",
+            "@id": "https://aimeecotetherapy.com/fr/#home",
+            "url": "https://aimeecotetherapy.com/fr/",
+            "name": "Accueil",
+            "description": "Aimee Cote, psychothérapeute à Chatou (Yvelines), spécialisée en thérapie systémique de couple et familiale, bilingue français anglais. Elle accompagne familles internationales, couples et individus pour améliorer la communication, résoudre les conflits et renforcer un bien-être durable.",
+            "inLanguage": "fr",
+            "isPartOf": {"@id": "https://aimeecotetherapy.com/fr/#website"}
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://aimeecotetherapy.com/fr/blog#page",
+            "url": "https://aimeecotetherapy.com/fr/blog",
+            "name": "Blog",
+            "description": "Aimee Cote, psychothérapeute à Chatou (Yvelines), spécialisée en thérapie systémique de couple et familiale, bilingue français anglais. Elle accompagne familles internationales, couples et individus pour améliorer la communication, résoudre les conflits et renforcer un bien-être durable.",
+            "inLanguage": "fr",
+            "isPartOf": {"@id": "https://aimeecotetherapy.com/fr/#website"}
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://aimeecotetherapy.com/fr/there#page",
+            "url": "https://aimeecotetherapy.com/fr/there",
+            "name": "Comment venir",
+            "description": "Aimee Cote, psychothérapeute à Chatou (Yvelines), spécialisée en thérapie systémique de couple et familiale, bilingue français anglais. Elle accompagne familles internationales, couples et individus pour améliorer la communication, résoudre les conflits et renforcer un bien-être durable.",
+            "inLanguage": "fr",
+            "isPartOf": {"@id": "https://aimeecotetherapy.com/fr/#website"}
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://aimeecotetherapy.com/fr/book#page",
+            "url": "https://aimeecotetherapy.com/fr/book",
+            "name": "Prendre rendez-vous",
+            "description": "Aimee Cote, psychothérapeute à Chatou (Yvelines), spécialisée en thérapie systémique de couple et familiale, bilingue français anglais. Elle accompagne familles internationales, couples et individus pour améliorer la communication, résoudre les conflits et renforcer un bien-être durable.",
+            "inLanguage": "fr",
+            "isPartOf": {"@id": "https://aimeecotetherapy.com/fr/#website"}
           }
         ]
       }
