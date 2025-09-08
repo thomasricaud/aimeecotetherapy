@@ -5,6 +5,7 @@ import Blog from '@/views/Blog.vue'
 import BlogEntry from '@/views/BlogEntry.vue'
 import Book from '@/views/Book.vue'
 import There from '@/views/There.vue'
+import Faq from '@/views/Faq.vue'
 import i18n from '@/i18n'
 
 Vue.use(Router)
@@ -31,6 +32,7 @@ export default new Router({
         { path: 'blog/:slug', name: 'blogentry', component: BlogEntry },
         { path: 'book', name: 'book', component: Book },
         { path: 'there', name: 'there', component: There },
+        { path: 'faq', name: 'faq', component: Faq },
       ],
     },
   ],

@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import VueI18n from 'vue-i18n'
 import Home from '@/views/Home.vue'
 import Blog from '@/views/Blog.vue'
+import Faq from '@/views/Faq.vue'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
@@ -12,6 +13,8 @@ function createI18n () {
   const messages = {
     en: {
       WelcomeTitle2: 'A bilingual French - English therapist located in Chatou (78400)'
+      ,
+      'faq.q1': 'What is individual therapy?'
     }
   }
   return new VueI18n({ locale: 'en', messages })
@@ -64,5 +67,14 @@ describe('Pages', () => {
     const blogs = wrapper.findAll('.blog')
     expect(blogs.length).toBe(1)
     expect(wrapper.text()).toContain('First post')
+  })
+
+  it('Faq page renders question', () => {
+    const i18n = createI18n()
+    const wrapper = shallowMount(Faq, {
+      localVue,
+      i18n
+    })
+    expect(wrapper.text()).toContain('What is individual therapy?')
   })
 })
