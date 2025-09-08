@@ -14,7 +14,14 @@ function createI18n () {
     en: {
       WelcomeTitle2: 'A bilingual French - English therapist located in Chatou (78400)'
       ,
-      'faq.q1': 'What is individual therapy?'
+      'faq.q1': 'What is individual therapy?',
+      'faq.a1': 'a1',
+      'faq.q2': 'q2',
+      'faq.a2': 'a2',
+      'faq.q3': 'q3',
+      'faq.a3': 'a3',
+      'faq.logoAlt': 'logo',
+      'faq.title': 'FAQ'
     }
   }
   return new VueI18n({ locale: 'en', messages })
@@ -73,8 +80,12 @@ describe('Pages', () => {
     const i18n = createI18n()
     const wrapper = shallowMount(Faq, {
       localVue,
-      i18n
+      i18n,
+      stubs: {
+        SmartPicture: { template: '<div class="logo-stub" />' }
+      }
     })
     expect(wrapper.text()).toContain('What is individual therapy?')
+    expect(wrapper.find('.logo-stub').exists()).toBe(true)
   })
 })

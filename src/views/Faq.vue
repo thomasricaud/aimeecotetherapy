@@ -1,10 +1,17 @@
 <template>
-  <div class="pt-10">
-    <h1 class="mb-6">{{ $t('faq.title') }}</h1>
-    <ul>
+  <div class="pt-10 text-center">
+    <SmartPicture
+      asset-path="logo.png"
+      alt-key="faq.logoAlt"
+      img-class="mx-auto mb-6"
+    />
+    <h1 class="mb-6 primary--text">{{ $t('faq.title') }}</h1>
+    <ul class="mx-auto" style="max-width: 700px;">
       <li v-for="item in faqs" :key="item.q" class="mb-4">
-        <strong>{{ $t(item.q) }}</strong>
-        <p>{{ $t(item.a) }}</p>
+        <div class="pa-4 secondary lighten-5 text-left">
+          <strong class="secondary--text">{{ $t(item.q) }}</strong>
+          <p class="mt-2">{{ $t(item.a) }}</p>
+        </div>
       </li>
     </ul>
   </div>
@@ -12,9 +19,11 @@
 
 <script>
 import buildGraphFor from '@/buildGraphFor'
+import SmartPicture from '@/components/SmartPicture'
 
 export default {
   name: 'Faq',
+  components: { SmartPicture },
   data () {
     return {
       faqs: [
