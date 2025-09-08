@@ -28,6 +28,10 @@ export default new Vuex.Store({
         text: 'nav.there',
         href: '/there',
       },
+      {
+        text: 'nav.faq',
+        href: '/faq',
+      },
     ],
   },
   getters: {
