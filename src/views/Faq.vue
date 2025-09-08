@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <h1>{{ $t('faq.title') }}</h1>
+  <div class="mt-10">
+    <h1 class="mb-6">{{ $t('faq.title') }}</h1>
     <ul>
-      <li v-for="item in faqs" :key="item.q">
+      <li v-for="item in faqs" :key="item.q" class="mb-4">
         <strong>{{ $t(item.q) }}</strong>
         <p>{{ $t(item.a) }}</p>
       </li>
