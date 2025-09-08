@@ -34,37 +34,103 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Aimee Cote Therapy",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "15 Avenue de l'Europe",
-          "addressLocality": "Chatou",
-          "postalCode": "78400",
-          "addressCountry": "FR"
-        },
-        "telephone": "+33 6 22 70 11 83",
-        "makesOffer": [
+        "@graph": [
           {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Terapia de pareja"
-            }
+            "@type": ["LocalBusiness", "ProfessionalService"],
+            "@id": "https://aimeecotetherapy.com/#business",
+            "name": "Aimee Cote Terapia",
+            "description": "Aimee Cote, psicoterapeuta en Chatou (Yvelines), especializada en terapia sistémica de pareja y familiar, bilingüe francés-inglés. Acompaña a familias internacionales, parejas e individuos para mejorar la comunicación, resolver conflictos y reforzar un bienestar duradero.",
+            "url": "https://aimeecotetherapy.com/es/",
+            "image": "https://aimeecotetherapy.com/logo.jpg",
+            "telephone": "+33 6 22 70 11 83",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "15 Avenue de l'Europe",
+              "addressLocality": "Chatou",
+              "postalCode": "78400",
+              "addressCountry": "FR"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+33 6 22 70 11 83",
+              "contactType": "servicio al cliente",
+              "areaServed": "FR",
+              "availableLanguage": ["es", "en", "fr"]
+            },
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Terapia de pareja",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Terapia de pareja",
+                  "description": "Apoyo a las parejas para mejorar la comunicación y resolver conflictos."
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Terapia familiar",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Terapia familiar",
+                  "description": "Orientación para fortalecer los vínculos familiares y superar dificultades."
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Terapia individual",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Terapia individual",
+                  "description": "Apoyo personalizado para fomentar el crecimiento y el bienestar."
+                }
+              }
+            ]
           },
           {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Terapia familiar"
-            }
+            "@type": "WebSite",
+            "@id": "https://aimeecotetherapy.com/es/#website",
+            "url": "https://aimeecotetherapy.com/es/",
+            "name": "Aimee Cote Terapia",
+            "description": "Aimee Cote, psicoterapeuta en Chatou (Yvelines), especializada en terapia sistémica de pareja y familiar, bilingüe francés-inglés. Acompaña a familias internacionales, parejas e individuos para mejorar la comunicación, resolver conflictos y reforzar un bienestar duradero.",
+            "inLanguage": "es",
+            "publisher": {"@id": "https://aimeecotetherapy.com/#business"}
           },
           {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Terapia individual"
-            }
+            "@type": "WebPage",
+            "@id": "https://aimeecotetherapy.com/es/#home",
+            "url": "https://aimeecotetherapy.com/es/",
+            "name": "Inicio",
+            "description": "Aimee Cote, psicoterapeuta en Chatou (Yvelines), especializada en terapia sistémica de pareja y familiar, bilingüe francés-inglés. Acompaña a familias internacionales, parejas e individuos para mejorar la comunicación, resolver conflictos y reforzar un bienestar duradero.",
+            "inLanguage": "es",
+            "isPartOf": {"@id": "https://aimeecotetherapy.com/es/#website"}
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://aimeecotetherapy.com/es/blog#page",
+            "url": "https://aimeecotetherapy.com/es/blog",
+            "name": "Blog",
+            "description": "Aimee Cote, psicoterapeuta en Chatou (Yvelines), especializada en terapia sistémica de pareja y familiar, bilingüe francés-inglés. Acompaña a familias internacionales, parejas e individuos para mejorar la comunicación, resolver conflictos y reforzar un bienestar duradero.",
+            "inLanguage": "es",
+            "isPartOf": {"@id": "https://aimeecotetherapy.com/es/#website"}
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://aimeecotetherapy.com/es/there#page",
+            "url": "https://aimeecotetherapy.com/es/there",
+            "name": "Cómo llegar",
+            "description": "Aimee Cote, psicoterapeuta en Chatou (Yvelines), especializada en terapia sistémica de pareja y familiar, bilingüe francés-inglés. Acompaña a familias internacionales, parejas e individuos para mejorar la comunicación, resolver conflictos y reforzar un bienestar duradero.",
+            "inLanguage": "es",
+            "isPartOf": {"@id": "https://aimeecotetherapy.com/es/#website"}
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://aimeecotetherapy.com/es/book#page",
+            "url": "https://aimeecotetherapy.com/es/book",
+            "name": "Agendar cita",
+            "description": "Aimee Cote, psicoterapeuta en Chatou (Yvelines), especializada en terapia sistémica de pareja y familiar, bilingüe francés-inglés. Acompaña a familias internacionales, parejas e individuos para mejorar la comunicación, resolver conflictos y reforzar un bienestar duradero.",
+            "inLanguage": "es",
+            "isPartOf": {"@id": "https://aimeecotetherapy.com/es/#website"}
           }
         ]
       }
