@@ -1,19 +1,21 @@
 <template>
-  <div class="pt-16 text-center">
-    <SmartPicture
-      asset-path="logo.jpg"
-      alt-key="faq.logoAlt"
-      img-class="mx-auto mb-6"
-    />
-    <h1 class="mb-6 primary--text">{{ $t('faq.title') }}</h1>
-    <ul class="mx-auto" style="max-width: 700px;">
-      <li v-for="item in faqs" :key="item.q" class="mb-4">
-        <div class="pa-4 secondary lighten-5 text-left">
-          <strong class="secondary--text">{{ $t(item.q) }}</strong>
-          <p class="mt-2">{{ $t(item.a) }}</p>
-        </div>
-      </li>
-    </ul>
+  <div class="pt-16">
+    <div class="text-center mx-auto" style="max-width: 700px;">
+      <SmartPicture
+        asset-path="logo.jpg"
+        alt-key="faq.logoAlt"
+        img-class="faq-logo mx-auto mb-6"
+      />
+      <h1 class="mb-6 primary--text">{{ $t('faq.title') }}</h1>
+      <ul class="pa-0">
+        <li v-for="item in faqs" :key="item.q" class="mb-4">
+          <div class="pa-4 secondary lighten-5 text-left">
+            <strong class="secondary--text">{{ $t(item.q) }}</strong>
+            <p class="mt-2">{{ $t(item.a) }}</p>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -74,4 +76,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.faq-logo {
+  max-width: 200px;
+}
+</style>
 
