@@ -76,6 +76,7 @@ describe('BlogEntry meta tags', () => {
       expect(article.datePublished).toBe('2024-01-01')
       expect(article.image).toBe('/img.jpg')
       expect(article.author.name).toBe('John Doe')
+      expect(article.inLanguage).toBe('en')
       expect(article.isPartOf['@type']).toBe('WebSite')
       expect(article.about['@type']).toBe('LocalBusiness')
   })

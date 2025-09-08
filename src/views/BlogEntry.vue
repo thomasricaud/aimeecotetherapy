@@ -52,6 +52,7 @@
       const description = this.article.description || ''
       const path = this.$route?.path || '/'
       const canonical = `https://aimeecotetherapy.com${path.endsWith('/') ? path : path + '/'}`
+      const lang = this.$i18n?.locale || this.$route?.params.lang || 'en'
       const articleGraph = {
         '@type': 'Article',
         '@id': `${canonical}#article`,
@@ -59,6 +60,7 @@
         datePublished: this.article.date,
         image: this.article.image,
         author: { '@type': 'Person', name: this.article.author },
+        inLanguage: lang,
         isPartOf: {
           '@type': 'WebSite',
           name: 'Aimee Cote Therapy',
