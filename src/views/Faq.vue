@@ -1,10 +1,11 @@
 <template>
-  <div class="pt-16">
-    <div class="text-center mx-auto" style="max-width: 700px;">
+  <div>
+    <div class="text-center mx-auto mt-16" style="max-width: 700px;">
       <SmartPicture
         asset-path="logo.jpg"
         alt-key="faq.logoAlt"
-        img-class="faq-logo mx-auto mb-6"
+        img-class="mx-auto mb-6"
+        img-style="max-width: 200px; width: 100%;"
       />
       <h1 class="mb-6 primary--text">{{ $t('faq.title') }}</h1>
       <ul class="pa-0">
@@ -77,9 +78,7 @@ export default {
 }
 </script>
 
-<style scoped>
-.faq-logo {
-  max-width: 200px;
-}
+<style>
+/* Intentionally left empty; FAQ uses inline styles for logo sizing */
 </style>
 
