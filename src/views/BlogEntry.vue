@@ -52,6 +52,24 @@
       const description = this.article.description || ''
       const path = this.$route?.path || '/'
       const canonical = `https://aimeecotetherapy.com${path.endsWith('/') ? path : path + '/'}`
+      const articleGraph = {
+        '@type': 'Article',
+        '@id': `${canonical}#article`,
+        headline: title,
+        datePublished: this.article.date,
+        image: this.article.image,
+        author: { '@type': 'Person', name: this.article.author },
+        isPartOf: {
+          '@type': 'WebSite',
+          name: 'Aimee Cote Therapy',
+          url: 'https://aimeecotetherapy.com/'
+        },
+        about: {
+          '@type': 'LocalBusiness',
+          name: 'Aimee Cote Therapy',
+          url: 'https://aimeecotetherapy.com/'
+        }
+      }
       return {
         title,
         meta: [
@@ -64,6 +82,12 @@
         ],
         link: [
           { vmid: 'canonical', rel: 'canonical', href: canonical }
+        ],
+        script: [
+          {
+            type: 'application/ld+json',
+            json: { '@context': 'https://schema.org', '@graph': [articleGraph] }
+          }
         ]
       }
     }

@@ -21,7 +21,8 @@ describe('BlogEntry meta tags', () => {
             slug: 'test-article',
             category: 'News',
             author: 'John Doe',
-            image: '/img.jpg'
+            image: '/img.jpg',
+            date: '2024-01-01'
           }
         ]
       }
@@ -31,7 +32,7 @@ describe('BlogEntry meta tags', () => {
       localVue,
       store,
       mocks: {
-        $route: { params: { slug: 'test-article' } }
+        $route: { params: { slug: 'test-article' }, path: '/en/blog/test-article' }
       },
       stubs: ['v-chip', 'v-img']
     })
@@ -65,5 +66,17 @@ describe('BlogEntry meta tags', () => {
       expect(wrapper.find('v-chip-stub').text()).toBe('News')
       expect(wrapper.find('.caption').text()).toBe('John Doe')
       expect(wrapper.find('v-img-stub').attributes('src')).toBe('/img.jpg')
+
+      const script = meta.metaInfo.script.find(s => s.type === 'application/ld+json')
+      expect(script).toBeTruthy()
+      const graph = script.json['@graph']
+      const article = graph.find(g => g['@type'] === 'Article')
+      expect(article).toBeTruthy()
+      expect(article.headline).toBe('Test Article')
+      expect(article.datePublished).toBe('2024-01-01')
+      expect(article.image).toBe('/img.jpg')
+      expect(article.author.name).toBe('John Doe')
+      expect(article.isPartOf['@type']).toBe('WebSite')
+      expect(article.about['@type']).toBe('LocalBusiness')
   })
 })
