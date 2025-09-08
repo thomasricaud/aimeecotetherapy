@@ -14,12 +14,26 @@ function createI18n () {
     en: {
       WelcomeTitle2: 'A bilingual French - English therapist located in Chatou (78400)'
       ,
-      'faq.q1': 'What is individual therapy?',
+      'faq.q1': 'What is couples therapy for one?',
       'faq.a1': 'a1',
       'faq.q2': 'q2',
       'faq.a2': 'a2',
       'faq.q3': 'q3',
       'faq.a3': 'a3',
+      'faq.q4': 'q4',
+      'faq.a4': 'a4',
+      'faq.q5': 'q5',
+      'faq.a5': 'a5',
+      'faq.q6': 'q6',
+      'faq.a6': 'a6',
+      'faq.q7': 'q7',
+      'faq.a7': 'a7',
+      'faq.q8': 'q8',
+      'faq.a8': 'a8',
+      'faq.q9': 'q9',
+      'faq.a9': 'a9',
+      'faq.q10': 'q10',
+      'faq.a10': 'a10',
       'faq.logoAlt': 'logo',
       'faq.title': 'FAQ'
     }
@@ -85,7 +99,7 @@ describe('Pages', () => {
         SmartPicture: { template: '<div class="logo-stub" />' }
       }
     })
-    expect(wrapper.text()).toContain('What is individual therapy?')
+    expect(wrapper.text()).toContain('What is couples therapy for one?')
     expect(wrapper.find('.logo-stub').exists()).toBe(true)
   })
 })

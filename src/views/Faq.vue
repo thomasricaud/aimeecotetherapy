@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="text-center mx-auto mt-16" style="max-width: 700px;">
+    <div class="text-center mx-auto mt-16 px-4" style="max-width: 700px;">
       <SmartPicture
         asset-path="logo.jpg"
         alt-key="faq.logoAlt"
@@ -32,7 +32,14 @@ export default {
       faqs: [
         { q: 'faq.q1', a: 'faq.a1' },
         { q: 'faq.q2', a: 'faq.a2' },
-        { q: 'faq.q3', a: 'faq.a3' }
+        { q: 'faq.q3', a: 'faq.a3' },
+        { q: 'faq.q4', a: 'faq.a4' },
+        { q: 'faq.q5', a: 'faq.a5' },
+        { q: 'faq.q6', a: 'faq.a6' },
+        { q: 'faq.q7', a: 'faq.a7' },
+        { q: 'faq.q8', a: 'faq.a8' },
+        { q: 'faq.q9', a: 'faq.a9' },
+        { q: 'faq.q10', a: 'faq.a10' }
       ]
     }
   },
@@ -43,6 +50,11 @@ export default {
     const lang = this.$i18n?.locale || this.$route?.params.lang || 'en'
     const graph = buildGraphFor(routeName, lang, this.$t.bind(this))
     const base = 'https://aimeecotetherapy.com'
+    const mainEntity = this.faqs.map(f => ({
+      '@type': 'Question',
+      name: this.$t(f.q),
+      acceptedAnswer: { '@type': 'Answer', text: this.$t(f.a) }
+    }))
     graph['@graph'].push(
       { '@type': 'WebSite', '@id': `${base}/#website`, url: base + '/', name: 'Aimee Cote Therapy' },
       { '@type': 'LocalBusiness', '@id': `${base}/#business`, name: 'Aimee Cote Therapy', url: base + '/' },
@@ -52,11 +64,7 @@ export default {
         url: canonical,
         isPartOf: { '@id': `${base}/#website` },
         about: { '@id': `${base}/#business` },
-        mainEntity: [
-          { '@type': 'Question', name: this.$t('faq.q1'), acceptedAnswer: { '@type': 'Answer', text: this.$t('faq.a1') } },
-          { '@type': 'Question', name: this.$t('faq.q2'), acceptedAnswer: { '@type': 'Answer', text: this.$t('faq.a2') } },
-          { '@type': 'Question', name: this.$t('faq.q3'), acceptedAnswer: { '@type': 'Answer', text: this.$t('faq.a3') } }
-        ]
+        mainEntity
       }
     )
     return {
