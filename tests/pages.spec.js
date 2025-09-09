@@ -75,7 +75,7 @@ describe('Pages', () => {
       const store = new Vuex.Store({
         getters: {
           faqs: () => [
-            { question: 'What is couples therapy for one?', answer: 'a1' }
+            { question: 'How many sessions will I need?', answer: 'a1' }
           ]
         }
       })
@@ -87,7 +87,7 @@ describe('Pages', () => {
           SmartPicture: { template: '<div class="logo-stub" />' }
         }
       })
-      expect(wrapper.text()).toContain('What is couples therapy for one?')
+      expect(wrapper.text()).toContain('How many sessions will I need?')
       expect(wrapper.find('.logo-stub').exists()).toBe(true)
     })
   })
