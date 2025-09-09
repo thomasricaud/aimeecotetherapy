@@ -33,7 +33,7 @@ async function optimizeOne (file) {
   if ((meta.width || 0) > MAX_WIDTH) {
     pipeline = pipeline.resize({ width: MAX_WIDTH, withoutEnlargement: true })
   }
-  let outTmp = file + '.tmp-opt'
+  const outTmp = file + '.tmp-opt'
   if (ext === '.jpg' || ext === '.jpeg') {
     pipeline = pipeline.jpeg({ quality: JPEG_QUALITY, mozjpeg: true })
   } else if (ext === '.png') {
@@ -66,6 +66,4 @@ async function main () {
     console.log(`Restored and optimized: ${rel}`)
   }
 }
-
 main().catch((e) => { console.error(e); process.exit(1) })
-

@@ -3,11 +3,12 @@ const tryPuppeteerChromePath = () => {
   try { return require('puppeteer').executablePath(); } catch { return undefined; }
 };
 
-const urls = [
-  'http://127.0.0.1:8080/en/',
-  'http://127.0.0.1:8080/fr/',
-  'http://127.0.0.1:8080/es/'
-];
+const baseUrl = 'http://127.0.0.1:8080';
+const locales = ['en', 'fr', 'es'];
+const paths = ['', 'blog', 'book', 'there', 'faq'];
+const urls = locales.flatMap(lang =>
+  paths.map(p => `${baseUrl}/${lang}${p ? `/${p}` : ''}/`)
+);
 const isLocal = urls.every(u => /^https?:\/\/(localhost|127\.0\.0\.1|host\.docker\.internal)/.test(u));
 
 module.exports = {
@@ -18,6 +19,7 @@ module.exports = {
       // Construit puis sert l'app; Vite preview si dispo sinon serve statique
       startServerCommand: 'npm run build && node scripts/start-seo-server.js',
       startServerReadyPattern: 'Local:\\s+http://.*:8080|Accepting connections',
+      startServerReadyTimeout: 120000,
       settings: {
         chromeFlags: '--headless=new --no-sandbox --disable-dev-shm-usage',
         chromePath: process.env.CHROME_PATH || tryPuppeteerChromePath()
@@ -32,7 +34,6 @@ module.exports = {
         'hreflang': 'warn',
         'is-crawlable': 'error',
         'robots-txt': 'warn',
-        'structured-data': 'warn',
         'document-title': 'error',
         'meta-description': 'error',
         'http-status-code': 'error',

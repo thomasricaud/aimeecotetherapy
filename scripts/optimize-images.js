@@ -13,7 +13,7 @@ const sharp = require('sharp')
 const TARGET_DIR = path.resolve(__dirname, '..', process.argv[2] || 'dist')
 const EXTS = new Set(['.jpg', '.jpeg', '.png'])
 
-async function* walk (dir) {
+async function * walk (dir) {
   const entries = await fs.promises.readdir(dir, { withFileTypes: true })
   for (const entry of entries) {
     const full = path.join(dir, entry.name)
