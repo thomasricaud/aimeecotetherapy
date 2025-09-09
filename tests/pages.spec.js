@@ -3,19 +3,23 @@ import Vuex from 'vuex'
 import VueI18n from 'vue-i18n'
 import Home from '@/views/Home.vue'
 import Blog from '@/views/Blog.vue'
+import Faq from '@/views/Faq.vue'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
 localVue.use(VueI18n)
 
 function createI18n () {
-  const messages = {
-    en: {
-      WelcomeTitle2: 'A bilingual French - English therapist located in Chatou (78400)'
+    const messages = {
+      en: {
+        WelcomeTitle2: 'A bilingual French - English therapist located in Chatou (78400)'
+        ,
+        'faq.logoAlt': 'logo',
+        'faq.title': 'FAQ'
+      }
     }
+    return new VueI18n({ locale: 'en', messages })
   }
-  return new VueI18n({ locale: 'en', messages })
-}
 
 describe('Pages', () => {
   it('Home page contains tagline', () => {
@@ -65,4 +69,25 @@ describe('Pages', () => {
     expect(blogs.length).toBe(1)
     expect(wrapper.text()).toContain('First post')
   })
-})
+
+    it('Faq page renders question', () => {
+      const i18n = createI18n()
+      const store = new Vuex.Store({
+        getters: {
+          faqs: () => [
+            { question: 'How many sessions will I need?', answer: 'a1' }
+          ]
+        }
+      })
+      const wrapper = shallowMount(Faq, {
+        localVue,
+        i18n,
+        store,
+        stubs: {
+          SmartPicture: { template: '<div class="logo-stub" />' }
+        }
+      })
+      expect(wrapper.text()).toContain('How many sessions will I need?')
+      expect(wrapper.find('.logo-stub').exists()).toBe(true)
+    })
+  })

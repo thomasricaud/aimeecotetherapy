@@ -13,7 +13,7 @@ This file provides guidance for automated agents working in this repository.
 - This project uses Node.js (>=22) and Vue.js.
 - Use `npm install` to add dependencies and update `package-lock.json` when needed.
 - Build the project with `npm run build` to verify production readiness.
-- Run `npm run seo-check` to audit SEO metadata across locales.
+- Run `npm run seo-check` to audit SEO metadata across locales. The script builds and serves the app automatically.
 
 ### Images workflow (important)
 
