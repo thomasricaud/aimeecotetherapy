@@ -59,6 +59,7 @@
     "image-minimizer-webpack-plugin": "^4.1.4",
     "jest": "^25.5.4",
     "prerender-spa-plugin": "^3.4.0",
+    "puppeteer": "^24.19.0",
     "raw-loader": "^4.0.2",
     "sass": "^1.26.3",
     "sass-loader": "^12.6.0",
