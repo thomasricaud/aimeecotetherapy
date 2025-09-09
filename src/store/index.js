@@ -6,6 +6,7 @@ import i18n from '@/i18n'
 Vue.use(Vuex)
 
 const markdownContext = require.context('!!raw-loader!../content/blog', true, /index\.[a-z]{2}\.md$/)
+const faqContext = require.context('!!raw-loader!../content/faq', true, /index\.[a-z]{2}\.md$/)
 
 export default new Vuex.Store({
   state: {
@@ -27,6 +28,10 @@ export default new Vuex.Store({
       {
         text: 'nav.there',
         href: '/there',
+      },
+      {
+        text: 'nav.faq',
+        href: '/faq',
       },
     ],
   },
@@ -55,6 +60,16 @@ export default new Vuex.Store({
         categories.push({ text, href: text })
       }
       return categories.sort().slice(0, 4)
+    },
+    faqs: () => {
+      const locale = i18n.locale
+      return faqContext.keys()
+        .filter(key => key.match(new RegExp(`index\\.${locale}\\.md$`)))
+        .sort()
+        .map(key => {
+          const { attributes, body } = fm(faqContext(key).default)
+          return { question: attributes.question, answer: body.trim() }
+        })
     },
     links: state => {
       const locale = i18n.locale

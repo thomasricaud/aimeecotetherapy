@@ -1,6 +1,6 @@
 <template>
   <div>
-    <banner class="mt-12" />
+    <banner class="mt-16" />
     <articles />
   </div>
 </template>

@@ -4,7 +4,8 @@ export default function buildGraphFor (routeName = 'home', lang = 'en', t = k =>
     home: { navKey: 'nav.home', titleKey: 'meta.homeTitle', path: '' },
     blog: { navKey: 'nav.blog', titleKey: 'meta.blogTitle', path: '/blog' },
     book: { navKey: 'nav.book', titleKey: 'meta.bookTitle', path: '/book' },
-    there: { navKey: 'nav.there', titleKey: 'meta.thereTitle', path: '/there' }
+    there: { navKey: 'nav.there', titleKey: 'meta.thereTitle', path: '/there' },
+    faq: { navKey: 'nav.faq', titleKey: 'meta.faqTitle', path: '/faq' }
   }
 
   const info = routes[routeName] || routes.home
