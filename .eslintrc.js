@@ -13,7 +13,4 @@ module.exports = {
     // Enforce alt text on images; keep translated via i18n keys in templates
     'vuejs-accessibility/alt-text': 'error',
   },
-  parserOptions: {
-    parser: 'babel-eslint',
-  },
 }

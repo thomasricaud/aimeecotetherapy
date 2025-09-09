@@ -65,6 +65,4 @@ async function main () {
   }
   console.log(`Variants: created=${created}, skipped=${skipped}`)
 }
-
 main().catch(err => { console.error(err); process.exit(1) })
-

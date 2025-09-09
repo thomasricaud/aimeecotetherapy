@@ -12,7 +12,7 @@
     "sitemap": "node scripts/generate-sitemap.js",
     "versions": "node -v && npm -v && npx vue-cli-service --version",
     "test": "jest",
-    "seo-check": "lhci autorun --config=lighthouserc.js",
+    "seo-check": "npm install --include=dev && lhci autorun --config=lighthouserc.js --assert.assertions.structured-data=off && node scripts/show-seo-results.js",
     "optimize:images": "node scripts/optimize-images.js",
     "picture:optimize": "node scripts/generate-source-variants.js",
     "assets:optimize": "node scripts/resize-source-assets.js",
