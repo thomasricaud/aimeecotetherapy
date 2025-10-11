@@ -60,6 +60,8 @@
     "husky": "^9.1.7",
     "image-minimizer-webpack-plugin": "^4.1.4",
     "jest": "^25.5.4",
+    "netlify-plugin-minify-html": "github:philhawksworth/netlify-plugin-minify-html#master",
+    "netlify-plugin-sitemap": "github:netlify-labs/netlify-plugin-sitemap#v0.8.1",
     "prerender-spa-plugin": "^3.4.0",
     "puppeteer": "^24.19.0",
     "raw-loader": "^4.0.2",
