@@ -55,3 +55,10 @@ SmartPicture component usage:
 Use `npm run seo-check` to run Lighthouse in CI mode against all localized
 pages. Set the `SITE_URL` environment variable to point to the deployed site
 or leave it unset to check a local server at `http://localhost:8080`.
+
+### CI/CD usage
+
+In the deployment pipeline, trigger `npm run seo-check` right after the
+Netlify build (`npm run build:prerender`). This validates that the prerendered
+output keeps structured data and key SEO metrics intact before promoting a
+deployment.

@@ -1,8 +1,20 @@
 [build]
-  command = "npm run build"
+  command = "npm run build:prerender"
   publish = "dist"
 
 [build.environment]
   NODE_VERSION = "22"
   NPM_VERSION  = "11.4.2"
   NPM_FLAGS    = "--include=dev"
+
+[[plugins]]
+  package = "netlify-plugin-sitemap"
+  [plugins.inputs]
+    buildDir = "dist"
+
+[[plugins]]
+  package = "netlify-plugin-minify-html"
+
+[context.production]
+  [[context.production.plugins]]
+    package = "netlify-plugin-prerender"
