@@ -79,8 +79,11 @@
           { vmid: 'description', name: 'description', content: description },
           { vmid: 'og:title', property: 'og:title', content: title },
           { vmid: 'og:description', property: 'og:description', content: description },
+          { vmid: 'og:type', property: 'og:type', content: 'article' },
+          { vmid: 'og:image', property: 'og:image', content: this.article.image || 'https://aimeecotetherapy.com/logo.jpg' },
           { vmid: 'twitter:title', name: 'twitter:title', content: title },
-          { vmid: 'twitter:description', name: 'twitter:description', content: description }
+          { vmid: 'twitter:description', name: 'twitter:description', content: description },
+          { vmid: 'twitter:image', name: 'twitter:image', content: this.article.image || 'https://aimeecotetherapy.com/logo.jpg' }
         ],
         link: [
           { vmid: 'canonical', rel: 'canonical', href: canonical }

@@ -1,24 +1,4 @@
 User-agent: *
 Allow: /
-Allow: /fr/blog/blog1
-Allow: /fr/blog/blog14
-Allow: /fr/blog/blog15
-Allow: /fr/blog/blog2
-Allow: /fr/blog/blog3
-Allow: /fr/blog/blog4
-Allow: /fr/blog/blog5
-Allow: /en/blog/blog1
-Allow: /en/blog/blog14
-Allow: /en/blog/blog15
-Allow: /en/blog/blog2
-Allow: /en/blog/blog3
-Allow: /en/blog/blog4
-Allow: /en/blog/blog5
-Allow: /es/blog/blog1
-Allow: /es/blog/blog14
-Allow: /es/blog/blog15
-Allow: /es/blog/blog2
-Allow: /es/blog/blog3
-Allow: /es/blog/blog4
-Allow: /es/blog/blog5
-Sitemap: https://www.aimeecotetherapy.com/sitemap.xml
+
+Sitemap: https://aimeecotetherapy.com/sitemap.xml

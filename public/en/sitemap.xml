@@ -1,39 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.aimeecotetherapy.com/en/</loc>
+    <loc>https://aimeecotetherapy.com/en/</loc>
+    <lastmod>2026-02-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aimeecotetherapy.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimeecotetherapy.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aimeecotetherapy.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimeecotetherapy.com/en/"/>
   </url>
   <url>
-    <loc>https://www.aimeecotetherapy.com/en/blog</loc>
+    <loc>https://aimeecotetherapy.com/en/blog</loc>
+    <lastmod>2026-02-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aimeecotetherapy.com/fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimeecotetherapy.com/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aimeecotetherapy.com/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimeecotetherapy.com/en/blog"/>
   </url>
   <url>
-    <loc>https://www.aimeecotetherapy.com/en/book</loc>
+    <loc>https://aimeecotetherapy.com/en/book</loc>
+    <lastmod>2026-02-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aimeecotetherapy.com/fr/book"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimeecotetherapy.com/en/book"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aimeecotetherapy.com/es/book"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimeecotetherapy.com/en/book"/>
   </url>
   <url>
-    <loc>https://www.aimeecotetherapy.com/en/there</loc>
+    <loc>https://aimeecotetherapy.com/en/there</loc>
+    <lastmod>2026-02-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aimeecotetherapy.com/fr/there"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimeecotetherapy.com/en/there"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aimeecotetherapy.com/es/there"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimeecotetherapy.com/en/there"/>
   </url>
   <url>
-    <loc>https://www.aimeecotetherapy.com/en/home</loc>
+    <loc>https://aimeecotetherapy.com/en/faq</loc>
+    <lastmod>2026-02-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aimeecotetherapy.com/fr/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimeecotetherapy.com/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aimeecotetherapy.com/es/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimeecotetherapy.com/en/faq"/>
   </url>
   <url>
-    <loc>https://www.aimeecotetherapy.com/en/blog/blog1</loc>
+    <loc>https://aimeecotetherapy.com/en/blog/blog1</loc>
+    <lastmod>2026-02-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aimeecotetherapy.com/fr/blog/blog1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimeecotetherapy.com/en/blog/blog1"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aimeecotetherapy.com/es/blog/blog1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimeecotetherapy.com/en/blog/blog1"/>
   </url>
   <url>
-    <loc>https://www.aimeecotetherapy.com/en/blog/blog14</loc>
+    <loc>https://aimeecotetherapy.com/en/blog/blog14</loc>
+    <lastmod>2026-02-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aimeecotetherapy.com/fr/blog/blog14"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimeecotetherapy.com/en/blog/blog14"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aimeecotetherapy.com/es/blog/blog14"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimeecotetherapy.com/en/blog/blog14"/>
   </url>
   <url>
-    <loc>https://www.aimeecotetherapy.com/en/blog/blog15</loc>
+    <loc>https://aimeecotetherapy.com/en/blog/blog15</loc>
+    <lastmod>2026-02-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aimeecotetherapy.com/fr/blog/blog15"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimeecotetherapy.com/en/blog/blog15"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aimeecotetherapy.com/es/blog/blog15"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimeecotetherapy.com/en/blog/blog15"/>
   </url>
   <url>
-    <loc>https://www.aimeecotetherapy.com/en/blog/blog2</loc>
+    <loc>https://aimeecotetherapy.com/en/blog/blog2</loc>
+    <lastmod>2026-02-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aimeecotetherapy.com/fr/blog/blog2"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimeecotetherapy.com/en/blog/blog2"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aimeecotetherapy.com/es/blog/blog2"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimeecotetherapy.com/en/blog/blog2"/>
   </url>
   <url>
-    <loc>https://www.aimeecotetherapy.com/en/blog/blog3</loc>
+    <loc>https://aimeecotetherapy.com/en/blog/blog3</loc>
+    <lastmod>2026-02-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aimeecotetherapy.com/fr/blog/blog3"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimeecotetherapy.com/en/blog/blog3"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aimeecotetherapy.com/es/blog/blog3"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimeecotetherapy.com/en/blog/blog3"/>
   </url>
   <url>
-    <loc>https://www.aimeecotetherapy.com/en/blog/blog4</loc>
+    <loc>https://aimeecotetherapy.com/en/blog/blog4</loc>
+    <lastmod>2026-02-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aimeecotetherapy.com/fr/blog/blog4"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimeecotetherapy.com/en/blog/blog4"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aimeecotetherapy.com/es/blog/blog4"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimeecotetherapy.com/en/blog/blog4"/>
   </url>
   <url>
-    <loc>https://www.aimeecotetherapy.com/en/blog/blog5</loc>
+    <loc>https://aimeecotetherapy.com/en/blog/blog5</loc>
+    <lastmod>2026-02-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://aimeecotetherapy.com/fr/blog/blog5"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aimeecotetherapy.com/en/blog/blog5"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aimeecotetherapy.com/es/blog/blog5"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aimeecotetherapy.com/en/blog/blog5"/>
   </url>
 </urlset>
