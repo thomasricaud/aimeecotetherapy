@@ -11,6 +11,8 @@
     <new-to-therapy class="my-5" />
 
     <my-approach class="my-5" />
+
+    <testimonials class="my-5" />
   </div>
 </template>
 
@@ -26,6 +28,7 @@
       Asystem: () => import('@/components/Asystem'),
       NewToTherapy: () => import('@/components/NewToTherapy'),
       MyApproach: () => import('@/components/MyApproach'),
+      Testimonials: () => import('@/components/Testimonials'),
     },
     metaInfo () {
       const path = this.$route?.path || '/'
