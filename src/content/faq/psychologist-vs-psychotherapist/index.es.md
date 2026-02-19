@@ -1,8 +1,6 @@
 ---
 question: "¿Cuál es la diferencia entre un psicólogo y un psychopraticien?"
 ---
-En Francia, el título de psicólogo está protegido por ley desde 1985 y requiere un máster (Bac+5) en psicología obtenido en una universidad francesa. El título de psicoterapeuta también está regulado desde 2010 y exige la inscripción en el registro nacional de psicoterapeutas (RPPS).
+El título de psicólogo está protegido por ley desde 1985 y exige un máster universitario (Bac+5). El psychopraticien es un practicante en psicoterapia cuyo título es de libre uso y no está regulado por el Estado francés, pero está encuadrado por federaciones profesionales (formación, supervisión, deontología).
 
-El psychopraticien (practicante en psicoterapia) es un profesional formado en psicoterapia cuyo título es de libre uso y no está regulado por el Estado francés. Atiende a individuos, parejas, familias y grupos. Las federaciones profesionales como la FF2P establecen criterios rigurosos: formación profunda en psicopatología clínica, psicoterapia personal, supervisión continua y respeto de un código deontológico.
-
-Aimee Cote posee un máster en Terapia Matrimonial y Familiar de la Universidad de New Hampshire (UNH), programa acreditado por la COAMFTE, que incluyó 500 horas de práctica clínica supervisada. Ejerce como psychopraticienne especializada en terapia sistémica de pareja y familiar, y atiende en francés, inglés y español.
+Aimee Cote posee un máster en Terapia Matrimonial y Familiar de la Universidad de New Hampshire (UNH, acreditado COAMFTE), que incluyó 500 horas de práctica clínica supervisada.
