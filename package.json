@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "npm run sitemap && cross-env ENABLE_PRERENDER=1 vue-cli-service build",
+    "build": "npm run sitemap && vue-cli-service build && node scripts/generate-static-html.js",
     "build:prerender": "cross-env ENABLE_PRERENDER=1 vue-cli-service build",
     "lint": "eslint scripts",
     "deploy": "yarn build && now && now alias",
