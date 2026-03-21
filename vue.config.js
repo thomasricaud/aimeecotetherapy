@@ -14,10 +14,17 @@ function getBlogSlugs () {
 }
 
 function buildPrerenderRoutes () {
-  // Prerender only locale roots to stabilize Puppeteer on Windows.
-  // We can add section pages and posts later once stable.
-  const base = LOCALES.map((l) => `/${l}`)
-  return ['/', ...base]
+  const staticPages = ['', '/blog', '/book', '/there', '/faq']
+  const blogSlugs = getBlogSlugs().map((slug) => `/blog/${slug}`)
+  const allPages = [...staticPages, ...blogSlugs]
+
+  const routes = ['/']
+  LOCALES.forEach((l) => {
+    allPages.forEach((page) => {
+      routes.push(`/${l}${page}`)
+    })
+  })
+  return routes
 }
 
 module.exports = {
