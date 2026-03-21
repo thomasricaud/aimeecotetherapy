@@ -1,6 +1,18 @@
+# Redirect www to non-www (fixes 5xx errors in Search Console)
+https://www.aimeecotetherapy.com/* https://aimeecotetherapy.com/:splat 301!
+
 /admin /admin/index.html 200
 /admin/* /admin/index.html 200
 / /en/ 301
+
+# Redirect legacy URLs without language prefix (fixes 5xx errors in Search Console)
+/home /en/ 301
+/there /en/there 301
+/blog /en/blog 301
+/book /en/book 301
+/faq /en/faq 301
+/blog/* /en/blog/:splat 301
+
 # Fallback to SPA shell for each language (only reached if no prerendered file exists)
 /fr/* /index.fr.html 200
 /es/* /index.es.html 200
