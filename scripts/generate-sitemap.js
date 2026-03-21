@@ -61,7 +61,7 @@ const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmln
 
 fs.writeFileSync(path.join(__dirname, '..', 'public', 'sitemap.xml'), sitemapIndex)
 
-const robots = `User-agent: *\nAllow: /\n\nSitemap: ${baseUrl}/sitemap.xml\n`
+const robots = `User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /admin/\n\nSitemap: ${baseUrl}/sitemap.xml\n`
 fs.writeFileSync(path.join(__dirname, '..', 'public', 'robots.txt'), robots)
 
 console.log('Generated sitemaps and robots for languages:', languages.join(', '))
