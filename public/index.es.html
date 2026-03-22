@@ -80,35 +80,55 @@
                 "closes": "18:00"
               }
             ],
-            "offers": [
-              {
-                "@type": "Offer",
-                "name": "Terapia de pareja",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Terapia de pareja",
-                  "description": "Apoyo a las parejas para mejorar la comunicación y resolver conflictos."
+            "areaServed": [
+              {"@type": "City", "name": "Chatou"},
+              {"@type": "City", "name": "Saint-Germain-en-Laye"},
+              {"@type": "City", "name": "Le Vésinet"},
+              {"@type": "City", "name": "Croissy-sur-Seine"},
+              {"@type": "City", "name": "Rueil-Malmaison"},
+              {"@type": "City", "name": "Neuilly-sur-Seine"},
+              {"@type": "City", "name": "Versailles"},
+              {"@type": "City", "name": "Paris"}
+            ],
+            "knowsLanguage": ["es", "en", "fr"],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Servicios de terapia",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Terapia de pareja",
+                    "description": "Terapia sistémica de pareja para mejorar la comunicación y resolver conflictos. Disponible en español, francés e inglés."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Terapia familiar",
+                    "description": "Terapia familiar para familias internacionales, desafíos de crianza y conflictos interculturales cerca de París."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Terapia individual",
+                    "description": "Acompañamiento individual para ansiedad, depresión, transiciones de vida y crecimiento personal."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Terapia en línea",
+                    "description": "Sesiones de terapia en línea por video para pacientes en Francia o en el extranjero. Disponible en español, francés e inglés."
+                  }
                 }
-              },
-              {
-                "@type": "Offer",
-                "name": "Terapia familiar",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Terapia familiar",
-                  "description": "Orientación para fortalecer los vínculos familiares y superar dificultades."
-                }
-              },
-              {
-                "@type": "Offer",
-                "name": "Terapia individual",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Terapia individual",
-                  "description": "Apoyo personalizado para fomentar el crecimiento y el bienestar."
-                }
-              }
-            ]
+              ]
+            }
           },
           {
             "@type": "WebSite",

@@ -151,6 +151,19 @@ function generateHomeContent (locale, lang) {
         ${approach}
         <p>${escapeHtml(approach2)}</p>
       </section>
+      <section aria-label="Service area">
+        ${lang === 'fr'
+    ? `<h2>Thérapeute accessible depuis les villes voisines</h2>
+            <p>Le cabinet est situé à Chatou (78400), dans les Yvelines, et accueille des patients de toute la région ouest parisienne : <strong>Saint-Germain-en-Laye</strong>, <strong>Le Vésinet</strong>, <strong>Croissy-sur-Seine</strong>, <strong>Le Pecq</strong>, <strong>Rueil-Malmaison</strong>, <strong>Bougival</strong>, <strong>Louveciennes</strong>, <strong>Marly-le-Roi</strong>, <strong>Nanterre</strong>, <strong>Neuilly-sur-Seine</strong>, <strong>Versailles</strong> et <strong>Paris</strong>. Des séances de thérapie en ligne sont également disponibles pour les personnes vivant ailleurs en France ou à l'étranger.</p>
+            <p>Aimee Cote est psychopraticienne (et non psychologue — <a href="/${lang}/faq/">voir la FAQ pour en savoir plus sur la différence</a>). Elle propose une approche systémique de la thérapie, bilingue français et anglais, adaptée aux familles internationales et aux expatriés.</p>`
+    : lang === 'es'
+      ? `<h2>Terapeuta accesible desde las ciudades cercanas</h2>
+            <p>El consultorio se encuentra en Chatou (78400), Yvelines, y recibe pacientes de toda la zona oeste de París: <strong>Saint-Germain-en-Laye</strong>, <strong>Le Vésinet</strong>, <strong>Croissy-sur-Seine</strong>, <strong>Rueil-Malmaison</strong>, <strong>Bougival</strong>, <strong>Neuilly-sur-Seine</strong>, <strong>Versailles</strong> y <strong>París</strong>. También se ofrecen sesiones de terapia en línea.</p>`
+      : `<h2>Therapist serving nearby cities</h2>
+            <p>The office is located in Chatou (78400), Yvelines, and welcomes clients from across western Paris: <strong>Saint-Germain-en-Laye</strong>, <strong>Le Vésinet</strong>, <strong>Croissy-sur-Seine</strong>, <strong>Le Pecq</strong>, <strong>Rueil-Malmaison</strong>, <strong>Bougival</strong>, <strong>Louveciennes</strong>, <strong>Marly-le-Roi</strong>, <strong>Nanterre</strong>, <strong>Neuilly-sur-Seine</strong>, <strong>Versailles</strong> and <strong>Paris</strong>. Online therapy sessions are also available for those living elsewhere in France or abroad.</p>
+            <p>Aimee Cote is a psychotherapist and marriage & family therapist (not a psychologist — <a href="/${lang}/faq/">see the FAQ for more on the distinction</a>). She offers a systemic approach to therapy, bilingual in French and English, tailored to international families and expats near Paris.</p>`
+}
+      </section>
     </main>
     <footer>
       <p>Aimee Cote Therapy – 15 Avenue de l'Europe, 78400 Chatou – +33 6 22 70 11 83</p>
