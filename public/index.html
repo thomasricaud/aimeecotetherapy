@@ -80,35 +80,60 @@
                 "closes": "18:00"
               }
             ],
-            "offers": [
-              {
-                "@type": "Offer",
-                "name": "Couple Therapy",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Couple Therapy",
-                  "description": "Support for couples to improve communication and resolve conflicts."
+            "areaServed": [
+              {"@type": "City", "name": "Chatou"},
+              {"@type": "City", "name": "Saint-Germain-en-Laye"},
+              {"@type": "City", "name": "Le Vésinet"},
+              {"@type": "City", "name": "Croissy-sur-Seine"},
+              {"@type": "City", "name": "Le Pecq"},
+              {"@type": "City", "name": "Rueil-Malmaison"},
+              {"@type": "City", "name": "Bougival"},
+              {"@type": "City", "name": "Louveciennes"},
+              {"@type": "City", "name": "Marly-le-Roi"},
+              {"@type": "City", "name": "Nanterre"},
+              {"@type": "City", "name": "Neuilly-sur-Seine"},
+              {"@type": "City", "name": "Versailles"},
+              {"@type": "City", "name": "Paris"}
+            ],
+            "knowsLanguage": ["en", "fr", "es"],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Therapy Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Couple Therapy",
+                    "description": "Systemic couple therapy to improve communication, resolve conflicts, and strengthen your relationship. Available in English and French."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Family Therapy",
+                    "description": "Family therapy for international and blended families, parenting challenges, and intercultural conflicts near Paris."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Individual Therapy",
+                    "description": "Individual counseling for anxiety, depression, life transitions, and personal growth. Bilingual French-English therapist."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Online Therapy",
+                    "description": "Online therapy sessions via video for clients anywhere in France or abroad. Available in English, French, and Spanish."
+                  }
                 }
-              },
-              {
-                "@type": "Offer",
-                "name": "Family Therapy",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Family Therapy",
-                  "description": "Guidance for families to enhance relationships and overcome challenges."
-                }
-              },
-              {
-                "@type": "Offer",
-                "name": "Individual Therapy",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Individual Therapy",
-                  "description": "Personal counseling to foster growth and well-being."
-                }
-              }
-            ]
+              ]
+            }
           },
           {
             "@type": "WebSite",

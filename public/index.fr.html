@@ -80,35 +80,60 @@
                 "closes": "18:00"
               }
             ],
-            "offers": [
-              {
-                "@type": "Offer",
-                "name": "Thérapie de couple",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Thérapie de couple",
-                  "description": "Accompagnement des couples pour améliorer la communication et résoudre les conflits."
+            "areaServed": [
+              {"@type": "City", "name": "Chatou"},
+              {"@type": "City", "name": "Saint-Germain-en-Laye"},
+              {"@type": "City", "name": "Le Vésinet"},
+              {"@type": "City", "name": "Croissy-sur-Seine"},
+              {"@type": "City", "name": "Le Pecq"},
+              {"@type": "City", "name": "Rueil-Malmaison"},
+              {"@type": "City", "name": "Bougival"},
+              {"@type": "City", "name": "Louveciennes"},
+              {"@type": "City", "name": "Marly-le-Roi"},
+              {"@type": "City", "name": "Nanterre"},
+              {"@type": "City", "name": "Neuilly-sur-Seine"},
+              {"@type": "City", "name": "Versailles"},
+              {"@type": "City", "name": "Paris"}
+            ],
+            "knowsLanguage": ["fr", "en", "es"],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Services de thérapie",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Thérapie de couple",
+                    "description": "Thérapie systémique de couple pour améliorer la communication, résoudre les conflits conjugaux et renforcer votre relation. Disponible en français et anglais."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Thérapie familiale",
+                    "description": "Thérapie familiale pour familles internationales et recomposées, défis parentaux et conflits interculturels dans les Yvelines."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Thérapie individuelle",
+                    "description": "Accompagnement individuel pour anxiété, dépression, transitions de vie et épanouissement personnel. Thérapeute bilingue français-anglais."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Thérapie en ligne",
+                    "description": "Séances de thérapie en ligne par vidéo pour les patients partout en France ou à l'étranger. Disponible en français, anglais et espagnol."
+                  }
                 }
-              },
-              {
-                "@type": "Offer",
-                "name": "Thérapie familiale",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Thérapie familiale",
-                  "description": "Guidance pour renforcer les liens familiaux et surmonter les difficultés."
-                }
-              },
-              {
-                "@type": "Offer",
-                "name": "Thérapie individuelle",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Thérapie individuelle",
-                  "description": "Soutien personnalisé pour favoriser l'épanouissement et le bien-être."
-                }
-              }
-            ]
+              ]
+            }
           },
           {
             "@type": "WebSite",
