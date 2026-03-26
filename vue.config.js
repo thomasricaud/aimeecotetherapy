@@ -14,8 +14,8 @@ function getBlogSlugs () {
 }
 
 function buildPrerenderRoutes () {
-  const staticPages = ['', '/blog', '/book', '/there', '/faq']
-  const blogSlugs = getBlogSlugs().map((slug) => `/blog/${slug}`)
+  const staticPages = ['/', '/blog/', '/book/', '/there/', '/faq/']
+  const blogSlugs = getBlogSlugs().map((slug) => `/blog/${slug}/`)
   const allPages = [...staticPages, ...blogSlugs]
 
   const routes = ['/']

@@ -19,19 +19,19 @@ export default new Vuex.Store({
       },
       {
         text: 'nav.blog',
-        href: '/blog',
+        href: '/blog/',
       },
       {
         text: 'nav.book',
-        href: '/book',
+        href: '/book/',
       },
       {
         text: 'nav.there',
-        href: '/there',
+        href: '/there/',
       },
       {
         text: 'nav.faq',
-        href: '/faq',
+        href: '/faq/',
       },
     ],
   },
@@ -75,7 +75,8 @@ export default new Vuex.Store({
       const locale = i18n.locale
       return state.items.map(link => {
         const base = link.href === '/' ? '' : link.href
-        return { ...link, href: `/${locale}${base}` }
+        const href = `/${locale}${base}`
+        return { ...link, href: href.endsWith('/') ? href : href + '/' }
       })
     },
   },
