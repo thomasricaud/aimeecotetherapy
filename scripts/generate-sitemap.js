@@ -32,10 +32,16 @@ const blogRoutesByLang = languages.reduce((acc, lang) => {
 const allBlogSlugs = new Set()
 languages.forEach(lang => blogRoutesByLang[lang].forEach(r => allBlogSlugs.add(r)))
 
+// Ensure all URLs end with trailing slash for consistency (avoids duplicate indexing)
+function withTrailingSlash (url) {
+  return url.endsWith('/') ? url : url + '/'
+}
+
 function buildHreflangLinks (routePath) {
+  const canonical = withTrailingSlash(routePath)
   return languages
-    .map(l => `    <xhtml:link rel="alternate" hreflang="${l}" href="${baseUrl}/${l}${routePath}"/>`)
-    .concat([`    <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/en${routePath}"/>`])
+    .map(l => `    <xhtml:link rel="alternate" hreflang="${l}" href="${baseUrl}/${l}${canonical}"/>`)
+    .concat([`    <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/en${canonical}"/>`])
     .join('\n')
 }
 
@@ -43,7 +49,7 @@ languages.forEach(lang => {
   const allRoutes = [...routes, ...blogRoutesByLang[lang]]
   const urls = allRoutes
     .map(route => {
-      const loc = `${baseUrl}/${lang}${route}`
+      const loc = withTrailingSlash(`${baseUrl}/${lang}${route}`)
       const hreflangs = buildHreflangLinks(route)
       return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${today}</lastmod>\n${hreflangs}\n  </url>`
     })

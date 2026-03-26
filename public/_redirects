@@ -5,13 +5,18 @@ https://www.aimeecotetherapy.com/* https://aimeecotetherapy.com/:splat 301!
 /admin/* /admin/index.html 200
 / /en/ 301
 
-# Redirect legacy URLs without language prefix (fixes 5xx errors in Search Console)
+# Redirect legacy URLs without language prefix to canonical URLs with trailing slash
 /home /en/ 301
-/there /en/there 301
-/blog /en/blog 301
-/book /en/book 301
-/faq /en/faq 301
+/there /en/there/ 301
+/blog /en/blog/ 301
+/book /en/book/ 301
+/faq /en/faq/ 301
 /blog/* /en/blog/:splat 301
+
+# Normalize trailing slashes for language routes (avoid duplicate URLs)
+/en /en/ 301
+/fr /fr/ 301
+/es /es/ 301
 
 # Fallback to SPA shell for each language (only reached if no prerendered file exists)
 /fr/* /index.fr.html 200

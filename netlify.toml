@@ -7,6 +7,12 @@
   NPM_VERSION  = "11.4.2"
   NPM_FLAGS    = "--include=dev"
 
+# Force trailing slashes to prevent duplicate URLs in search engines
+[build.processing]
+  skip_processing = false
+[build.processing.html]
+  pretty_urls = true
+
 # Cache static assets (JS, CSS, images) for 1 year - improves Core Web Vitals
 [[headers]]
   for = "/js/*"
