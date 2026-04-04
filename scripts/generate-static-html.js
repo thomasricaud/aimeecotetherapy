@@ -483,6 +483,47 @@ function injectArticleSchema (html, schemaJson) {
   )
 }
 
+function generateBreadcrumbSchema (lang, routePath, pageName, locale) {
+  const homeName = locale['nav.home'] || 'Home'
+  const breadcrumbs = [
+    { '@type': 'ListItem', position: 1, name: homeName, item: `${baseUrl}/${lang}/` }
+  ]
+  if (routePath) {
+    breadcrumbs.push({
+      '@type': 'ListItem',
+      position: 2,
+      name: pageName,
+      item: `${baseUrl}/${lang}${routePath}/`
+    })
+  }
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbs
+  })
+}
+
+function generateBlogEntryBreadcrumbSchema (lang, slug, blogTitle, locale) {
+  const homeName = locale['nav.home'] || 'Home'
+  const blogName = locale['nav.blog'] || 'Blog'
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: homeName, item: `${baseUrl}/${lang}/` },
+      { '@type': 'ListItem', position: 2, name: blogName, item: `${baseUrl}/${lang}/blog/` },
+      { '@type': 'ListItem', position: 3, name: blogTitle, item: `${baseUrl}/${lang}/blog/${slug}/` }
+    ]
+  })
+}
+
+function injectBreadcrumbSchema (html, schemaJson) {
+  return html.replace(
+    '</head>',
+    `<script type="application/ld+json">${schemaJson}</script>\n</head>`
+  )
+}
+
 // ──────────────────────────────────────────────────────────────
 // MAIN GENERATION LOOP
 // ──────────────────────────────────────────────────────────────
@@ -513,6 +554,7 @@ languages.forEach(lang => {
     const canonical = `${baseUrl}/${lang}/`
     let html = replaceMetaTags(shellHtml, { title, description, canonical, routePath })
     html = injectBodyContent(html, generateHomeContent(locale, lang))
+    html = injectBreadcrumbSchema(html, generateBreadcrumbSchema(lang, '', title, locale))
     const outputPath = path.join(distDir, lang, 'index.html')
     writeHtml(outputPath, html)
     generated++
@@ -553,6 +595,9 @@ languages.forEach(lang => {
       html = injectBodyContent(html, bodyHtml)
     }
 
+    // Inject BreadcrumbList schema for all static pages
+    html = injectBreadcrumbSchema(html, generateBreadcrumbSchema(lang, routePath, title, locale))
+
     const outputPath = path.join(distDir, lang, routePath.slice(1), 'index.html')
     writeHtml(outputPath, html)
     generated++
@@ -583,6 +628,7 @@ languages.forEach(lang => {
       lang === 'fr' ? 'thérapie Chatou' : lang === 'es' ? 'terapia Chatou' : 'therapy Chatou'
     ].filter(Boolean).join(', ')
     html = replaceMetaKeywords(html, blogKeywords)
+    html = injectBreadcrumbSchema(html, generateBlogEntryBreadcrumbSchema(lang, slug, title, locale))
 
     const outputPath = path.join(distDir, lang, 'blog', slug, 'index.html')
     writeHtml(outputPath, html)
