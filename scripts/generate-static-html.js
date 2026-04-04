@@ -172,7 +172,10 @@ function generateHomeContent (locale, lang) {
 
 function generateBlogListContent (locale, lang) {
   const slugs = getBlogSlugs()
-  const articles = slugs.map(slug => loadBlogFull(slug, lang)).filter(Boolean)
+  const articles = slugs.map(slug => {
+    const data = loadBlogFull(slug, lang)
+    return data ? { ...data, slug } : null
+  }).filter(Boolean)
   const blogTitle = locale['meta.blogTitle'] || 'Blog'
   const blogDesc = locale['meta.blogDesc'] || ''
   const navBook = locale['nav.book'] || 'Schedule an appointment'
@@ -193,7 +196,7 @@ function generateBlogListContent (locale, lang) {
       <section aria-label="Articles">
         ${articles.map(a => `
           <article>
-            <h2><a href="/${lang}/blog/${a.slug || ''}">${escapeHtml(a.title || '')}</a></h2>
+            <h2><a href="/${lang}/blog/${a.slug}/">${escapeHtml(a.title || '')}</a></h2>
             <p>${escapeHtml(a.description || '')}</p>
             <span>${escapeHtml(a.category || '')}</span>
             <span>${escapeHtml(a.author || '')}</span>
@@ -342,6 +345,13 @@ function generateFaqContent (locale, lang) {
 // META TAG REPLACEMENT (unchanged logic)
 // ──────────────────────────────────────────────────────────────
 
+function replaceMetaKeywords (html, keywords) {
+  return html.replace(
+    /<meta name="keywords" content="[^"]*">/,
+    `<meta name="keywords" content="${escapeHtml(keywords)}">`
+  )
+}
+
 function replaceMetaTags (html, { title, description, canonical, routePath, ogImage }) {
   const safeTitle = escapeHtml(title)
   const safeDesc = escapeHtml(description)
@@ -424,6 +434,49 @@ function injectBodyContent (html, bodyHtml) {
 
 function injectFaqSchema (html, schemaJson) {
   // Add FAQ schema before closing </head>
+  return html.replace(
+    '</head>',
+    `<script type="application/ld+json">${schemaJson}</script>\n</head>`
+  )
+}
+
+function generateArticleSchema (blog, lang, slug) {
+  const canonical = `${baseUrl}/${lang}/blog/${slug}/`
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: blog.title || slug,
+    description: blog.description || '',
+    author: {
+      '@type': 'Person',
+      name: blog.author || 'Aimee Cote',
+      url: `${baseUrl}/${lang}/`
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Aimee Cote Therapy',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${baseUrl}/logo.jpg`
+      }
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': canonical
+    },
+    url: canonical,
+    inLanguage: lang === 'fr' ? 'fr-FR' : lang === 'es' ? 'es-ES' : 'en-US'
+  }
+  if (blog.image) {
+    schema.image = `${baseUrl}${blog.image}`
+  }
+  if (blog.date) {
+    schema.datePublished = blog.date
+  }
+  return JSON.stringify(schema)
+}
+
+function injectArticleSchema (html, schemaJson) {
   return html.replace(
     '</head>',
     `<script type="application/ld+json">${schemaJson}</script>\n</head>`
@@ -519,6 +572,17 @@ languages.forEach(lang => {
 
     let html = replaceMetaTags(shellHtml, { title, description, canonical, routePath, ogImage })
     html = injectBodyContent(html, generateBlogEntryContent(blog, locale, lang, slug))
+    html = injectArticleSchema(html, generateArticleSchema(blog, lang, slug))
+
+    // Replace generic keywords with blog-specific keywords
+    const blogKeywords = [
+      blog.category || '',
+      blog.title || '',
+      'Aimee Cote',
+      'therapy',
+      lang === 'fr' ? 'thérapie Chatou' : lang === 'es' ? 'terapia Chatou' : 'therapy Chatou'
+    ].filter(Boolean).join(', ')
+    html = replaceMetaKeywords(html, blogKeywords)
 
     const outputPath = path.join(distDir, lang, 'blog', slug, 'index.html')
     writeHtml(outputPath, html)
