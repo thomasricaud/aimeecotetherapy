@@ -21,7 +21,6 @@
 </template>
 
 <script>
-import buildGraphFor from '@/buildGraphFor'
 import SmartPicture from '@/components/SmartPicture'
 
 export default {
@@ -35,27 +34,9 @@ export default {
   metaInfo () {
     const path = this.$route?.path || '/faq'
     const canonical = `https://aimeecotetherapy.com${path.endsWith('/') ? path : path + '/'}`
-    const routeName = this.$route?.name || 'faq'
-    const lang = this.$i18n?.locale || this.$route?.params.lang || 'en'
-    const graph = buildGraphFor(routeName, lang, this.$t.bind(this))
-    const base = 'https://aimeecotetherapy.com'
-    const mainEntity = this.faqs.map(f => ({
-      '@type': 'Question',
-      name: f.question,
-      acceptedAnswer: { '@type': 'Answer', text: f.answer }
-    }))
-    graph['@graph'].push(
-      { '@type': 'WebSite', '@id': `${base}/#website`, url: base + '/', name: 'Aimee Cote Therapy' },
-      { '@type': 'LocalBusiness', '@id': `${base}/#business`, name: 'Aimee Cote Therapy', url: base + '/' },
-      {
-        '@type': 'FAQPage',
-        '@id': canonical,
-        url: canonical,
-        isPartOf: { '@id': `${base}/#website` },
-        about: { '@id': `${base}/#business` },
-        mainEntity
-      }
-    )
+    // FAQPage schema is injected by generate-static-html.js in the pre-rendered HTML.
+    // Do NOT add it here via vue-meta to avoid duplicate FAQPage schema,
+    // which causes Google to invalidate the structured data.
     return {
       title: this.$t('meta.faqTitle'),
       meta: [
@@ -63,12 +44,6 @@ export default {
       ],
       link: [
         { vmid: 'canonical', rel: 'canonical', href: canonical }
-      ],
-      script: [
-        {
-          type: 'application/ld+json',
-          json: graph
-        }
       ]
     }
   }
